@@ -1,0 +1,14 @@
+.login_pg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newUser_btn{
+    border-top-left-radius: 0% !important;
+    border-top-right-radius: 0% !important;
+}
+
+h1::first-letter{
+    text-transform:uppercase;
+}

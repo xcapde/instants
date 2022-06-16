@@ -9,19 +9,23 @@ export function Menu () {
         <span className='nav_icon'><i className="fa-solid fa-magnifying-glass"></i></span>
         <span className='nav_name'>SEARCH</span></button>
 
-        <button><span className='nav_icon'><i className="fa-solid fa-globe"></i></span>
+        <button className="explore_btn">
+        <span className='nav_icon'><i className="fa-solid fa-globe"></i></span>
         <span className='nav_name'>EXPLORE</span></button>
-        
-        <Link to="create">
-            <button><span className='nav_icon'><i class="fa-solid fa-plus"></i></span>
+
+        <button className="profile_btn">
+        <span className='nav_icon'><i className="fa-solid fa-user"></i></span>
+        <span className='nav_name'> PROFILE</span></button>
+
+        <Link to="/create">
+            <button className="create_btn">
+            <span className='nav_icon'><i className="fa-solid fa-plus"></i></span>
             <span className='nav_name'> CREATE</span></button>
         </Link>
-
-        <button><span className='nav_icon'><i className="fa-solid fa-user"></i></span>
-        <span className='nav_name'> PROFILE</span></button>
         
-        <Link to="login">
-            <button><span className='nav_icon'><i className="fa-solid fa-user"></i></span>
+        <Link to="/login">
+            <button className="login_btn">
+            <span className='nav_icon'><i className="fa-solid fa-user"></i></span>
             <span className='nav_name'> LOG IN</span></button>
         </Link>
 

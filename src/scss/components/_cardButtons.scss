@@ -1,14 +1,24 @@
 .card_btns, .reaction_btns, .gestion_btns{
     z-index: 1;
-    background-color: inherit;
+    background-color:#F9F9F9;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 2.5rem;
 }
 
+.card_btns{
+    border-radius: 0.8rem;
+}
+
+.card_btns button{
+    color: #3e89b4;
+}
+
 .reaction_btns, .gestion_btns{
     width: 50%;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
 }
 
 .reaction_btns{
@@ -16,7 +26,7 @@
 }
 
 .reaction_btns button{
-    margin-left: 10%;
+    margin-left: 15%;
     border-style: solid;
     border-width: 0.1rem;
     border-radius: 50%;
@@ -27,18 +37,49 @@
 }
 
 .gestion_btns button{
-    margin-right: 10%;
+    margin-right: 15%;
 }
 
-.fav_btn, .delete_btn, .edit_btn, .like_btn{
+.like_btn, .fav_btn, .edit_btn, .delete_btn {
     background: none;
     border: none;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
     cursor: pointer;
+}
+
+.edit_btn, .delete_btn{
+    height: 2rem;
+    width: 2rem;
+}
+
+.like_btn:hover{
+    color: #EE3561;
+}
+
+.like_btn:active{
+    color: #F1557A;
+}
+
+.fav_btn:hover{
+    color: #FCA641;
+}
+
+.fav_btn:active{
+    color: #fcb462;
+}
+
+.edit_btn:hover, .delete_btn:hover{
+    color:#303030;
+    background-color: #E1E1E1;
+}
+
+.edit_btn:active, .delete_btn:active{
+    color:#666666;
 }

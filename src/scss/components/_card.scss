@@ -1,11 +1,20 @@
 .card_cnt{
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 17%;
     height: 22rem;
-    margin: 1.25%;
-    filter:drop-shadow(.1rem .1rem .15rem #2424246e);
+    margin: 1.5%;
+    filter:drop-shadow(0rem .1rem .15rem #2424246e);
     background-color: burlywood;
+    border-radius: 0.8rem;
+}
+
+.card_cnt:hover{
+    filter:drop-shadow(0rem .1rem .15rem #316da5);
+}
+
+.card_cnt:active{
+    filter:drop-shadow(0rem .1rem .15rem #3b7dbbe7);
 }
 
 .card_img{
@@ -21,41 +30,66 @@
 .card_img img{
     width: 100%;
     height: 100%;
-    object-fit:fill;
-}
-
-.card_info{
-    background-color:#F9F9F9;
-    width: 100%;
-    display: flex;
-    flex-direction: column;    
+    object-fit:cover;
 }
 
 .card_txt{
-    background-color: inherit;
+    width: 100%;
+    background-color:#F9F9F9;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 0 5%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    padding-bottom: 1%;
 }
 
-.card_txt h1{
+.card_user{
     width: 100%;
-    background-color: inherit;
-    color: #242424;
-    font-weight: 500;
-    font-size: larger;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    height: 1.7rem;
+    display: flex;
+    align-items: center;
     justify-content: flex-start;
-
 }
+
+.card_user .profile_photo{
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(88, 88, 88, 0.233);
+    border-radius: 50%;
+    margin: 0 5%;
+ }
 
 .card_txt h2{
-    background-color: inherit;
+    width: auto;
     color: #242424;
     font-size: smaller;
     font-weight: 300;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card_txt h1{
+    width: 90%;
+    background-color: inherit;
+    color: #242424;
+    font-weight: 500;
+    font-size: medium;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    justify-content: flex-start;
+    margin: 0 5%;
+    line-height: 1.3rem;
+}
+
+@media only screen and (max-width: 500px){
+    .card_cnt{
+        width: 90%;
+        height: 22rem;
+        margin: 5%;
+    }
 }

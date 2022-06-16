@@ -7,32 +7,32 @@
 }
 
 .searcher input{
-    width: 100%;
+    width: 95%;
     height: 6vh;
+    min-width: 10rem;
     position: relative;
     border: none;
-    background-color:#242424;
+    background-color: #494949;
     color: #3b7dbb;
     padding-left: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     font-size: smaller;
-}
-
-.searcher input:hover{
-    background-color: #494949;
-    cursor: pointer;
-}
-
-.searcher input:focus{
-    background-color: #494949;
-    color: #242424;
-    cursor: unset;
     outline: none;
 }
 
+.searcher input:hover{
+    background-color: #242424;
+    cursor: pointer;
+}
+
 .searcher input:active, .searcher input:focus{
-    background-color: rgba(255, 255, 255, 0.897);
+    background-color: #F9F9F9;
     padding-left: 1rem;
+}
+
+.searcher input:focus{
+    color: #242424;
+    cursor: unset;
 }
 
 .searcher button{
@@ -46,10 +46,13 @@
 
 .searcher button i{
     background:none;
-    color: #494949;
+    color: #242424;
 }
 
 .searcher:hover i{
-    background:none;
+    color: #3b7dbb;
+}
+
+.searcher:active button i{
     color: #3b7dbb;
 }

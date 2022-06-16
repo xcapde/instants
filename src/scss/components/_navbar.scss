@@ -6,10 +6,30 @@
 
 .navbar_cnt{
     background-color: #303030;
-
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
     height: 10vh;
+}
+
+.search_bottom{
+    display: none;
+}
+
+@media only screen and (max-width: 500px){
+
+    .menu_cnt{
+        display: none;
+    }
+
+    .searcher{
+        display: none;
+    }
+
+    .navbar_cnt{
+        z-index: 2;
+        filter:drop-shadow(0.0rem .1rem .05rem #24242449);
+    }
+
 }

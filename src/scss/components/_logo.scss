@@ -4,7 +4,7 @@
 }
 
 .logo{
-    background-color: #303030;
+    background-color: inherit;
     color: #F9F9F9;
     font-size: larger;
     font-weight: 400;
@@ -16,4 +16,16 @@
 
 .logo:hover{
     color:#3b7dbb;
+}
+
+@media only screen and (max-width: 500px){
+
+    .logo_cnt{
+        width: 100%;
+    }
+    .logo{
+        justify-content: center;
+        font-weight: 100;
+        margin: 0;
+    }
 }
