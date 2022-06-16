@@ -6,7 +6,7 @@ export function Logo () {
         <div className="logo_cnt">
 
             <Link to="/">
-                <h1 className="logo">Instants</h1>
+                <h1 className="logo">INSTANTS</h1>
             </Link>
         </div>
     )

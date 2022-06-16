@@ -1,0 +1,90 @@
+// $colorPrimary: #EE3561;
+// $colorPrimaryLight:#F1557A;
+// $colorSecondary: #FCA641;
+// $colorSecondaryLight: #fcb462;
+
+// $colorPrimary: #316da5;
+// $colorPrimaryLight:#3b7dbb;
+// $colorSecondary: #FCA641;
+// $colorSecondaryLight: #fcb462;
+
+$colorAlmostDark:#242424;
+$colorAlmostWhite:#F9F9F9;
+
+$colorPrimary: #303030;
+$colorPrimaryLight:#494949;
+$colorSecondary: #316da5;
+$colorSecondaryLight: #3b7dbb;
+$colorDarkTxt: #333333;
+
+$colorCardSecondary:#4ACC95;
+$colorCardButtons:#B9B9B9;
+$colorDelete:#EF5E5E;
+
+$colorFormHead: #E1E1E1;
+$colorBoxPrimary:#D30D3C;
+$colorBoxPrimaryLight:#F22858;
+
+$colorDetailsHead: #73877F;
+$colorDetailHeadDark: #55615C;
+
+$shadows: filter drop-shadow(2px 2px 5px rgba(2,2,0,0.4));
+
+$breakPointSmall: 500px;    
+$breakPontMedium: 750px;
+$breakPontLarge: 1000px;
+
+@mixin displayFlexCenter {
+    background-color: #D30D3C;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin textBasic{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@mixin iconsBasic {
+    background: none;
+    border: none;    
+    cursor: pointer;
+}
+
+@mixin buttonsHoop {
+    background: none;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: none;
+    cursor: pointer;
+}
+
+@mixin formButton {
+    border:none;
+    border-radius: 25%;
+    border-color: $colorBoxPrimaryLight;
+    color: $colorCardPrimary;
+}
+
+@mixin menuButton {
+    background: $colorPrimaryLight;
+    border: none;
+    border-radius: 50%;
+    color: $colorCardPrimary;
+    font-weight: 200;
+    margin: 0 1.7rem;
+    padding: 1rem 1.5rem;
+
+    menuButton:hover{
+        background-color: $colorSecondary;
+        cursor: pointer;
+    }
+
+    menuButton:active{
+        background-color: $colorSecondaryLight;
+    }
+}

@@ -1,0 +1,15 @@
+@use'./variables.scss';
+@import url(./_logo.scss);
+@import url(./_menu.scss);
+@import url(./_searcher.scss);
+
+
+.navbar_cnt{
+    background-color: #303030;
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+}

@@ -1,15 +1,11 @@
-import './App.css';
-import { Navbar } from './components/navbar/Navbar';
-// import { NavbarBottom } from './components/navbar_bottom/NavbarBottom';
+import '../src/scss/styles.css';
 import { Home } from './pages/home/Home';
 
 function App() {
   return (
     <div className="App">
-
-      <Navbar/>
+      
       <Home/>
-      {/* <NavbarBottom/> */}
       
     </div>
   );

@@ -1,0 +1,36 @@
+.menu_cnt{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.menu_cnt button{
+    background: none;
+    border: none;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    background-color: #494949;
+    color: #F9F9F9;
+    font-size: small;
+    font-weight: 400;
+    white-space:nowrap;
+}
+
+.menu_cnt button:hover{
+    background-color: #316da5;
+    cursor: pointer;
+}
+
+.menu_cnt button:active{
+    background-color: #3b7dbb;
+}
+
+.nav_icon{
+    margin-right: 0.5rem;
+    display: none;
+}

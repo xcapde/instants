@@ -3,7 +3,7 @@ import { Menu } from "../navbar/menu/Menu";
 export function NavbarBottom () {
 
     return (
-        <div className="navigation_cnt">
+        <div className="navbar_bottom">
 
             <Menu/>
 
