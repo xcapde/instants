@@ -1,7 +1,6 @@
-@use'./variables.scss';
-@import url(./_logo.scss);
-@import url(./_menu.scss);
-@import url(./_searcher.scss);
+@import "./logo.scss";
+@import "./menu.scss";
+@import "./searcher.scss";
 
 
 .navbar_cnt{

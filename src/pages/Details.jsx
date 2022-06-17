@@ -21,6 +21,11 @@ export function Details() {
                         <h1>Title</h1>
                     </div>
 
+                    <div className="details_photo_mobile">
+                        {/* <image src="" alt="preview"/> */}
+                        <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
+                    </div>
+
                     <div className="details_body">
 
                         <p>Description</p>
