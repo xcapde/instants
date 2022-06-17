@@ -1,6 +1,7 @@
 @import "./components/variables";
 @import "./components/navbar.scss";
 @import "./components/navbarBottom.scss";
+@import "./components/navbarTopMobile.scss";
 @import "./components/list.scss";
 @import "./components/card.scss";
 @import "./components/cardButtons.scss";
@@ -50,10 +51,16 @@ a{
 }
 
 @media only screen and (max-width: $breakPointSmall){
-    .signup_pg, .login_pg, .create_pg, .home_pg, .details_pg, .update_pg, .form_cnt{
+    .signup_pg, .login_pg, .create_pg, .details_pg, .update_pg, .form_cnt{
+        bottom: 10vh; 
+        // height: 80vh;
+        top: 0;
+        height: 90vh;
+    }  
+    
+    .home_pg{
+        top: 10vh;
         bottom: 10vh; 
         height: 80vh;
-        // top: 0;
-        // height: 90vh;
-    }   
+    }
 }

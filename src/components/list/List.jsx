@@ -8,9 +8,8 @@ export function List () {
 
 
     return(
-
         <div className="list_pg">
-
+            
             <div className="list_cnt">
                 <>{instants.map((instant,key) =>
                     <Card key={key} instant={instant}/>

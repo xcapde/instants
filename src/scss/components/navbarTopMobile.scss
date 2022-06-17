@@ -1,0 +1,17 @@
+.navbarTopMobile_cnt{
+    display: none;
+}
+
+@media only screen and (max-width: $breakPointSmall){
+
+.navbarTopMobile_cnt{
+    z-index: 2;
+    background-color: $colorPrimary;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+}

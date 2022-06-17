@@ -158,7 +158,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .menu_cnt, .searcher {
+  .navbar_cnt {
     display: none;
   }
   .navbar_cnt {
@@ -270,6 +270,21 @@
 @media only screen and (min-width: 500px) {
   .navbar_bottom {
     display: none;
+  }
+}
+.navbarTopMobile_cnt {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbarTopMobile_cnt {
+    z-index: 2;
+    background-color: #303030;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
   }
 }
 .list_cnt {
@@ -1051,7 +1066,13 @@ a {
 }
 
 @media only screen and (max-width: 500px) {
-  .signup_pg, .login_pg, .create_pg, .home_pg, .details_pg, .update_pg, .form_cnt {
+  .signup_pg, .login_pg, .create_pg, .details_pg, .update_pg, .form_cnt {
+    bottom: 10vh;
+    top: 0;
+    height: 90vh;
+  }
+  .home_pg {
+    top: 10vh;
     bottom: 10vh;
     height: 80vh;
   }
