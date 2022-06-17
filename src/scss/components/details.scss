@@ -20,7 +20,7 @@
 }
 
 .details_photo{
-    width: 60%;
+    // width: 60%;
     height: 100%;
     background-color: $colorBrokenWhite;
     border-radius: 1rem;
@@ -30,11 +30,12 @@
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    object-fit: fill;
+    // object-fit: cover;
+    object-fit:scale-down;
 }
 
 .details_info{
-    width: 40%;
+    width: 35%;
     height: 100%;
     border-radius: 1rem;
 }
@@ -107,6 +108,10 @@
         border-radius: 0% !important;
         height: 10vh;
     }
+
+    // .details_info{
+    //     background-color: $colorAlmostWhite;
+    // }
     
     .details_photo{
         display: none;
@@ -114,10 +119,13 @@
 
     .details_photo_mobile{
         display: flex;
-        width: 90vw;
-        height: 90vw;
-        background-color: #d1d3d4;
-        border-radius: 1rem;
+        width: 100vw;
+        height: unset;
+        margin: 0 auto;
+    }
+
+    .details_photo_mobile img{
+        border-radius: 0rem;
     }
 
     .details_info{

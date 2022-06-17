@@ -1,8 +1,14 @@
-.list_pg{
+.list_cnt{
     display: flex;
     justify-content: flex-start;
     width: 100%;
     height: unset;
     flex-wrap: wrap;
     overflow-y: auto;
+}
+
+@media only screen and (max-width: $breakPointSmall){
+    .list_cnt{
+        margin-top: 3%;
+    }
 }

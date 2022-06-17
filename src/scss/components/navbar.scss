@@ -19,6 +19,11 @@
 
 @media only screen and (max-width: $breakPointSmall){
 
+    // NOMÉS HAURIA DE SER VISIBLE A LA HOME PAGE
+    // .navbar_cnt{
+    //     display: none;
+    // }    
+    
     .menu_cnt, .searcher{
         display: none;
     }

@@ -11,10 +11,11 @@ export function List () {
 
         <div className="list_pg">
 
-    <>{instants.map((instant,key) =>
-        <Card key={key} instant={instant}/>
-        )}</>
-    
+            <div className="list_cnt">
+                <>{instants.map((instant,key) =>
+                    <Card key={key} instant={instant}/>
+                    )}</>
+            </div>
         </div>
     )
 }
