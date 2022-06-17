@@ -1,24 +1,20 @@
 import { Card } from "../card/Card";
-// import {appData} from ""
+import appData from "../../../src/data_API/appData.json";
+import { useState } from "react";
 
 export function List () {
 
-    // const[instants, setInstants] = useState(appData);
-    // <>{instants.map((instants,key)=>
-    //     <Card instants={instants}/>)}</>
+    const[instants] = useState(appData);
+
 
     return(
+
         <div className="list_pg">
 
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-
+    <>{instants.map((instant,key) =>
+        <Card key={key} instant={instant}/>
+        )}</>
+    
         </div>
     )
 }

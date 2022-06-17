@@ -1,0 +1,162 @@
+[
+    {
+        "title":"Lofoten 1",
+        "userName":"Papa Noel",
+        "userSurname":"Capdevila",
+        "description":"Illes Lofoten, Noruega",
+        "imgUrl":"http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 1
+    },
+    {
+        "title":"Lofoten 2",
+        "userName":"Rudolf",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images.alphacoders.com/906/thumbbig-906175.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 2
+    },
+    {
+        "title":"Lofoten 3",
+        "userName":"Olaf",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images.alphacoders.com/108/thumbbig-1085327.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 3
+    },
+    {
+        "title":"Lofoten 4",
+        "userName":"Yeti",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images3.alphacoders.com/688/thumbbig-688256.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 4
+    },
+    {
+        "title":"Lofoten 5",
+        "userName":"Snowman",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images3.alphacoders.com/108/thumbbig-1089749.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 5
+    },
+    {
+        "title":"Lofoten 6",
+        "userName":"Sr. Noruec",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images2.alphacoders.com/108/thumbbig-1088235.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 6
+    },
+    {
+        "title":"Lofoten 7",
+        "userName":"Elsa",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images7.alphacoders.com/108/thumbbig-1080021.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 7
+    },
+    {
+        "title":"Lofoten 8",
+        "userName":"Sven",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images8.alphacoders.com/108/thumbbig-1088268.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 8
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images7.alphacoders.com/109/thumbbig-1092279.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 9
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images7.alphacoders.com/997/thumbbig-997627.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 10
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images7.alphacoders.com/885/thumbbig-885453.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 11
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images4.alphacoders.com/109/thumbbig-1090395.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 12
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images4.alphacoders.com/887/thumbbig-887130.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 13
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images8.alphacoders.com/885/thumbbig-885432.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 14
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images3.alphacoders.com/110/thumbbig-1103130.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 15
+    },
+    {
+        "title":"Title",
+        "userName":"Name",
+        "userSurname":"Surname",
+        "description":"Description",
+        "imgUrl":"https://images.alphacoders.com/772/thumbbig-772749.webp",
+        "isFav":"false",
+        "isLike":"false",
+        "id": 16
+    }
+]

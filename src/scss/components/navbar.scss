@@ -4,7 +4,8 @@
 
 
 .navbar_cnt{
-    background-color: #303030;
+    z-index: 1;
+    background-color: $colorPrimary;
     display: flex;
     position: fixed;
     top: 0;
@@ -16,7 +17,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: $breakPointSmall){
 
     .menu_cnt, .searcher{
         display: none;

@@ -1,24 +1,28 @@
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { UserCard } from "../UserCard"
 
-export function Card(){
+export function Card(props){
+
+    const [instant, setInstant] = useState(props.instant)
+
+    useEffect(() => {
+        setInstant(props.instant)
+    }, [props.instant])
 
     return (
         <div className="card_cnt">
             <div className="card_txt">
-                {/* <div className="card_user">
-                    <div className="profile_photo">
-                    </div>
-                    <h2>User</h2>                        
-                </div> */}
-                <UserCard/>
-                <h1>Title..</h1>
+                {/* <UserCard instant={instant}/> */}
+                <div className="user_cnt">
+                    <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
+                    <h1 className="user_name">{instant.userName}</h1>
+                </div>
+                <h1>{instant.title}</h1>
             </div>
 
             <div className="card_img">
                 <Link to="/details">                            
-                    <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt=""/>
-                    {/* <img src="" alt=""/> */}
+                    <img src={instant.imgUrl} alt=""/>
                 </Link>
             </div>
 
