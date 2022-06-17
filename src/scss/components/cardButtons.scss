@@ -1,6 +1,6 @@
 .card_btns, .reaction_btns, .gestion_btns{
     z-index: 1;
-    background-color:#F9F9F9;
+    background-color:$colorAlmostWhite;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,7 +12,7 @@
 }
 
 .card_btns button{
-    color: #3e89b4;
+    color: $colorCardButton;
 }
 
 .reaction_btns, .gestion_btns{
@@ -60,26 +60,51 @@
 }
 
 .like_btn:hover{
-    color: #EE3561;
+    color: $colorLike;
 }
 
 .like_btn:active{
-    color: #F1557A;
+    color: $colorLikeLight;
 }
 
 .fav_btn:hover{
-    color: #FCA641;
+    color: $colorFav;
 }
 
 .fav_btn:active{
-    color: #fcb462;
+    color: $colorFavLight;
 }
 
 .edit_btn:hover, .delete_btn:hover{
-    color:#303030;
-    background-color: #E1E1E1;
+    color:$colorPrimary;
+    background-color: $colorAlmostGrey;
 }
 
 .edit_btn:active, .delete_btn:active{
     color:#666666;
+}
+
+@media only screen and (max-width: $breakPointSmall){
+    .card_btns, .reaction_btns, .gestion_btns{
+        height: 3rem;
+    }
+    
+    .reaction_btns button{
+        margin-left: 20%;
+    }
+
+    .gestion_btns button{
+        margin-right: 20%;
+    }
+    
+    .like_btn, .fav_btn, .edit_btn, .delete_btn {
+        font-size: 1.3rem;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    
+    .edit_btn, .delete_btn{
+        height: 2.5rem;
+        width: 2.5rem;
+    }    
 }

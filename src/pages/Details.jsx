@@ -6,7 +6,6 @@ export function Details() {
 
             <div className="details_cnt">
                 <div className="details_photo">
-                        {/* <image src="" alt="preview"/> */}
                         <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
                 </div>
 
@@ -22,7 +21,6 @@ export function Details() {
                     </div>
 
                     <div className="details_photo_mobile">
-                        {/* <image src="" alt="preview"/> */}
                         <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
                     </div>
 

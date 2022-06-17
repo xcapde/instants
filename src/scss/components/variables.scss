@@ -1,33 +1,34 @@
 $colorAlmostDark:#242424;
+$colorShadowAlmostDark:#2424246e;
+$colorAlmostGrey: #E1E1E1;
 $colorAlmostWhite:#F9F9F9;
+$colorBrokenWhite:#d1d3d4;
 
 $colorPrimary: #303030;
 $colorPrimaryLight:#494949;
 $colorSecondary: #316da5;
 $colorSecondaryLight: #3b7dbb;
-$colorDarkTxt: #333333;
+$colorTertiary: #73877F;
+$colorTertiaryHover: #869991;
+$colorTertiaryActive: #81948d;
 
-$colorFormsPrimary:#153f66;
-$colorFormsPrimaryDark:#0f365a;
+// $colorPrimaryPink:#e61c4b;
+// $colorBoxPrimaryLight:#F22858;
 
-$colorOkButton:#0a803b;
-$colorOkButtonLight:#108a43;
+$colorFormPrimary: #153f66;
+$colorFormPrimaryDark:#0f365a;
+$colorFormSecundary:#0a803b;
+$colorFormSecundaryLight:#108a43;
+$colorFormInputHover:#d9e9f7;
+$colorDarkHover:#0a4780;
+$colorDarkActive:#155692;
 
 $colorCardSecondary:#4ACC95;
-$colorCardButtons:#969696;
-$colorCardButtonsVivid:#3e89b4;
-
+$colorCardButton:#3e89b4;
 $colorFav: #FCA641;
 $colorFavLight: #fcb462;
 $colorLike: #EE3561;
 $colorLikeLight:#F1557A;
-
-$colorFormHead: #E1E1E1;
-$colorPrimaryPink:#e61c4b;
-$colorBoxPrimaryLight:#F22858;
-
-$colorDetailsHead: #73877F;
-$colorDetailHeadDark: #55615C;
 
 $shadows: filter drop-shadow(2px 2px 5px rgba(2,2,0,0.4));
 
@@ -80,12 +81,12 @@ $breakPontLarge: 1000px;
     margin: 0 1.7rem;
     padding: 1rem 1.5rem;
 
-    menuButton:hover{
+    &menuButton:hover{
         background-color: $colorSecondary;
         cursor: pointer;
     }
 
-    menuButton:active{
+    &menuButton:active{
         background-color: $colorSecondaryLight;
     }
 }

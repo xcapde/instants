@@ -5,20 +5,22 @@
 
 .logo{
     background-color: inherit;
-    color: #F9F9F9;
+    color: $colorAlmostWhite;
     font-size: larger;
     font-weight: 400;
     height: 100%;
     align-items: center;
     justify-content: flex-start;
     margin: 0 0.5rem 0 1.5rem;
+    font-weight: 100;
+
 }
 
 .logo:hover{
-    color:#3b7dbb;
+    color:$colorSecondaryLight;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: $breakPointSmall){
 
     .logo_cnt{
         width: 100%;

@@ -15,7 +15,7 @@ export default function Router(){
             <Routes>
                 <Route path="/" element={<App/>}/>
                 {/* <Route path="/details/:id" element={<Details/>}/> */}
-                <Route path="/details" element={<Details/>}/>
+                <Route path="/detail" element={<Details/>}/>
                 <Route path="/signup" element={<SignUp/>}/>
                 <Route path="/login" element={<LogIn/>}/>
                 <Route path="/create" element={<Create/>}/>

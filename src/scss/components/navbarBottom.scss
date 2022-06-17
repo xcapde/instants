@@ -7,8 +7,7 @@
     height: 10vh;
     display: flex;
     justify-content: space-around;
-    background-color: #303030;
-    filter:drop-shadow(0.0rem .1rem .10rem #24242470);
+    background-color: $colorPrimary;
 }
 
 .navbar_bottom .menu_cnt{
@@ -26,7 +25,7 @@
     background: none;
     height: 100%;
     width: 20%;
-    color: #F9F9F9;
+    color: $colorAlmostWhite;
 }
 
 .navbar_bottom .nav_icon{
@@ -45,12 +44,12 @@
 }
 
 .navbar_bottom button:hover{
-    color: #F9F9F9;
-    background-color: #316da5;
+    color: $colorAlmostWhite;
+    background-color: $colorSecondary;
 }
 
 .navbar_bottom button:active{
-    background-color: #3b7dbb;
+    background-color: $colorSecondaryLight;
 }
 
 
@@ -92,7 +91,7 @@
 
 .profile_btn .user_photo{
     font-size: large;
-    color: #F9F9F9;
+    color: $colorAlmostWhite;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,7 +103,7 @@
 }
 
 
-@media only screen and (min-width: 499px){
+@media only screen and (min-width: $breakPointSmall){
 
     .navbar_bottom{
         display: none;  

@@ -21,7 +21,7 @@ export function Card(props){
             </div>
 
             <div className="card_img">
-                <Link to="/details">                            
+                <Link to="/detail">                            
                     <img src={instant.imgUrl} alt=""/>
                 </Link>
             </div>

@@ -14,19 +14,19 @@
     margin-left: 0.5rem;
     padding: 0.5rem 1.3rem;
     border-radius: 1.5rem;
-    color: #F9F9F9;
+    color: $colorAlmostWhite;
     font-size: small;
     font-weight: 400;
     white-space:nowrap;
 }
 
 .menu_cnt button:hover{
-    background-color: #316da5;
+    background-color: $colorSecondary;
     cursor: pointer;
 }
 
 .menu_cnt button:active{
-    background-color: #3b7dbb;
+    background-color: $colorSecondaryLight;
 }
 
 .nav_icon{
@@ -42,13 +42,13 @@
 
 .menu_cnt .user_cnt:hover{
     cursor: pointer;
-    background-color: #316da5;
+    background-color: $colorSecondary;
 }
     
 .menu_cnt .user_cnt:active{
-    background-color: #3b7dbb;
+    background-color: $colorSecondaryLight;
 }
 
 .menu_cnt .user_photo{
-    background-color: #494949;
+    background-color: $colorPrimaryLight;
 }
