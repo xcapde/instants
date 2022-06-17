@@ -1,0 +1,34 @@
+.signup_pg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name_inputs{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2.5% !important;
+
+}
+
+.name_inputs input{
+    display: flex;
+    justify-content: space-between;
+    width: 24% !important;
+}
+
+
+@media only screen and (max-width: 500px){
+
+.name_inputs{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.name_inputs input{
+    width: 65% !important;
+}
+
+}

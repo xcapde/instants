@@ -1,0 +1,27 @@
+.user_cnt{
+    display: flex;
+    background:none;
+    align-items: center;
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+.user_photo{
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 0.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #e4e4e4;
+}
+
+.user_name{
+    background: inherit;
+    margin: 0;
+    padding: 0;
+    color: #f9f9f9;
+    font-size: small;
+    font-weight: 400;
+}

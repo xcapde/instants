@@ -19,11 +19,10 @@ export function LogIn() {
                         <input name="password" type="password" placeholder="Password"/>
                         <button type="submit" className="login_btn">LOG IN</button>
                     </div>
-                    <Link to="/signin">
+                    <Link to="/signup">
                         <button className="newUser_btn" type="button">NEW USER</button>
                     </Link>
                 </div>
-
             </div>
 
         </div>

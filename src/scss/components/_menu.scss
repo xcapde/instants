@@ -33,3 +33,22 @@
     margin-right: 0.5rem;
     display: none;
 }
+
+// USER CARD
+.menu_cnt .user_cnt{
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.3rem 0.5rem 0rem;
+}
+
+.menu_cnt .user_cnt:hover{
+    cursor: pointer;
+    background-color: #316da5;
+}
+    
+.menu_cnt .user_cnt:active{
+    background-color: #3b7dbb;
+}
+
+.menu_cnt .user_photo{
+    background-color: #494949;
+}

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 
-export function SignIn() {
+export function SignUp() {
     return(
-        <div className="signin_pg">
+        <div className="signup_pg">
 
             <div className="form_cnt">
                 <div className="form_header">
@@ -22,7 +22,7 @@ export function SignIn() {
                         </div>
                         <input name="email" type="text" placeholder="E-mail"/>
                         <input name="password" type="password" placeholder="Password"/>
-                        <button type="submit" className="sigin_btn">CREATE</button>
+                        <button type="submit" className="singUp_btn">CREATE</button>
                     </div>
                 </div>
 

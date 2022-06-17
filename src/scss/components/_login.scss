@@ -5,10 +5,18 @@
 }
 
 .newUser_btn{
+    height: 5vh;
     border-top-left-radius: 0% !important;
     border-top-right-radius: 0% !important;
 }
 
 h1::first-letter{
     text-transform:uppercase;
+}
+
+@media only screen and (max-width: 500px){
+
+.newUser_btn{
+    border-radius: 0 !important;
+}
 }

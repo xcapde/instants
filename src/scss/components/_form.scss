@@ -16,7 +16,7 @@
     height: 4rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    background-color: #E1E1E1;
+    background-color: #0f365a;
     position: relative;
 }
 
@@ -39,18 +39,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #316da5;
+    color: #F9F9F9;
     font-size: large;
 }
 
 .back_btn:hover{
     cursor: pointer;
-    background-color: #d1d1d1;
+    background-color: #0a4780;
+}
+
+.back_btn:active{
+    background-color: #155692;
 }
 
 .form_header h1{
     background: none;
-    color: #316da5;
+    color: #F9F9F9;
     font-size: medium;
     display: flex;
     align-items: center;
@@ -59,7 +63,7 @@
 .form_body{
     width: 100%;
     height: 100%;
-    background-color: #316da5;
+    background-color: #153f66;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     display: flex;
@@ -71,7 +75,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5% 0;
     width: 100%;
     height: 100%;
 }
@@ -84,30 +87,41 @@
     height: 3rem;
     border-radius: 1.2rem;
     padding: 0 1.5rem;
+    background-color: #F9F9F9;
+}
+
+.form_body input:hover{
+    background-color: #d9e9f7;
+}
+
+.form_body input:focus{
+    background-color: #F9F9F9;
 }
 
 .form_body button{
+    position: relative;
     background: none;
     border: none;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     margin-top: 1rem;
     padding: 0.5rem 1.3rem;
     border-radius: 1.5rem;
-    background-color: #3b7dbb;
+    background-color: #0f365a;
     color: #F9F9F9;
     font-size: small;
     font-weight: 400;
 }
 
 .form_body button:hover{
-    background-color: #0a4780;
+    background-color: #0a803b;
 }
 
 .form_body button:active{
-    background-color: #165a99;
+    background-color: #108a43;
 }
 
 @media only screen and (max-width: 500px){
+    
     .form_cnt{
         width: 100%;
         border-radius: 0rem;
@@ -119,7 +133,6 @@
         width: 100%;
         height: 10vh;
         border-radius: 0rem;
-        background-color: #E1E1E1;
         position: relative;
     }
 
@@ -128,8 +141,6 @@
     }
 
     .form_body input{
-        border: none;
-        outline: none;
         width: 65%;
     }
 }

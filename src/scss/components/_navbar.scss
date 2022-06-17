@@ -13,17 +13,13 @@
     height: 10vh;
 }
 
-.search_bottom{
+.profile_btn, .search_bottom, .home_btn{
     display: none;
 }
 
 @media only screen and (max-width: 500px){
 
-    .menu_cnt{
-        display: none;
-    }
-
-    .searcher{
+    .menu_cnt, .searcher{
         display: none;
     }
 

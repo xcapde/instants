@@ -5,11 +5,12 @@
 @import url(./components/_cardButtons.scss);
 @import url(./components/_home.scss);
 @import url(./components/_login.scss);
-@import url(./components/_signin.scss);
+@import url(./components/_signup.scss);
 @import url(./components/_create.scss);
 @import url(./components/_details.scss);
 @import url(./components/_update.scss);
 @import url(./components/_form.scss);
+@import url(./components/_userCard.scss);
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -39,19 +40,15 @@ a{
     display: contents;
 }
 
-.signin_pg, .login_pg, .create_pg, .home_pg, .details_pg, .update_pg{
+.signup_pg, .login_pg, .create_pg, .home_pg, .details_pg, .update_pg{
     position: relative;
     top: 10vh;    
-    width: 100vw;
+    width: 100%;
     height: 90vh;
 }
 
-.list_pg{
-    width: 100vw;
-}
-
 @media only screen and (max-width: 500px){
-    .signin_pg, .login_pg, .create_pg, .home_pg, .details_pg, .update_pg, .form_cnt{
+    .signup_pg, .login_pg, .create_pg, .home_pg, .details_pg, .update_pg, .form_cnt{
         bottom: 10vh; 
         height: 80vh;   
     }   

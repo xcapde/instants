@@ -1,85 +1,112 @@
 .navbar_bottom{
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: #303030;
+    filter:drop-shadow(0.0rem .1rem .10rem #24242470);
+}
+
+.navbar_bottom .menu_cnt{
+    display: contents;
+}
+
+.navbar_bottom button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    height: 100%;
+    width: 20%;
+    color: #F9F9F9;
+}
+
+.navbar_bottom .nav_icon{
+    display: flex;
+    font-size: large;
+    height: 60%;
+    align-items: center;
+    margin: 0;
+}
+
+.navbar_bottom .nav_name{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.navbar_bottom button:hover{
+    color: #F9F9F9;
+    background-color: #316da5;
+}
+
+.navbar_bottom button:active{
+    background-color: #3b7dbb;
+}
+
+
+.navbar_bottom .search_bottom{
+    order: 2;
+}
+
+.navbar_bottom .create_btn{
+    order: 3;
+}
+
+.navbar_bottom .create_btn .nav_icon{
+    font-size: xx-large !important;
+}
+
+.navbar_bottom .login_btn{
+    order: 4;
+}
+
+.navbar_bottom  .home_btn{
+    order:1;
+}
+
+.navbar_bottom .profile_btn{
+    order:5;
+}
+
+// USER CARD
+
+.user_cnt{
+    width: 100%;
+}
+
+.profile_btn .user_cnt{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.profile_btn .user_photo{
+    font-size: large;
+    color: #F9F9F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.profile_btn .user_name{
     display: none;
 }
 
 
-@media only screen and (max-width: 500px){
+@media only screen and (min-width: 499px){
+
     .navbar_bottom{
-        z-index: 2;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        justify-content: space-around;
-        background-color: #303030;
-        filter:drop-shadow(0.0rem .1rem .10rem #24242470);
-    }
-    
-    .navbar_bottom .menu_cnt{
-        display: contents;
-    }
-    
-    .navbar_bottom button{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-        border-radius: 0;
-        background: none;
-        height: 100%;
-        width: 20%;
-        color: #F9F9F9;
-    }
-    
-    .navbar_bottom .nav_icon{
-        display: flex;
-        font-size: large;
-        height: 60%;
-        align-items: center;
-        margin: 0;
-    }
-    
-    .navbar_bottom .nav_name{
-        height: 40%;
-        display: flex;
-        align-items: center;
-        display: none;
-    }
-    
-    .navbar_bottom button:hover{
-        color: #F9F9F9;
-        background-color: #316da5;
-    }
-    
-    .navbar_bottom button:active{
-        background-color: #3b7dbb;
-    }
-
-    .login_btn{
-        order: 1;
-    }
-
-    .search_bottom{
-        order: 2;
-    }
-
-    .create_btn{
-        order: 3;
-    }
-
-    .create_btn .nav_icon{
-        font-size: xx-large !important;
-    }
-
-    .explore_btn{
-        order:4;
-    }
-
-    .profile_btn{
-        order:5;
+        display: none;  
     }
 }

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route,} from "react-router-dom";
 import React from "react";
-import { Details } from "../pages/details/Details";
-import { SignIn } from "../pages/SignIn";
+import { Details } from "../pages/Details";
+import { SignUp } from "../pages/SignUp";
 import { LogIn } from "../pages/LogIn";
 import { Create } from "../pages/Create";
 import App from "../App";
@@ -16,7 +16,7 @@ export default function Router(){
                 <Route path="/" element={<App/>}/>
                 {/* <Route path="/details/:id" element={<Details/>}/> */}
                 <Route path="/details" element={<Details/>}/>
-                <Route path="/signin" element={<SignIn/>}/>
+                <Route path="/signup" element={<SignUp/>}/>
                 <Route path="/login" element={<LogIn/>}/>
                 <Route path="/create" element={<Create/>}/>
             </Routes>

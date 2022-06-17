@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
+import { UserCard } from "../UserCard"
 
 export function Card(){
 
     return (
         <div className="card_cnt">
             <div className="card_txt">
-                <div className="card_user">
+                {/* <div className="card_user">
                     <div className="profile_photo">
                     </div>
                     <h2>User</h2>                        
-                </div>
+                </div> */}
+                <UserCard/>
                 <h1>Title..</h1>
             </div>
 
