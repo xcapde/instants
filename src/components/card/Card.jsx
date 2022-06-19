@@ -30,6 +30,9 @@ export function Card(props){
                     <div className="reaction_btns">
                         <button className="like_btn"><i className="fa-solid fa-heart"></i></button>
                         <button className="fav_btn"><i className="fa-solid fa-star"></i></button>
+                        {/* GOOGLE FONTS ICONS */}
+                        {/* <button className="like_btn"><span class="material-icons">favorite</span></button> */}
+                        {/* <button className="fav_btn"><span class="material-icons">star</span></button>                         */}
                     </div>
                     <div className="gestion_btns">
                         <button className="edit_btn"><i className="fa-solid fa-pencil"></i></button>

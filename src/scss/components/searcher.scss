@@ -12,16 +12,20 @@
     min-width: 10rem;
     position: relative;
     border: none;
-    background-color: $colorPrimaryLight;
+    // background-color: $colorPrimaryLight;
     color: $colorSecondaryLight;
     padding-left: 1.5rem;
     border-radius: 1.5rem;
     font-size: smaller;
     outline: none;
+
+    background-color: $colorPrimaryLightOpacity;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.103);
+    --webkit-backdrop-filter: blur( 12.5px );
 }
 
 .searcher input:hover{
-    background-color: $colorAlmostDark;
+    background-color: $colorBrokenWhite;   
     cursor: pointer;
 }
 
@@ -46,13 +50,5 @@
 
 .searcher button i{
     background:none;
-    color: $colorAlmostDark;
-}
-
-.searcher:hover i{
-    color: $colorSecondaryLight;
-}
-
-.searcher:active button i{
-    color: $colorSecondaryLight;
+    color: $colorShadowAlmostDark;
 }
