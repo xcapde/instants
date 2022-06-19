@@ -27,12 +27,13 @@ export function Details() {
 
                     <div className="details_body">
                         <p>Description</p>  
-                        <div className="reaction_btns">
-                            <div className="like_count">999 likes</div>
-                            <button className="like_btn"><i className="fa-solid fa-heart"></i></button>
-                            <button className="fav_btn"><i className="fa-solid fa-star"></i></button>
-                        </div>
-                    </div>            
+                    </div> 
+
+                    <div className="reaction_btns">
+                        <div className="like_count">999 likes</div>
+                        <button className="like_btn"><i className="fa-solid fa-heart"></i></button>
+                        <button className="fav_btn"><i className="fa-solid fa-star"></i></button>
+                    </div>          
 
                 </div>                
             </div>

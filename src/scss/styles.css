@@ -737,8 +737,8 @@
   width: 100%;
   height: 83%;
   background-color: #F9F9F9;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 
 .details_body p {
@@ -748,29 +748,31 @@
   font-size: smaller;
 }
 
-.details_body .like_count {
+.details_info .like_count {
   color: rgba(249, 249, 249, 0.6156862745);
   position: relative;
 }
 
-.details_body .reaction_btns {
+.details_info .reaction_btns {
   background-color: #478f72;
   color: #676767 !important;
   width: 100%;
   position: absolute;
   bottom: 0;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
 
-.details_body .reaction_btns button {
+.details_info .reaction_btns button {
   color: rgba(249, 249, 249, 0.4745098039);
 }
 
-.details_body .reaction_btns button:hover {
+.details_info .reaction_btns button:hover {
   background-color: rgba(249, 249, 249, 0.4745098039);
   color: #478f72;
 }
 
-.details_body .reaction_btns button:active {
+.details_info .reaction_btns button:active {
   background-color: rgba(249, 249, 249, 0.6156862745);
 }
 
@@ -806,13 +808,13 @@
   .details_body p {
     font-size: medium;
   }
-  .details_body .reaction_btns {
+  .details_info .reaction_btns {
     position: fixed;
     bottom: 0;
     border-radius: 0% !important;
     font-size: medium;
   }
-  .details_body .reaction_btns button {
+  .details_info .reaction_btns button {
     font-size: medium;
   }
 }
@@ -873,6 +875,7 @@
 .form_header h1 {
   background: none;
   color: #F9F9F9;
+  font-weight: 300;
   font-size: medium;
   display: flex;
   align-items: center;
@@ -943,8 +946,8 @@
   width: 100%;
   border-top-left-radius: 0% !important;
   border-top-right-radius: 0% !important;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
   color: #F9F9F9;
 }
 

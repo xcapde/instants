@@ -55,6 +55,7 @@
 .form_header h1{
     background: none;
     color: $colorAlmostWhite;
+    font-weight: 300;
     font-size: medium;
     display: flex;
     align-items: center;
@@ -125,8 +126,8 @@
     width: 100%;
     border-top-left-radius: 0% !important;
     border-top-right-radius: 0% !important;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
     color: $colorAlmostWhite;
 }
 
