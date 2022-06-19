@@ -14,6 +14,9 @@ export function List () {
                 <>{instants.map((instant,key) =>
                     <Card key={key} instant={instant}/>
                     )}</>
+
+                {/* <div className="full_blur"></div> */}
+
             </div>
         </div>
     )

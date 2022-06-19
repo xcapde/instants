@@ -1,0 +1,44 @@
+.searcher_pg .searcher{
+    justify-content: flex-end;
+}
+
+.searcher_pg .back_cnt{
+    z-index: 2;
+}
+
+.searcher_pg .searcher input{
+    width: 100%;
+    height: 100%;
+    background-color: $colorFormPrimaryDark;
+    border-radius: 0;
+    font-size: medium;
+}
+
+.searcher_pg .searcher input, .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active, .searcher_pg .searcher input:focus{
+    padding: 0 4rem 0 4rem !important;
+}
+
+.searcher_pg .searcher input:hover{
+    background-color: $colorAlmostGrey;   
+}
+
+.searcher_pg .searcher input::placeholder{
+    color: $colorAlmostWhiteOpacity;
+}
+
+.searcher_pg .searcher input:hover::placeholder{
+    color: $colorCardButton;
+}
+
+.searcher_pg .searcher button{
+    margin-right: 3%;
+}
+
+.searcher_pg .searcher button i{
+    font-size: medium;
+    color: $colorAlmostWhiteOpacity;
+}
+
+.searcher_pg .searcher:hover button i{
+    color: $colorNavbar;
+}

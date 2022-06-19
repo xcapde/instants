@@ -12,7 +12,6 @@ export function Card(props){
     return (
         <div className="card_cnt">
             <div className="card_txt">
-                {/* <UserCard instant={instant}/> */}
                 <div className="user_cnt">
                     <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
                     <h1 className="user_name">{instant.userName}</h1>

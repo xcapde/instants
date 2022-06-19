@@ -7,6 +7,18 @@
     overflow-y: auto;
 }
 
+.full_blur{
+    z-index: 3;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $colorPrimaryOpacity;
+    backdrop-filter: blur( 0.7rem );
+    -webkit-backdrop-filter: blur( 0.7rem );
+    border: 0.01rem solid $colorAlmostWhiteOpacityMore;
+}
+
 @media only screen and (max-width: $breakPointSmall){
     .list_cnt{
         margin-top: 3%;

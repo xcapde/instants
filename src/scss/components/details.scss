@@ -47,6 +47,7 @@
 
 .details_info .form_header{
     background-color: $colorTertiary;
+    height: 10vh;
 }
 
 .details_info .form_header .back_btn:hover{
@@ -74,21 +75,30 @@
 
 .details_info .like_count{
     color: $colorAlmostWhiteOpacityLess;
-    position: relative;
+    display: flex;
+    align-content: center !important;
+    position: absolute;
+    bottom: 2%;
 }
 
 .details_info .reaction_btns{
     background-color: $colorTertiary;
     color: $colorNavbar !important;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 7vh;
 }
 
 .details_info .reaction_btns button{
     color: $colorAlmostWhiteOpacity;
+    margin: 0 7%;
+    display: flex;
+    justify-content: center;
 }
 
 .details_info .reaction_btns button:hover{
@@ -150,4 +160,5 @@
     .details_info .reaction_btns button{
         font-size: medium;
     }
+
 }
