@@ -20,7 +20,7 @@ export function LogIn() {
                         <button type="submit" className="login_btn">LOG IN</button>
                     </div>
                     <Link to="/signup">
-                        <button className="newUser_btn" type="button">NEW USER</button>
+                        <button className="mainBottom_btn" type="button">NEW USER</button>
                     </Link>
                 </div>
             </div>

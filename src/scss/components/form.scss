@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 1.5rem;
-    filter:drop-shadow(0rem .1rem .15rem $colorShadowAlmostDark);
+    filter:drop-shadow(0rem .1rem .15rem $colorPrimaryLightOpacity);
 }
 
 .form_header{
@@ -45,11 +45,11 @@
 
 .back_btn:hover{
     cursor: pointer;
-    background-color: $colorDarkHover;
+    background-color: $colorFormHeaderHover;
 }
 
 .back_btn:active{
-    background-color: $colorDarkActive;
+    background-color: $colorFormHeaderActive;
 }
 
 .form_header h1{
@@ -117,7 +117,17 @@
 }
 
 .form_body button:active{
-    background-color: $colorFormSecundaryLight;
+    background-color: $colorFormSecundaryActive;
+}
+
+.mainBottom_btn{
+    height: 7vh;
+    width: 100%;
+    border-top-left-radius: 0% !important;
+    border-top-right-radius: 0% !important;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: $colorAlmostWhite;
 }
 
 @media only screen and (max-width: $breakPointSmall){
@@ -125,6 +135,7 @@
     .form_cnt{
         width: 100%;
         border-radius: 0rem;
+        height: 80vh;
     }
 
     .form_header{
@@ -143,5 +154,9 @@
 
     .form_body input{
         width: 65%;
+    }
+
+    .mainBottom_btn{
+        border-radius: 0 !important;
     }
 }

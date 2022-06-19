@@ -5,8 +5,9 @@
         "userSurname":"Capdevila",
         "description":"Illes Lofoten, Noruega",
         "imgUrl":"http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":true,
+        "isLike":false,
+        "likes":10,
         "id": 1
     },
     {
@@ -15,8 +16,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images.alphacoders.com/906/thumbbig-906175.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":true,
+        "isLike":true,
+        "likes":0,
         "id": 2
     },
     {
@@ -25,8 +27,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images.alphacoders.com/108/thumbbig-1085327.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":528,
         "id": 3
     },
     {
@@ -35,8 +38,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images3.alphacoders.com/688/thumbbig-688256.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":158726,
         "id": 4
     },
     {
@@ -45,8 +49,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images3.alphacoders.com/108/thumbbig-1089749.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":true,
+        "likes":10,
         "id": 5
     },
     {
@@ -55,8 +60,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images2.alphacoders.com/108/thumbbig-1088235.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":14,
         "id": 6
     },
     {
@@ -65,8 +71,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images7.alphacoders.com/108/thumbbig-1080021.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":true,
+        "isLike":true,
+        "likes":20,
         "id": 7
     },
     {
@@ -75,8 +82,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images8.alphacoders.com/108/thumbbig-1088268.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":10,
         "id": 8
     },
     {
@@ -85,8 +93,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images7.alphacoders.com/109/thumbbig-1092279.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":7,
         "id": 9
     },
     {
@@ -95,8 +104,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images7.alphacoders.com/997/thumbbig-997627.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":true,
+        "isLike":false,
+        "likes":1,
         "id": 10
     },
     {
@@ -105,8 +115,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images7.alphacoders.com/885/thumbbig-885453.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":true,
+        "likes":108,
         "id": 11
     },
     {
@@ -115,8 +126,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images4.alphacoders.com/109/thumbbig-1090395.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":10025,
         "id": 12
     },
     {
@@ -125,8 +137,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images4.alphacoders.com/887/thumbbig-887130.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":158,
         "id": 13
     },
     {
@@ -135,8 +148,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images8.alphacoders.com/885/thumbbig-885432.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":true,
+        "isLike":true,
+        "likes":7025,
         "id": 14
     },
     {
@@ -145,8 +159,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images3.alphacoders.com/110/thumbbig-1103130.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":false,
+        "isLike":false,
+        "likes":1001,
         "id": 15
     },
     {
@@ -155,8 +170,9 @@
         "userSurname":"Surname",
         "description":"Description",
         "imgUrl":"https://images.alphacoders.com/772/thumbbig-772749.webp",
-        "isFav":"false",
-        "isLike":"false",
+        "isFav":true,
+        "isLike":false,
+        "likes":999,
         "id": 16
     }
 ]

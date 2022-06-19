@@ -13,19 +13,18 @@
     position: relative;
     border: none;
     // background-color: $colorPrimaryLight;
-    color: $colorSecondaryLight;
+    color: $colorSecondaryActive;
     padding-left: 1.5rem;
     border-radius: 1.5rem;
     font-size: smaller;
     outline: none;
 
     background-color: $colorPrimaryLightOpacity;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.103);
-    --webkit-backdrop-filter: blur( 12.5px );
+    --webkit-backdrop-filter: blur( 0.7rem );
 }
 
 .searcher input:hover{
-    background-color: $colorBrokenWhite;   
+    background-color: $colorAlmostGrey;   
     cursor: pointer;
 }
 
@@ -50,5 +49,5 @@
 
 .searcher button i{
     background:none;
-    color: $colorShadowAlmostDark;
+    color: $colorNavbar;
 }

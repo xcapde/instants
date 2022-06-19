@@ -5,13 +5,14 @@ export function Details() {
         <div className="details_pg">
 
             <div className="details_cnt">
+
                 <div className="details_photo">
                         <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
                 </div>
 
                 <div className="details_info">
 
-                    <div className="details_header">
+                    <div className="form_header">
                         <div className="back_cnt">
                             <Link to="/">                    
                                 <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
@@ -25,13 +26,15 @@ export function Details() {
                     </div>
 
                     <div className="details_body">
+                        <p>Description</p>  
+                        <div className="reaction_btns">
+                            <div className="like_count">999 likes</div>
+                            <button className="like_btn"><i className="fa-solid fa-heart"></i></button>
+                            <button className="fav_btn"><i className="fa-solid fa-star"></i></button>
+                        </div>
+                    </div>            
 
-                        <p>Description</p>
-
-                    </div>
-
-                </div>
-                
+                </div>                
             </div>
 
         </div>

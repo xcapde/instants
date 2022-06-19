@@ -1,35 +1,37 @@
 $colorAlmostDark:#242424;
-$colorShadowAlmostDark:#2424246e;
+$colorAlmostDarkOpacity: #2424241a;
 $colorAlmostGrey: #E1E1E1;
 $colorAlmostWhite:#F9F9F9;
-$colorBrokenWhite:#d1d3d4;
+$colorAlmostWhiteOpacity: #f9f9f979;
+$colorAlmostWhiteOpacityLess: #f9f9f99d;
+$colorAlmostWhiteOpacityMore: #f9f9f92f;
 
 $colorPrimary: #303030;
 $colorPrimaryOpacity: #303030bb;
 $colorPrimaryLight:#494949;
 $colorPrimaryLightOpacity:#49494977;
 $colorSecondary: #316da5;
-$colorSecondaryLight: #3b7dbb;
+$colorSecondaryActive: #3b7dbb;
 $colorTertiary: #73877F;
-$colorTertiaryHover: #869991;
-$colorTertiaryActive: #81948d;
+$colorTertiaryHover: #849b92;
+$colorTertiaryActive: #98a7a1;
 
+$colorNavbar:#676767;
 $colorFormPrimary: #153f66;
 $colorFormPrimaryDark:#0f365a;
 $colorFormSecundary:#0a803b;
-$colorFormSecundaryLight:#108a43;
+$colorFormSecundaryActive:#108a43;
 $colorFormInputHover:#d9e9f7;
-$colorDarkHover:#0a4780;
-$colorDarkActive:#155692;
+$colorFormHeaderHover:#0a4780;
+$colorFormHeaderActive:#155692;
+$colorCreateInputHover:#7198bd;
 
-$colorCardSecondary:#4ACC95;
-$colorCardButton:#3e89b4;
 $colorFav: #FCA641;
-$colorFavLight: #fcb462;
+$colorFavActive: #fcb462;
 $colorLike: #EE3561;
-$colorLikeLight:#F1557A;
+$colorLikeActive:#F1557A;
 
-$shadows: filter drop-shadow(2px 2px 5px rgba(2,2,0,0.4));
+$shadows: filter drop-shadow(0rem .1rem .15rem $colorPrimaryLightOpacity);
 
 $breakPointSmall: 500px;    
 $breakPontMedium: 750px;
@@ -86,6 +88,6 @@ $breakPontLarge: 1000px;
     }
 
     &menuButton:active{
-        background-color: $colorSecondaryLight;
+        background-color: $colorSecondaryActive;
     }
 }

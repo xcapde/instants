@@ -24,6 +24,7 @@ export function Card(props){
                 <Link to="/detail">                            
                     <img src={instant.imgUrl} alt=""/>
                 </Link>
+                <div className="like_count">{instant.likes} likes</div>
             </div>
 
                 <div className="card_btns">                    

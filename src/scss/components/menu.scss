@@ -26,7 +26,7 @@
 }
 
 .menu_cnt button:active{
-    background-color: $colorSecondaryLight;
+    background-color: $colorSecondaryActive;
 }
 
 .nav_icon{
@@ -46,7 +46,7 @@
 }
     
 .menu_cnt .user_cnt:active{
-    background-color: $colorSecondaryLight;
+    background-color: $colorSecondaryActive;
 }
 
 .menu_cnt .user_photo{

@@ -12,7 +12,7 @@
 }
 
 .card_btns button{
-    color: $colorCardButton;
+    color: $colorTertiary;
 }
 
 .reaction_btns, .gestion_btns{
@@ -64,7 +64,7 @@
 }
 
 .like_btn:active{
-    color: $colorLikeLight;
+    color: $colorLikeActive;
 }
 
 .fav_btn:hover{
@@ -72,7 +72,7 @@
 }
 
 .fav_btn:active{
-    color: $colorFavLight;
+    color: $colorFavActive;
 }
 
 .edit_btn:hover, .delete_btn:hover{
