@@ -426,7 +426,7 @@
 }
 
 .card_btns button {
-  color: #478f72;
+  color: #73877F;
 }
 
 .reaction_btns, .gestion_btns {
@@ -495,7 +495,7 @@
 }
 
 .edit_btn:active, .delete_btn:active {
-  color: #666666;
+  color: #73877F;
 }
 
 @media only screen and (max-width: 500px) {
