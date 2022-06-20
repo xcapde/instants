@@ -17,7 +17,7 @@ export function List () {
                 
                 {/* <Spinner/> */}
                 {/* <Modal/> */}
-                <Update/>
+                {/* <Update/> */}
 
                 <>{instants.map((instant,key) =>
                     <Card key={key} instant={instant}/>
