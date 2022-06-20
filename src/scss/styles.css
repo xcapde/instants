@@ -1268,6 +1268,7 @@ input:focus::placeholder {
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   color: #F9F9F9;
+  margin: 0 !important;
 }
 
 @media only screen and (max-width: 500px) {
