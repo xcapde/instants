@@ -108,18 +108,18 @@
     margin-top: 1rem;
     padding: 0.5rem 1.3rem;
     border-radius: 1.5rem;
-    background-color: $colorSecundary;
+    background-color: $colorSecondary;
     color: $colorWhite;
     font-size: small;
     font-weight: 400;
 }
 
 .form_body button:hover{
-    background-color: $colorSecundaryHover;
+    background-color: $colorSecondaryHover;
 }
 
 .form_body button:active{
-    background-color: $colorSecundaryActive;
+    background-color: $colorSecondaryActive;
 }
 
 .mainBottom_btn{
@@ -129,8 +129,16 @@
     border-top-right-radius: 0% !important;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+    // background-color: $colorSecondary !important;
+    background-color: $colorGreyHeader !important;
     color: $colorWhite;
     margin: 0!important;
+    &:hover{
+        background-color:$colorSecondaryHover !important;
+    }
+    &:active{
+        background-color: $colorSecondaryActive !important;
+    }
 }
 
 @media only screen and (max-width: $breakPointSmall){

@@ -8,10 +8,12 @@
     display: flex;
     justify-content: space-around;
 
-    background-color: $colorHeaderOpacity;
+    // background-color: $colorHeaderOpacity;
+    // background-color: $colorDarkOpacity;
+    background-color: $colorDarkOpacityLess;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
-    border: 0.01rem solid $colorHeader;
+    border: 0.01rem solid $colorDarkOpacity;
 }
 
 .navbar_bottom .menu_cnt{

@@ -14,7 +14,7 @@
     width: 65%;
     height: 90%;
     margin-left: 3%;
-    background-color: $colorSecundary;
+    background-color: $colorGrey;
     border-radius: 1rem;
 }
 
@@ -23,7 +23,7 @@
     height: 100%;
     width: 100%;
     border-radius: 1rem;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 
 .create_pg .inputs{
@@ -78,18 +78,18 @@
     margin-top: 1rem;
     padding: 0.5rem 1.3rem;
     border-radius: 1.5rem;
-    background-color: $colorSecundary;
+    background-color: $colorSecondary;
     color: $colorWhite;
     font-size: small;
     font-weight: 400;
 }
 
 .create_pg .form_body button:hover{
-    background-color: $colorSecundaryHover;
+    background-color: $colorSecondaryHover;
 }
 
 .create_pg .form_body button:active{
-    background-color: $colorSecundaryActive;
+    background-color: $colorSecondaryActive;
 }
 
 @media only screen and (max-width: $breakPointSmall){

@@ -83,7 +83,11 @@
 }
 
 .details_info .reaction_btns{
-    background-color: $colorSecundary;
+    // background-color: $colorSecondary;
+    background-color: $colorWhite;
+    border-top-width: 0.1rem;
+    border-top-color: $colorDarkOpacity;
+    border-top-style: solid;
     color: $colorGrey !important;
     width: 100%;
     border-bottom-left-radius: 1.5rem;
@@ -96,19 +100,28 @@
 }
 
 .details_info .reaction_btns button{
-    color: $colorWhiteOpacity;
+    color: $colorGreyHeader;
     margin: 0 7%;
     display: flex;
     justify-content: center;
 }
 
-.details_info .reaction_btns button:hover{
-    background-color: $colorSecundaryActive;
-    color: $colorSecundary;
+.details_info .like_btn{
+    &:hover{
+        color:$colorLike;
+    }
+    &:active{
+        color:$colorLikeActive
+    }
 }
 
-.details_info .reaction_btns button:active{
-    background-color: $colorWhiteOpacityLess;
+.details_info .fav_btn{
+    &:hover{
+        color:$colorFav;
+    }
+    &:active{
+        color:$colorFavActive
+    }
 }
 
 @media only screen and (max-width: $breakPointSmall){

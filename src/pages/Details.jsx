@@ -8,7 +8,7 @@ export function Details() {
 
                 <div className="details_photo">
                         <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
-                        {/* <div className="like_count">999 likes</div> */}
+                        <div className="like_count">999 likes</div>
                 </div>
 
                 <div className="details_info">
@@ -24,6 +24,7 @@ export function Details() {
 
                     <div className="details_photo_mobile">
                         <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
+                        <div className="like_count">999 likes</div>
                     </div>
 
                     <div className="details_body">

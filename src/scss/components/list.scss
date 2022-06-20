@@ -5,7 +5,19 @@
     height: unset;
     flex-wrap: wrap;
     overflow-y: auto;
+
+    // animation: moveToRight 1s ease-in-out;
+    // animation-delay: 10ms;
 }
+
+// @keyframes moveToRight {
+// 0% {
+//     transform: translateX(-100vw);
+// }
+// 100% {
+//     transform: translateX(0vw);
+// }
+// }
 
 @media only screen and (max-width: $breakPointSmall){
     .list_cnt{

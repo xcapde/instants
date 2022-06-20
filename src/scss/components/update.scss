@@ -12,7 +12,7 @@
     position: fixed;
     width: 100%;
 
-    background-color: $colorGreyOpacity;
+    background-color: $colorDarkOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
     border: 0.01rem solid $colorWhiteOpacityMore;
@@ -32,9 +32,10 @@
 
 .inputs_box label{
     width: 100%;
-    color: $colorWhiteOpacity;
-    font-weight: 100;
+    font-size: small;
     margin-top: 1rem;
+    color: $colorDarkOpacityLess;
+    font-weight: 400;
 }
 
 .inputs_box textarea, .inputs_box input, .inputs_box button{
@@ -48,10 +49,10 @@
 
 .inputs_box textarea, .inputs_box input{
     padding: 0 4%;
-    color: $colorWhite;
     font-size: medium;
     width: 100% !important;
-
+    background-color: $colorWhiteOpacity;
+    color: $colorDarkOpacityLess !important;
 }
 
 .inputs_box textarea, .imgurl_input, .description_input{
@@ -61,7 +62,7 @@
     }
 
     &:hover{
-        background-color: $colorWhiteOpacity;
+        background-color: $colorWhite;
         color: $colorDarkOpacityLess !important;
     }
     &:focus{
@@ -79,14 +80,13 @@
     height: 2.5rem;
     font-size: x-large !important;
     background: none !important;
-    color: $colorWhite !important;
 
     &::placeholder{
         color: $colorWhiteOpacity;
     }
 
     &:hover, &:focus{
-        color: $colorWhite;
+        color: $colorDark !important;
     } 
 
     &:hover::placeholder, &:focus::placeholder{
@@ -103,12 +103,11 @@
     max-height: 20rem;
     font-size: medium;  
     min-width: inherit;
-    max-width: 100%;
 }
 
 .imgurl_input{
     height: 2.5rem;
-    color: $colorWhiteOpacity !important;   
+    // color: $colorWhiteOpacity !important;   
 }
 
 .update_btns{
@@ -128,12 +127,12 @@
 }
 
 .update_btn{
-    background-color: $colorSecundary !important;
+    background-color: $colorSecondary !important;
     &:hover{
-        background-color: $colorSecundaryHover !important;
+        background-color: $colorSecondaryHover !important;
     }
     &:active{
-        background-color: $colorSecundaryActive !important;
+        background-color: $colorSecondaryActive !important;
     }
 }
 
