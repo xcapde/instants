@@ -1,46 +1,43 @@
-$colorAlmostDark:#242424;
-$colorAlmostDarkOpacity: #2424241a;
-$colorAlmostDarkOpacityLess: #24242494;
-$colorAlmostGrey: #E1E1E1;
-$colorAlmostWhite:#F9F9F9;
-$colorAlmostWhiteOpacity: #f9f9f979;
-$colorAlmostWhiteOpacityLess: #f9f9f99d;
-$colorAlmostWhiteOpacityMore: #f9f9f92f;
+$colorDark:#242424;
+$colorDarkOpacity: #2424241a;
+$colorDarkOpacityLess: #24242494;
 
-$colorPrimary: #303030;
-$colorPrimaryOpacity: #303030bb;
-$colorPrimaryLight:#494949;
-$colorPrimaryLightOpacity:#49494977;
-$colorSecondary: #316da5;
-$colorSecondaryActive: #3b7dbb;
-$colorTertiary: #267053;
-$colorTertiaryHover: #358565;
-$colorTertiaryActive: #5e9c83;
+$colorGrey: #d3d3d3;
+$colorGreyOpacity:#5757578c;
 
-$colorNavbar:#676767;
-$colorFormPrimary: #153f66;
-$colorFormPrimaryDark:#0f365a;
-$colorFormSecundary:#0a803b;
-$colorFormSecundaryActive:#108a43;
-$colorFormInputHover:#d9e9f7;
-$colorFormHeaderHover:#0a4780;
-$colorFormHeaderActive:#155692;
-$colorCreateInputHover:#7198bd;
+$colorWhite:#F9F9F9;
+$colorWhiteOpacity: #f9f9f979;
+$colorWhiteOpacityLess: #f9f9f99d;
+$colorWhiteOpacityMore: #f9f9f92f;
 
-$colorCardButton: #73877F;
+$colorPrimary: #edeeeb;
+$colorSecundary:#99b959;
+$colorSecundaryHover:#a6c764;
+$colorSecundaryActive:rgb(179, 212, 113);
+$colorSecundaryDark:#7da72b;
+
+$colorGreyHeader: #a8a8a8;
+$colorGreyHeaderHover: rgb(190, 190, 190);
+
+$colorHeaderOpacity: rgba(12, 136, 95, 0.863);
+$colorHeader:#289772;
+$colorHeaderHover:#25a77b;
+$colorHeaderActive:#36af87;
+$colorHeaderDark:#056344;
+$colorTabsMobile:#2fa57d;
+
 $colorFav: #FCA641;
 $colorFavActive: #fcb462;
 $colorLike: #EE3561;
 $colorLikeActive:#F1557A;
 
-$shadows: filter drop-shadow(0rem .1rem .15rem $colorPrimaryLightOpacity);
+$shadows: filter drop-shadow(0rem .1rem .15rem $colorGreyOpacity);
 
 $breakPointSmall: 500px;    
 $breakPontMedium: 750px;
 $breakPontLarge: 1000px;
 
 @mixin displayFlexCenter {
-    background-color: #D30D3C;
     height: 20vh;
     display: flex;
     justify-content: center;
@@ -76,7 +73,6 @@ $breakPontLarge: 1000px;
 }
 
 @mixin menuButton {
-    background: $colorPrimaryLight;
     border: none;
     border-radius: 50%;
     color: $colorCardPrimary;

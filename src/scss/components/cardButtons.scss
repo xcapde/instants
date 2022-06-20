@@ -1,6 +1,6 @@
 .card_btns, .reaction_btns, .gestion_btns{
     z-index: 1;
-    background-color:$colorAlmostWhite;
+    background-color:$colorWhite;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,7 +12,7 @@
 }
 
 .card_btns button{
-    color: $colorCardButton;
+    color: $colorGreyHeader;
 }
 
 .reaction_btns, .gestion_btns{
@@ -76,12 +76,12 @@
 }
 
 .edit_btn:hover, .delete_btn:hover{
-    color:$colorPrimary;
-    background-color: $colorAlmostGrey;
+    color:$colorDarkOpacityLess;
+    background-color: $colorDarkOpacity;
 }
 
 .edit_btn:active, .delete_btn:active{
-    color:$colorCardButton;
+    color:$colorGreyOpacity;
 }
 
 @media only screen and (max-width: $breakPointSmall){

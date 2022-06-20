@@ -4,17 +4,17 @@
     width: 18%;
     margin: 1.5% 1%;
     // @include shadows();
-    filter:drop-shadow(0rem .1rem .15rem $colorPrimaryLightOpacity);
-    background-color: $colorSecondaryActive;
+    filter:drop-shadow(0rem .1rem .15rem $colorGreyOpacity);
+    background-color: $colorHeaderActive;
     border-radius: 0.8rem;
 }
 
 .card_cnt:hover{
-    filter:drop-shadow(0rem .1rem .15rem $colorPrimaryLight);
+    filter:drop-shadow(0rem .1rem .15rem $colorDarkOpacityLess);
 }
 
 .card_img{
-    background-color: $colorAlmostGrey;
+    background-color: $colorGrey;
     width: 100%;
     height: 100%;
     position: relative;
@@ -37,17 +37,17 @@
     left: 0;
     padding: 1% 3%;
     margin: 1%;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
     font-size: x-small;
     border-radius: 0.5rem;
-    background-color: $colorAlmostDarkOpacity;
+    background-color: $colorDarkOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
 }
 
 .card_txt{
     width: 100%;
-    background-color:$colorAlmostWhite;
+    background-color:$colorWhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,7 +59,7 @@
 
 .card_txt h2{
     width: auto;
-    color: $colorAlmostDark;
+    color: $colorDark;
     font-size: smaller;
     font-weight: 300;
     margin: 0;
@@ -71,7 +71,7 @@
 .card_txt h1{
     width: 90%;
     background-color: inherit;
-    color: $colorAlmostDark;
+    color: $colorDark;
     font-weight: 500;
     font-size: medium;
     overflow: hidden;

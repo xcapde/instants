@@ -14,7 +14,7 @@
     width: 65%;
     height: 90%;
     margin-left: 3%;
-    background-color: $colorFormPrimaryDark;
+    background-color: $colorSecundary;
     border-radius: 1rem;
 }
 
@@ -44,22 +44,15 @@
     height: 3rem;
     border-radius: 1.2rem;
     padding: 0 1.5rem;
-    background-color: $colorFormPrimaryDark;
+    background-color: $colorWhite;
 }
 
-.create_pg input::placeholder, .create_pg textarea::placeholder{
-    color: $colorAlmostWhite;
-}
 .create_pg input:hover, .create_pg textarea:hover{
-    background-color: $colorCreateInputHover !important;
+    background-color: $colorWhiteOpacity !important;
 }
 
 .create_pg input:focus, .create_pg textarea:focus{
-    background-color: $colorAlmostWhite !important;
-}
-
-.create_pg input:focus::placeholder, .create_pg textarea:focus::placeholder{
-    color: $colorTertiaryActive;
+    background-color: $colorWhite !important;
 }
 
 .create_pg textarea{
@@ -74,7 +67,7 @@
     margin: 0.5rem 0;
     border-radius: 1.2rem;
     padding: 1rem 1.5rem;
-    background-color: $colorFormPrimaryDark;
+    background-color: $colorWhite;
 } 
 
 .create_pg .form_body button{
@@ -85,18 +78,18 @@
     margin-top: 1rem;
     padding: 0.5rem 1.3rem;
     border-radius: 1.5rem;
-    background-color: $colorFormPrimaryDark;
-    color: $colorAlmostWhite;
+    background-color: $colorSecundary;
+    color: $colorWhite;
     font-size: small;
     font-weight: 400;
 }
 
 .create_pg .form_body button:hover{
-    background-color: $colorFormSecundary;
+    background-color: $colorSecundaryHover;
 }
 
 .create_pg .form_body button:active{
-    background-color: $colorFormSecundaryActive;
+    background-color: $colorSecundaryActive;
 }
 
 @media only screen and (max-width: $breakPointSmall){

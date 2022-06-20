@@ -4,7 +4,7 @@
 
 .logo{
     background-color: inherit;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
     font-size: larger;
     font-weight: 400;
     height: 100%;
@@ -16,7 +16,7 @@
 }
 
 .logo:hover{
-    color:$colorAlmostDark;
+    color:$colorHeaderDark;
 }
 
 @media only screen and (max-width: $breakPointSmall){

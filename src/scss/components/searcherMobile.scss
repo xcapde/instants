@@ -1,3 +1,8 @@
+.searcher_pg{
+    background-color: $colorWhite;
+    height: 100vh;
+}
+
 .searcher_pg .searcher{
     justify-content: flex-end;
 }
@@ -9,7 +14,7 @@
 .searcher_pg .searcher input{
     width: 100%;
     height: 100%;
-    background-color: $colorFormPrimaryDark;
+    background-color: $colorHeader;
     border-radius: 0;
     font-size: medium;
 }
@@ -19,17 +24,21 @@
 }
 
 .searcher_pg .searcher input:hover{
-    background-color: $colorAlmostGrey;   
+    background-color: $colorGrey;   
 }
 
 .searcher_pg .searcher input::placeholder{
-    color: $colorAlmostWhiteOpacity;
+    color: $colorWhiteOpacity;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     font-weight: 200 !important;
 }
 
 .searcher_pg .searcher input:hover::placeholder{
-    color: $colorCardButton;
+    color: $colorGreyHeader;
+}
+
+.searcher_pg .searcher input:focus::placeholder{
+    color: $colorDarkOpacityLess !important;
 }
 
 .searcher_pg .searcher button{
@@ -38,9 +47,9 @@
 
 .searcher_pg .searcher button i{
     font-size: medium;
-    color: $colorAlmostWhiteOpacity;
+    color: $colorWhiteOpacity;
 }
 
 .searcher_pg .searcher:hover button i{
-    color: $colorNavbar;
+    color: $colorDarkOpacityLess;
 }

@@ -39,7 +39,10 @@
     background: none;
     display: flex;
     justify-content: center;
-    background-color: white;
+}
+
+.App, body, html{
+    background-color: $colorWhite;
 }
 
 a{

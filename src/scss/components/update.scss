@@ -2,7 +2,6 @@
     z-index: 3;
     position: relative;
     top: 10vh;    
-    width: 100%;
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -11,12 +10,12 @@
 
 .full_blur{
     position: fixed;
-    width: 100vw;
+    width: 100%;
 
-    background-color: $colorPrimaryOpacity;
+    background-color: $colorGreyOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
-    border: 0.01rem solid $colorAlmostWhiteOpacityMore;
+    border: 0.01rem solid $colorWhiteOpacityMore;
 }
 
 .update_box{
@@ -33,7 +32,7 @@
 
 .inputs_box label{
     width: 100%;
-    color: $colorAlmostWhiteOpacity;
+    color: $colorWhiteOpacity;
     font-weight: 100;
     margin-top: 1rem;
 }
@@ -44,43 +43,54 @@
     outline: none;
     border-radius: 0.5rem;
     margin-top: 0.3rem;
-    background-color: $colorAlmostWhiteOpacityMore;
+    background-color: $colorWhiteOpacityMore;
 }
 
 .inputs_box textarea, .inputs_box input{
     padding: 0 4%;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
     font-size: medium;
     width: 100% !important;
 
+}
+
+.inputs_box textarea, .imgurl_input, .description_input{
+    
     &::placeholder{
-        color: $colorAlmostWhiteOpacity;
+        color: $colorWhiteOpacity;
     }
+
     &:hover{
-        background-color: $colorAlmostWhiteOpacityLess;
-        color: $colorAlmostDarkOpacityLess;
+        background-color: $colorWhiteOpacity;
+        color: $colorDarkOpacityLess !important;
     }
     &:focus{
-        background-color: $colorAlmostWhite;
-        color: $colorAlmostDark;
+        background-color: $colorWhite;
+        color: $colorDark !important;
     }
+
     &:focus::placeholder{
-        color: $colorAlmostDark;
+        color: $colorDarkOpacityLess;
     }
 }
+
 
 .title_input{
     height: 2.5rem;
     font-size: x-large !important;
     background: none !important;
-    color: $colorAlmostWhite !important;
+    color: $colorWhite !important;
 
-    // &:hover, &:focus{
-    //     background-color: $colorAlmostWhiteOpacity !important;
-    // } 
+    &::placeholder{
+        color: $colorWhiteOpacity;
+    }
 
-    &:focus::placeholder{
-        color:$colorAlmostWhite !important;
+    &:hover, &:focus{
+        color: $colorWhite;
+    } 
+
+    &:hover::placeholder, &:focus::placeholder{
+        color: $colorWhiteOpacityLess !important;
     }
 }
 
@@ -97,7 +107,8 @@
 }
 
 .imgurl_input{
-    height: 2.5rem;   
+    height: 2.5rem;
+    color: $colorWhiteOpacity !important;   
 }
 
 .update_btns{
@@ -110,23 +121,31 @@
     margin: 1.5rem 0.5rem !important;
     padding: 0.5rem 1.3rem;
     border-radius: 1.5rem;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
     font-size: small;
     font-weight: 400; 
     width: 10rem;   
-    
+}
+
+.update_btn{
+    background-color: $colorSecundary !important;
     &:hover{
-        background-color: $colorFormSecundary;
+        background-color: $colorSecundaryHover !important;
     }
     &:active{
-        background-color: $colorFormSecundaryActive;
+        background-color: $colorSecundaryActive !important;
     }
 }
 
-.cancel_btn:hover{
-    background-color: $colorPrimary;
+.cancel_btn{
+    background-color: $colorDarkOpacity !important;
+    color: $colorWhiteOpacityLess;
+    &:hover{
+    background-color: $colorDarkOpacityLess !important;
+    color: $colorWhite;
+    }
     &:active{
-        background-color: $colorAlmostDarkOpacityLess;
+        background-color: $colorGreyOpacity !important;
     }
 }
 

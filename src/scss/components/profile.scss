@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: $colorFormPrimary;
+    background-color: $colorTabsMobile;
     position: fixed;
     top: 10vh;
     width: 100%;
@@ -15,15 +15,15 @@
     background: none;
     border: none;
     font-size: small;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
 }
 
 .profile_tabs button:hover{
-    background-color: $colorFormHeaderHover;
+    background-color: $colorHeaderHover;
 }
 
 .profile_tabs button:active{
-    background-color: $colorFormHeaderActive;
+    background-color: $colorHeaderActive;
 }
 
 .profile_body{
@@ -51,7 +51,7 @@
 }
 
 .tab_user .user_name{
-    color: $colorAlmostDark;
+    color: $colorDark;
     font-size: large;
     font-weight: 400;
 }

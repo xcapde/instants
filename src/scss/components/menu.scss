@@ -14,24 +14,28 @@
     margin-left: 0.5rem;
     padding: 0.5rem 1.3rem;
     border-radius: 1.5rem;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
     font-size: small;
     font-weight: 400;
     white-space:nowrap;
 }
 
 .menu_cnt button:hover{
-    background-color: $colorSecondary;
+    background-color: $colorHeaderHover;
     cursor: pointer;
 }
 
 .menu_cnt button:active{
-    background-color: $colorSecondaryActive;
+    background-color: $colorHeaderActive;
 }
 
 .nav_icon{
     margin-right: 0.5rem;
     display: none;
+    // opacity: 0.8;
+    // &:focus, &:active{
+    //     opacity: 1;
+    // }
 }
 
 // USER CARD
@@ -42,13 +46,13 @@
 
 .menu_cnt .user_cnt:hover{
     cursor: pointer;
-    background-color: $colorSecondary;
+    background-color: $colorHeaderHover;
 }
     
 .menu_cnt .user_cnt:active{
-    background-color: $colorSecondaryActive;
+    background-color: $colorHeaderActive;
 }
 
 .menu_cnt .user_photo{
-    background-color: $colorPrimaryLight;
+    background-color: $colorGrey;
 }

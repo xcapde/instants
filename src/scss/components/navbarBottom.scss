@@ -8,10 +8,10 @@
     display: flex;
     justify-content: space-around;
 
-    background-color: $colorPrimaryOpacity;
+    background-color: $colorHeaderOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
-    border: 0.01rem solid $colorAlmostWhiteOpacityMore;
+    border: 0.01rem solid $colorHeader;
 }
 
 .navbar_bottom .menu_cnt{
@@ -29,7 +29,7 @@
     background: none;
     height: 100%;
     width: 20%;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
 }
 
 .navbar_bottom .nav_icon{
@@ -48,12 +48,12 @@
 }
 
 .navbar_bottom button:hover{
-    color: $colorAlmostWhite;
-    background-color: $colorSecondary;
+    color: $colorWhite;
+    background-color: $colorHeaderHover;
 }
 
 .navbar_bottom button:active{
-    background-color: $colorSecondaryActive;
+    background-color: $colorHeaderActive;
 }
 
 
@@ -95,7 +95,7 @@
 
 .profile_btn .user_photo{
     font-size: large;
-    color: $colorAlmostWhite;
+    color: $colorWhite;
     display: flex;
     align-items: center;
     justify-content: center;

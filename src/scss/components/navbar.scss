@@ -4,17 +4,17 @@
 
 
 .navbar_cnt{
-    z-index: 1;
+    z-index: 5;
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
     height: 10vh;
 
-    background-color: $colorPrimaryOpacity;
+    background-color: $colorHeaderOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
-    border: 0.01rem solid $colorAlmostWhiteOpacityMore;
+    border: 0.01rem solid $colorHeader;
 }
 
 .profile_btn, .search_bottom, .home_btn{
@@ -28,13 +28,10 @@
         display: none;
     }    
     
-    // .menu_cnt, .searcher{
-    //     display: none;
-    // }
 
     .navbar_cnt{
         z-index: 2;
-        filter:drop-shadow(0.0rem .1rem .05rem $colorAlmostDark);
+        filter:drop-shadow(0.0rem .1rem .05rem $colorDark);
     }
 
 }
