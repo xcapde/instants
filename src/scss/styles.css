@@ -795,7 +795,7 @@
 }
 
 .cancel_btn:hover {
-  background-color: #242424;
+  background-color: #303030;
 }
 .cancel_btn:hover:active {
   background-color: rgba(36, 36, 36, 0.5803921569);

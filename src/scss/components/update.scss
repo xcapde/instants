@@ -124,7 +124,7 @@
 }
 
 .cancel_btn:hover{
-    background-color: $colorAlmostDark;
+    background-color: $colorPrimary;
     &:active{
         background-color: $colorAlmostDarkOpacityLess;
     }

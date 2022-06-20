@@ -14,8 +14,8 @@ export function Update() {
                     <input className="imgurl_input" name="imageUrl" id="imageUrl" type="text" placeholder="Image URL"/>
                     
                     <div className="update_btns">                    
+                        <button type="button" className="cancel_btn">CANCEL</button>
                         <button type="submit" className="update_btn">UPDATE</button>
-                        <button type="submit" className="cancel_btn">CANCEL</button>
                     </div>
                 </div>
             </div>
