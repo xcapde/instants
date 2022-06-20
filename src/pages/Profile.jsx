@@ -16,10 +16,11 @@ export function Profile() {
                 </div>
 
                 <div className="profile_tabs">
-                        <button >PROFILE</button>
-                        <button >IMAGES</button>
-                        <button >LIST</button>
-                        <button >FAVS</button>
+                        {/* <Link to="user_card"></Link> */}
+                        <button ><i class="fa-solid fa-address-card"></i></button>
+                        <button ><i class="fa-solid fa-table-cells"></i></button>
+                        <button ><i class="fa-solid fa-list"></i></button>
+                        <button ><i class="fa-solid fa-star"></i></button>
                 </div>
 
                 <div className="profile_body">

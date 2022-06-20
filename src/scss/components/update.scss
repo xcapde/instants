@@ -1,11 +1,148 @@
-.full_blur{
+.update_pg{
     z-index: 3;
+    position: relative;
+    top: 10vh;    
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full_blur{
     position: fixed;
     width: 100vw;
-    height: 100vh;
 
     background-color: $colorPrimaryOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
     border: 0.01rem solid $colorAlmostWhiteOpacityMore;
+}
+
+.update_box{
+    width: 60%;
+    justify-content: center;
+}
+
+.inputs_box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.inputs_box label{
+    width: 100%;
+    color: $colorAlmostWhiteOpacity;
+    font-weight: 100;
+    margin-top: 1rem;
+}
+
+.inputs_box textarea, .inputs_box input, .inputs_box button{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    margin-top: 0.3rem;
+    background-color: $colorAlmostWhiteOpacityMore;
+}
+
+.inputs_box textarea, .inputs_box input{
+    padding: 0 4%;
+    color: $colorAlmostWhite;
+    font-size: medium;
+    width: 100% !important;
+
+    &::placeholder{
+        color: $colorAlmostWhiteOpacity;
+    }
+    &:hover{
+        background-color: $colorAlmostWhiteOpacityLess;
+        color: $colorAlmostDarkOpacityLess;
+    }
+    &:focus{
+        background-color: $colorAlmostWhite;
+        color: $colorAlmostDark;
+    }
+    &:focus::placeholder{
+        color: $colorAlmostDark;
+    }
+}
+
+.title_input{
+    height: 2.5rem;
+    font-size: x-large !important;
+    background: none !important;
+    color: $colorAlmostWhite !important;
+
+    // &:hover, &:focus{
+    //     background-color: $colorAlmostWhiteOpacity !important;
+    // } 
+
+    &:focus::placeholder{
+        color:$colorAlmostWhite !important;
+    }
+}
+
+.inputs_box textarea{
+    padding-top: 2%;
+    width: initial;
+    max-width: 100%;
+    height: 15rem;  
+    min-height: 12rem;
+    max-height: 20rem;
+    font-size: medium;  
+    min-width: inherit;
+    max-width: 100%;
+}
+
+.imgurl_input{
+    height: 2.5rem;   
+}
+
+.update_btns{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.update_btn, .cancel_btn{
+    margin: 1.5rem 0.5rem !important;
+    padding: 0.5rem 1.3rem;
+    border-radius: 1.5rem;
+    color: $colorAlmostWhite;
+    font-size: small;
+    font-weight: 400; 
+    width: 10rem;   
+    
+    &:hover{
+        background-color: $colorFormSecundary;
+    }
+    &:active{
+        background-color: $colorFormSecundaryActive;
+    }
+}
+
+.cancel_btn:hover{
+    background-color: $colorAlmostDark;
+    &:active{
+        background-color: $colorAlmostDarkOpacityLess;
+    }
+}
+
+@media only screen and (max-width: $breakPointSmall){
+    .update_pg{
+        position: relative;
+        top: 10vh !important;
+        bottom: 10vh !important; 
+        height: 80vh !important;
+    } 
+
+    .full_blur{
+        position: fixed;
+    }
+
+    .update_box{
+        width: 90%;
+    }
 }

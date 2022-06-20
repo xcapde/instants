@@ -24,6 +24,8 @@
 
 .searcher_pg .searcher input::placeholder{
     color: $colorAlmostWhiteOpacity;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-weight: 200 !important;
 }
 
 .searcher_pg .searcher input:hover::placeholder{

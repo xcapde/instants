@@ -47,18 +47,18 @@
     background-color: $colorFormPrimaryDark;
 }
 
-.create_pg input::placeholder, textarea::placeholder{
+.create_pg input::placeholder, .create_pg textarea::placeholder{
     color: $colorAlmostWhite;
 }
-.create_pg input:hover, textarea:hover{
+.create_pg input:hover, .create_pg textarea:hover{
     background-color: $colorCreateInputHover !important;
 }
 
-.create_pg input:focus, textarea:focus{
+.create_pg input:focus, .create_pg textarea:focus{
     background-color: $colorAlmostWhite !important;
 }
 
-.create_pg input:focus::placeholder, textarea:focus::placeholder{
+.create_pg input:focus::placeholder, .create_pg textarea:focus::placeholder{
     color: $colorTertiaryActive;
 }
 
@@ -120,7 +120,7 @@
         position: relative;
     }
 
-    textarea{
+    .create_pg textarea{
         width: 65% !important;
         max-width: 65% !important;
         min-width: 65% !important;
