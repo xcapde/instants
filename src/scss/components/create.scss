@@ -1,7 +1,5 @@
 .create_pg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayFlexCenter;
 }
 
 .create_pg .form_body{

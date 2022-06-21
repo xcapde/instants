@@ -56,6 +56,10 @@ a{
     height: 90vh;
 }
 
+.routes{
+    @include slideOut();
+}
+
 @media only screen and (max-width: $breakPointSmall){
     .signup_pg, .login_pg, .create_pg, .details_pg, .update_pg, .form_cnt{
         bottom: 10vh; 

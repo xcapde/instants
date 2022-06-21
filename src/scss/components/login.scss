@@ -1,17 +1,3 @@
 .login_pg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    // animation: moveToRight 1s ease-in-out;
-    // animation-delay: 10ms;
+    @include displayFlexCenter;
 }
-
-// @keyframes moveToRight {
-// 0% {
-//     transform: translateX(-100vw);
-// }
-// 100% {
-//     transform: translateX(0vw);
-// }
-// }

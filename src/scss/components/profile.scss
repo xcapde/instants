@@ -27,9 +27,7 @@
 }
 
 .profile_body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include displayFlexCenter;
     position: relative;
     top: 15vh;
     bottom: 10vh;

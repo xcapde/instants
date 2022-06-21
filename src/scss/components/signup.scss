@@ -1,7 +1,5 @@
 .signup_pg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include displayFlexCenter;
 }
 
 .name_inputs{
