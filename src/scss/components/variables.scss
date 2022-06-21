@@ -37,10 +37,24 @@ $breakPointSmall: 500px;
 $breakPontMedium: 750px;
 $breakPontLarge: 1000px;
 
-@mixin displayFlexCenter {
+@mixin flexCenterRow {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin flexCenterColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin glassmorphism ($background:$colorHeaderOpacity, $border:$colorHeader){
+    background-color: $background;
+    backdrop-filter: blur( 0.7rem );
+    -webkit-backdrop-filter: blur( 0.7rem );
+    border: 0.01rem solid $border;
 }
 
 @mixin textBasic{

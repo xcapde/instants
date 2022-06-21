@@ -22,6 +22,7 @@ export function Create() {
                         <input name="title" type="text" placeholder="Title"/>
                         <textarea  name="description" placeholder="Description.."/>
                         <button type="submit" className="share_btn">SHARE</button>
+                        <button className="mainBottom_btn" type="button">CLEAR ALL</button>
                     </div>
                 </div>
             </div>

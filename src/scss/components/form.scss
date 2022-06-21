@@ -1,8 +1,7 @@
 .form_cnt{
     width: 85%;
     height: 85%;
-    flex-direction: column;
-    @include displayFlexCenter;
+    @include flexCenterColumn;
     border-radius: 1.5rem;
     filter:drop-shadow(0rem .1rem .15rem $colorGreyOpacity);
 }
@@ -121,6 +120,8 @@
 }
 
 .mainBottom_btn{
+    position: absolute !important;
+    bottom: 0;
     height: 7vh;
     width: 100%;
     border-top-left-radius: 0% !important;
@@ -128,6 +129,7 @@
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     // background-color: $colorSecondary !important;
+    // background-color: $colorDark !important;
     background-color: $colorGreyHeader !important;
     color: $colorWhite;
     margin: 0!important;

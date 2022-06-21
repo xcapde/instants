@@ -1,11 +1,12 @@
 .create_pg{
-    @include displayFlexCenter;
+    @include flexCenterRow;
 }
 
 .create_pg .form_body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    // padding-bottom: 7vh;
 }
 
 .preview_cnt{
@@ -90,6 +91,31 @@
     background-color: $colorSecondaryActive;
 }
 
+.create_pg .mainBottom_btn {
+    width: 30%;
+    background-color: $colorPrimary !important; 
+    color: $colorGreyHeader !important;
+
+        &:hover{
+            background-color:$colorPrimary !important;
+            color: $colorSecondaryHover !important;
+        }
+        &:active{
+            color: $colorSecondaryActive !important;
+        }
+
+        @media only screen and (max-width: $breakPointSmall){
+            width: 100%;
+            &:hover{
+                background-color: $colorSecondaryHover !important;
+                color: $colorPrimary !important;
+            }
+            &:active{
+                background-color: $colorSecondaryActive !important;
+            }
+        }
+}
+
 @media only screen and (max-width: $breakPointSmall){
 
     .create_pg .form_body{
@@ -98,10 +124,15 @@
         top: 10vh;
         height: 80vh;
         position: absolute;
+        padding-bottom: unset;
     }
 
     .create_pg .form_body input{
         width: 65%;
+    }
+
+    .create_pg .form_body .inputs{
+        padding-bottom: 7vh;
     }
 
     .preview_cnt{

@@ -1,6 +1,6 @@
 .searcher{
     width: 100%;
-    @include displayFlexCenter;
+    @include flexCenterRow;
     position: relative;
 }
 
