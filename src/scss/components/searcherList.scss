@@ -48,6 +48,7 @@
 .searcher_list_pg .list_cnt{
     margin-top: 1% ;
     margin: 0 11vw;
+    padding-bottom: 0;
 }
 
 .searcher_list_pg .card_cnt{
@@ -75,7 +76,7 @@
 }
 
 .searcher_list_pg img{
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
 }
 
 
@@ -90,6 +91,10 @@
         position: relative;
         height: 90vh;        
         width: 100%;
+    }
+
+    .searcher_list_pg h1{
+        font-size: x-small;
     }
 
     .searcher_list_pg .list_pg{
@@ -118,6 +123,7 @@
 
     .searcher_list_pg .list_cnt{
         margin: 1% 0 0 0 ;
+        padding-bottom: 10vh;
     }
 
     .searcher_list_pg .card_cnt{

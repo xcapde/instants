@@ -317,6 +317,7 @@ input:focus::placeholder {
 @media only screen and (max-width: 500px) {
   .list_cnt {
     margin-top: 3%;
+    padding-bottom: 10vh;
   }
 }
 .card_cnt {
@@ -1221,6 +1222,7 @@ input:focus::placeholder {
 .searcher_list_pg .list_cnt {
   margin-top: 1%;
   margin: 0 11vw;
+  padding-bottom: 0;
 }
 
 .searcher_list_pg .card_cnt {
@@ -1248,7 +1250,7 @@ input:focus::placeholder {
 }
 
 .searcher_list_pg img {
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 @media only screen and (max-width: 500px) {
@@ -1260,6 +1262,9 @@ input:focus::placeholder {
     position: relative;
     height: 90vh;
     width: 100%;
+  }
+  .searcher_list_pg h1 {
+    font-size: x-small;
   }
   .searcher_list_pg .list_pg {
     height: 90vh;
@@ -1283,6 +1288,7 @@ input:focus::placeholder {
   }
   .searcher_list_pg .list_cnt {
     margin: 1% 0 0 0;
+    padding-bottom: 10vh;
   }
   .searcher_list_pg .card_cnt {
     width: 49vw;
