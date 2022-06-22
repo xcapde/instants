@@ -28,8 +28,6 @@
 
 .profile_body{
     @include flexCenterRow;
-    position: relative;
-    top: 15vh;
     bottom: 10vh;
     width: 100vw;
     height: 75vh;
@@ -58,18 +56,19 @@
 
 .tab_imageList{
     position: relative;
-    height: 100%;
+    height: 75vh;
+    top: 15vh;
 }
 
 .tab_imageList .list_pg{
-    z-index: 0;
     position: relative;
-    height: 100%;
+    height: 75vh;
 } 
 
 .tab_imageList .list_cnt{
     margin: 0;
     overflow: inherit;
+    padding-bottom: 10vh;
 }
 
 .tab_imageList .card_txt, .tab_imageList .card_btns, .tab_imageList .card_img .like_count{

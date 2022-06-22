@@ -1,0 +1,133 @@
+.searcher_pg{
+    display: none;
+}
+
+.searcher_list_pg{
+    @include flexCenterRow;
+    position: relative;
+    background-color: $colorPrimary;
+    width: 100%;
+    height: 90vh;
+    top: 10vh;  
+}
+
+.searcher_list_pg .back_cnt{
+    z-index: 2;
+    position: fixed;
+    top: 12vh;
+    left: 2%;
+    height: 2rem;
+}
+
+.searcher_list_pg .back_cnt button{
+    color: $colorWhiteOpacity;
+
+    &:hover{
+        background-color: $colorHeader;
+        color: $colorWhite;
+    }
+
+    &:active{
+        background-color: $colorHeaderActive;
+    }
+}
+
+
+// IMAGE LIST
+.searcher_list_pg .list_pg{
+    background-color: $colorDark;
+    height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.searcher_list_pg .user_cnt, .searcher_list_pg .card_btns, .searcher_list_pg .card_img .like_count{
+    display: none;
+}
+.searcher_list_pg .list_cnt{
+    margin-top: 1% ;
+    margin: 0 11vw;
+}
+
+.searcher_list_pg .card_cnt{
+    width: 25vw;
+    height: 100%;
+    margin: 0.5vw;
+    padding: 0;
+    filter:drop-shadow(0rem 0rem .2rem rgb(22, 22, 22));
+    background: none;
+}
+
+.searcher_list_pg .card_cnt .card_txt{
+    background-color: inherit;
+}
+
+.searcher_list_pg h1{
+    color: $colorWhiteOpacity;
+    font-size: small;
+    font-weight: 400;
+    padding: 3% 0 0 0;
+}
+
+.searcher_list_pg .card_img{
+    background-color: inherit;
+    border-radius: 0.5rem;
+}
+
+.searcher_list_pg img{
+    border-radius: 0.5rem;
+}
+
+
+@media only screen and (max-width: $breakPointSmall){
+
+    .searcher_pg{
+        display: flex;
+    }
+
+    .searcher_list_pg{
+        top: 10vh;
+        position: relative;
+        height: 90vh;        
+        width: 100%;
+    }
+
+    .searcher_list_pg .list_pg{
+        height: 90vh;
+        top: 10vh;
+    }
+    
+    .searcher_list_pg .back_cnt{
+        display: none;
+    }
+
+    .searcher_pg .back_cnt{
+        top: unset;
+        height: 100%;
+        position: absolute;
+        left: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .searcher_pg .back_cnt button{
+        position: relative;
+        color: $colorWhite;
+
+    }
+
+    .searcher_list_pg .list_cnt{
+        margin: 1% 0 0 0 ;
+    }
+
+    .searcher_list_pg .card_cnt{
+        width: 49vw;
+        height: 100%;
+        margin: 0.5vw;
+        padding: 0;
+        filter:drop-shadow(0rem 0rem .2rem rgb(22, 22, 22));
+        background: none;
+    }
+}

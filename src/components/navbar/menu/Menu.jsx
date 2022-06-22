@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { UserCard } from "../../user/UserCard";
+import { UserCard } from "../../../pages/profile/UserCard";
 
 export function Menu () {
 
     return (
         <div className="menu_cnt">
 
-        <Link to="/searcher">
+        <Link to="/searcher_list">
             <button className='search_bottom'>
             <span className='nav_icon'><i className="fa-solid fa-magnifying-glass"></i></span>
             <span className='nav_name'>SEARCH</span></button>

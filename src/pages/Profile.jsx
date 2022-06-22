@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { List } from "../components/list/List";
-import { UserCard } from "../components/user/UserCard";
 
 export function Profile() {
     return(
@@ -16,9 +15,12 @@ export function Profile() {
                 </div>
 
                 <div className="profile_tabs">
-                        {/* <Link to="user_card"></Link> */}
-                        <button ><i class="fa-solid fa-address-card"></i></button>
-                        <button ><i class="fa-solid fa-table-cells"></i></button>
+                        <Link to="user_card">
+                            <button ><i class="fa-solid fa-address-card"></i></button>
+                        </Link>
+                        <Link to="user_list">
+                            <button ><i class="fa-solid fa-table-cells"></i></button>
+                        </Link>
                         <button ><i class="fa-solid fa-list"></i></button>
                         <button ><i class="fa-solid fa-star"></i></button>
                 </div>
@@ -31,9 +33,9 @@ export function Profile() {
                     <div className="tab_imageList">
                         <List/>
                     </div>
-                    <div className="tab_list">
-                        {/* <List/> */}
-                    </div>
+                    {/* <div className="tab_list">
+                        <List/>
+                    </div> */}
                     <div className="tab_favs">
                         {/* <List/> */}
                     </div>
