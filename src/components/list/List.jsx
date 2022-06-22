@@ -1,6 +1,7 @@
 import { Card } from "../card/Card";
 import appData from "../../../src/data_API/appData.json";
 import { useState } from "react";
+import { Update } from "../update/Update";
 
 export function List () {
 
@@ -14,7 +15,7 @@ export function List () {
                 
                 {/* <Spinner/> */}
                 {/* <Modal/> */}
-                {/* <Update/> */}
+                {/* <Update/>                 */}
 
                 <>{instants.map((instant,key) =>
                     <Card key={key} instant={instant}/>
