@@ -1,19 +1,16 @@
 .update_pg{
+    @include flexCenterRow();
     z-index: 3;
     position: relative;
     top: 10vh;    
     height: 90vh;
-    @include flexCenterRow;
+    align-items: flex-start;
 }
 
 .full_blur{
+    background-color: $colorPrimary;
     position: fixed;
     width: 100%;
-
-    background-color: $colorDarkOpacity;
-    backdrop-filter: blur( 0.7rem );
-    -webkit-backdrop-filter: blur( 0.7rem );
-    border: 0.01rem solid $colorWhiteOpacityMore;
 }
 
 .update_box{
@@ -29,11 +26,14 @@
 }
 
 .inputs_box label{
-    width: 100%;
+    width: 5rem;
     font-size: small;
     margin-top: 1rem;
-    color: $colorDarkOpacityLess;
+    color: $colorSecondary;
+    border-radius: 1.5rem;
+    padding: 1% 2%;
     font-weight: 400;
+    width: 100%;
 }
 
 .inputs_box textarea, .inputs_box input, .inputs_box button{
@@ -42,76 +42,59 @@
     outline: none;
     border-radius: 0.5rem;
     margin-top: 0.3rem;
-    background-color: $colorWhiteOpacityMore;
 }
 
 .inputs_box textarea, .inputs_box input{
-    padding: 0 4%;
+    padding: 1% 2%;
     font-size: medium;
     width: 100% !important;
-    background-color: $colorWhiteOpacity;
-    color: $colorDarkOpacityLess !important;
-}
-
-.inputs_box textarea, .imgurl_input, .description_input{
+    background: none;
+    color: $colorDark;
     
     &::placeholder{
-        color: $colorWhiteOpacity;
+        color: $colorGrey;
+        font-weight: 400;
+        font-size: medium;
     }
 
     &:hover{
-        background-color: $colorWhite;
-        color: $colorDarkOpacityLess !important;
+        color: $colorDarkOpacityLess;
+        transition: 0.3s all;
     }
     &:focus{
-        background-color: $colorWhite;
-        color: $colorDark !important;
-    }
-
-    &:focus::placeholder{
-        color: $colorDarkOpacityLess;
+        color: $colorHeaderDark;
     }
 }
 
-
 .title_input{
-    height: 2.5rem;
-    font-size: x-large !important;
-    background: none !important;
-
-    &::placeholder{
-        color: $colorWhiteOpacity;
-    }
-
-    &:hover, &:focus{
-        color: $colorDark !important;
-    } 
-
-    &:hover::placeholder, &:focus::placeholder{
-        color: $colorWhiteOpacityLess !important;
-    }
+    height: 2rem;
+    font-size: xx-large !important;
+    font-weight: 600;
 }
 
 .inputs_box textarea{
     padding-top: 2%;
     width: initial;
     max-width: 100%;
-    height: 15rem;  
-    min-height: 12rem;
-    max-height: 20rem;
+    height: 10rem;  
+    min-height: 10rem;
+    max-height: 15rem;
     font-size: medium;  
     min-width: inherit;
 }
 
 .imgurl_input{
-    height: 2.5rem;
-    // color: $colorWhiteOpacity !important;   
+    height: 2rem;
+    font-size: small !important;
+    font-weight: 300 !important;  
 }
 
 .update_btns{
     display: flex;
     width: 100%;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .update_btn, .cancel_btn{
@@ -135,14 +118,13 @@
 }
 
 .cancel_btn{
-    background-color: $colorDarkOpacity !important;
-    color: $colorWhiteOpacityLess;
-    &:hover{
-    background-color: $colorDarkOpacityLess !important;
+    background-color: $colorGreyOpacity !important;
     color: $colorWhite;
+    &:hover{
+        background-color: $colorGreyHeader !important;
     }
     &:active{
-        background-color: $colorGreyOpacity !important;
+        background-color: $colorGreyHeaderHover!important;
     }
 }
 

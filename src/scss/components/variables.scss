@@ -11,10 +11,9 @@ $colorWhiteOpacityLess: #f9f9f99d;
 $colorWhiteOpacityMore: #f9f9f92f;
 
 $colorPrimary: #edeeeb;
-$colorSecondary:#99b959;
-$colorSecondaryHover:#a6c764;
-$colorSecondaryActive:rgb(179, 212, 113);
-$colorSecondaryDark:#7da72b;
+$colorSecondary:#e0c133;
+$colorSecondaryHover:#e6cb52;
+$colorSecondaryActive:#eed567;
 
 $colorGreyHeader: #a8a8a8;
 $colorGreyHeaderHover: rgb(190, 190, 190);
@@ -103,7 +102,7 @@ $breakPontLarge: 1000px;
     }
 }
 
-// GENERAL TRANSITIONS
+// TRANSITIONS
 @mixin slideOut {
     animation: moveFromLeft 0.5s ease-in;
     animation-delay: 10ms;

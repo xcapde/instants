@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { List } from "../components/list/List";
 import { Searcher } from "../components/navbar/searcher/Searcher";
 
 export function SearcherMobile() {
@@ -12,12 +13,8 @@ export function SearcherMobile() {
                         </Link>
                     </div>
                     <Searcher/>
+                    <List/>
                 </div>
-
-                {/* <div className="searcher_tabs">
-                        <button className="back_btn"><i className="fa-solid fa-arrow-left"></i>A-Z</button>
-                        <button className="back_btn"><i className="fa-solid fa-arrow-left"></i>Z-A</button>
-                </div> */}
 
         </div>
     )

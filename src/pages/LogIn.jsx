@@ -15,8 +15,8 @@ export function LogIn() {
                 </div>
                 <div className="form_body">
                     <div className="inputs">
-                        <input name="email" type="text" placeholder="E-mail"/>
-                        <input name="password" type="password" placeholder="Password"/>
+                        <input name="email" type="text" placeholder="E-mail" required autoFocus/>
+                        <input name="password" type="password" placeholder="Password" required/>
                         <button type="submit" className="login_btn">LOG IN</button>
                     </div>
                     <Link to="/signup">

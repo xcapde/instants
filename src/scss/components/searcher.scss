@@ -56,3 +56,16 @@ input:focus::placeholder{
     background:none;
     color: $colorHeader ;
 }
+
+
+//SEARCH
+.searcher_pg .card_txt, .searcher_pg .card_btns, .searcher_pg .card_img .like_count{
+    display: none;
+}
+
+.tab_imageList .card_cnt{
+    width: 32vw;
+    height: 32vw;
+    margin: 0.66vw;
+    padding: 0;
+}
