@@ -5,7 +5,7 @@
     margin: 1.5% 1%;
     filter:drop-shadow(0rem 0rem .2rem $colorGrey);
     background-color: $colorHeaderActive;
-    border-radius: 0.8rem;
+    border-radius: 0.4rem;
 }
 
 .card_cnt:hover{
@@ -38,7 +38,7 @@
     margin: 1%;
     color: $colorWhite;
     font-size: x-small;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     background-color: $colorDarkOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
@@ -51,8 +51,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-top-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
     padding-bottom: 1%;
 }
 
