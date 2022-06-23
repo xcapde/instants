@@ -168,19 +168,3 @@ $tertiaryRadius:0.25rem;
         background-color: $colorSecondaryActive;
     }
 }
-
-// TRANSITIONS
-
-@mixin slideIn {
-    animation: moveFromLeft 0.5s ease-in;
-    animation-delay: 10ms;
-}
-
-@keyframes moveFromLeft {
-0% {
-    transform: translateX(-100vw);
-}
-100% {
-    transform: translateX(0vw);
-}
-}

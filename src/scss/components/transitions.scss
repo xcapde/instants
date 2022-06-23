@@ -1,0 +1,28 @@
+
+.slidein{
+    animation: moveFromLeft 0.5s ease-in;
+    animation-delay: 10ms;
+}
+
+@keyframes moveFromLeft {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(0vw);
+    } 
+}
+
+.slideout{
+    animation: moveFromRight 0.5s ease-in;
+    animation-delay: 10ms;
+}
+
+@keyframes moveFromRight {
+    0% {
+        transform: translateX(0vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }     
+}

@@ -3,7 +3,7 @@ export function Update(props) {
 
 
     return(
-        <section className={props.editIsActive? "update_pg" : "update_pg hidden"}>
+        <section className={props.editIsActive? "update_pg slidein" : "update_pg hidden"}>
 
             <div className="update_box">
                 <form className="inputs_box">

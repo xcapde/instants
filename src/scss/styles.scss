@@ -18,6 +18,7 @@
 @import "./components/modals.scss";
 @import "./components/scrollbar.scss";
 @import "./components/spinner.scss";
+@import "./components/transitions.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -55,10 +56,6 @@ a{
     top: 10vh;    
     width: 100%;
     height: 90vh;
-}
-
-.routes{
-    @include slideIn();
 }
 
 @media only screen and (max-width: $breakPointSmall){
