@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function LogIn() {
     return(
-        <div className="login_pg">
+        <section className="login_pg">
 
             <div className="form_cnt">
                 <div className="form_header">
@@ -14,17 +14,17 @@ export function LogIn() {
                     <h1>WELCOME!</h1>
                 </div>
                 <div className="form_body">
-                    <div className="inputs">
+                    <form className="inputs">
                         <input name="email" type="text" placeholder="E-mail" required autoFocus/>
                         <input name="password" type="password" placeholder="Password" required/>
                         <button type="submit" className="login_btn">LOG IN</button>
-                    </div>
+                    </form>
                     <Link to="/signup">
                         <button className="mainBottom_btn" type="button">NEW USER</button>
                     </Link>
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }

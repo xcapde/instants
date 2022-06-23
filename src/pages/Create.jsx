@@ -1,8 +1,31 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export function Create() {
+export function Create(props) {
+
+    const[newInstant, setNewInstant] = useState();
+
+    const onInputChange=(e)=>{
+        let value= e.target.value;
+        let name = e.target.name;
+        setNewInstant({...newInstant,[name]:value});
+    }
+
+    const onHandleSubmit=(e)=>{
+        e.preventDefault();
+
+        // props.addInstant();
+        console.log('patata! no agafa props.addInstant')
+
+    }
+
+    const resetInputs=()=>{
+
+    }
+
+
     return(
-        <div className="create_pg">
+        <section className="create_pg">
 
             <div className="form_cnt">
                 <div className="form_header">
@@ -17,16 +40,16 @@ export function Create() {
                     <div className="preview_cnt">
                         <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
                     </div>
-                    <div className="inputs">
-                        <input name="imageUrl" type="text" placeholder="Image URL"/>
-                        <input name="title" type="text" placeholder="Title"/>
-                        <textarea  name="description" placeholder="Description.."/>
+                    <form onSubmit={onHandleSubmit} className="inputs">
+                        <input onChange={onInputChange}      name="title" type="text" placeholder="Title" autoFocus autocompleteatribut="on"/>
+                        <input onChange={onInputChange}  name="imageUrl" type="text" placeholder="Image URL"/>
+                        <textarea onChange={onInputChange}   name="description" placeholder="Description.."/>
                         <button type="submit" className="share_btn">SHARE</button>
-                        <button className="mainBottom_btn" type="button">CLEAR ALL</button>
-                    </div>
+                        <button onClick={resetInputs} className="mainBottom_btn" type="button">CLEAR ALL</button>
+                    </form>
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }

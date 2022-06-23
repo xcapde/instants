@@ -103,7 +103,7 @@ $breakPontLarge: 1000px;
 }
 
 // TRANSITIONS
-@mixin slideOut {
+@mixin slideIn {
     animation: moveFromLeft 0.5s ease-in;
     animation-delay: 10ms;
 }

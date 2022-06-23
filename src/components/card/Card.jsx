@@ -9,8 +9,9 @@ export function Card(props){
         setInstant(props.instant)
     }, [props.instant])
 
+
     return (
-        <div className="card_cnt">
+        <section className="card_cnt">
             <div className="card_txt">
                 <div className="user_cnt">
                     <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
@@ -29,17 +30,14 @@ export function Card(props){
                 <div className="card_btns">                    
                     <div className="reaction_btns">
                         <button className="like_btn"><i className="fa-solid fa-heart"></i></button>
-                        <button className="fav_btn"><i className="fa-solid fa-star"></i></button>
-                        {/* GOOGLE FONTS ICONS */}
-                        {/* <button className="like_btn"><span class="material-icons">favorite</span></button> */}
-                        {/* <button className="fav_btn"><span class="material-icons">star</span></button>                         */}
+                        <button className="fav_btn"><i className="fa-solid fa-star"></i></button>                      
                     </div>
                     <div className="gestion_btns">
-                        <button className="edit_btn"><i className="fa-solid fa-pencil"></i></button>
-                        <button className="delete_btn"><i className="fa-solid fa-trash-can"></i></button>
+                        <button onClick={props.showEdit} className="edit_btn"><i className="fa-solid fa-pencil"></i></button>
+                        <button onClick={props.deleteInstant} className="delete_btn"><i className="fa-solid fa-trash-can"></i></button>
                     </div>
                 </div>
-        </div>
+        </section>
     )
 }
 

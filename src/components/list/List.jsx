@@ -6,22 +6,53 @@ import { Update } from "../update/Update";
 export function List () {
 
     const[instants] = useState(appData);
+    const[createIsActive, setCreateIsActive] = useState(false);
+    const[editIsActive, setEditIsActive] = useState(false);
+    const[editIndex, setEditIndex] = useState('');
+    const[favList, setFavList] = useState([]);
+    const[likeList, setLikeList] = useState([]);
+
+    const createInstant=()=>{
+        console.log('create')
+    }
+
+    const addInstant=()=>{
+        console.log('add')
+
+    }
+
+    const showEdit=()=>{
+        setEditIsActive(!editIsActive);
+        console.log('showUpdate')
+        console.log(editIsActive)
+    }
+
+    const updateInstant=()=>{
+        console.log('update')
+        showEdit();
+        console.log(editIsActive)
+    }
+
+    const deleteInstant=()=>{
+        console.log('delete')
+
+    }
 
 
     return(
-        <div className="list_pg">
+        <section className="list_pg">
             
             <div className="list_cnt">
                 
                 {/* <Spinner/> */}
                 {/* <Modal/> */}
-                {/* <Update/>                 */}
+                <Update editIsActive={editIsActive} showEdit={showEdit} updateInstant={updateInstant}/>
 
                 <>{instants.map((instant,key) =>
-                    <Card key={key} instant={instant}/>
+                    <Card key={key} instant={instant} deleteInstant={deleteInstant} showEdit={showEdit} editIsActive={editIsActive}/>
                     )}</>
 
             </div>
-        </div>
+        </section>
     )
 }

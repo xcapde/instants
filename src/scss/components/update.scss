@@ -1,10 +1,17 @@
+.hidden{
+    display: none;
+}
+
 .update_pg{
-    @include flexCenterRow();
-    z-index: 3;
-    position: relative;
-    top: 10vh;    
-    height: 90vh;
+    // display: flex;
+    justify-content: center;
     align-items: flex-start;
+    z-index: 3;
+    position: fixed;
+    background-color:$colorWhite;
+    width: 100%;
+    height: 90vh;
+    // top: 10vh;    
 }
 
 .full_blur{
@@ -15,14 +22,16 @@
 
 .update_box{
     width: 60%;
+    height: 100%;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .inputs_box{
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
+    height: 78vh;
 }
 
 .inputs_box label{
@@ -36,7 +45,7 @@
     width: 100%;
 }
 
-.inputs_box textarea, .inputs_box input, .inputs_box button{
+.inputs_box textarea, .inputs_box input, button{
     font-family: 'IBM Plex Sans Thai', sans-serif;
     border: none;
     outline: none;
@@ -94,8 +103,8 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
 }
 
 .update_btn, .cancel_btn{
@@ -131,7 +140,7 @@
 
 @media only screen and (max-width: $breakPointSmall){
     .update_pg{
-        position: relative;
+        position: fixed;
         top: 10vh !important;
         bottom: 10vh !important; 
         height: 80vh !important;
@@ -143,5 +152,6 @@
 
     .update_box{
         width: 90%;
+        height: 70vh;
     }
 }

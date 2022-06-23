@@ -58,7 +58,7 @@ a{
 }
 
 .routes{
-    @include slideOut();
+    @include slideIn();
 }
 
 @media only screen and (max-width: $breakPointSmall){

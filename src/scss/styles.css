@@ -717,15 +717,18 @@ input:focus::placeholder {
     min-width: 65% !important;
   }
 }
+.hidden {
+  display: none;
+}
+
 .update_pg {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 3;
-  position: relative;
-  top: 10vh;
-  height: 90vh;
   align-items: flex-start;
+  z-index: 3;
+  position: fixed;
+  background-color: #F9F9F9;
+  width: 100%;
+  height: 90vh;
 }
 
 .full_blur {
@@ -736,14 +739,16 @@ input:focus::placeholder {
 
 .update_box {
   width: 60%;
+  height: 100%;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .inputs_box {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;
+  height: 78vh;
 }
 
 .inputs_box label {
@@ -757,7 +762,7 @@ input:focus::placeholder {
   width: 100%;
 }
 
-.inputs_box textarea, .inputs_box input, .inputs_box button {
+.inputs_box textarea, .inputs_box input, button {
   font-family: "IBM Plex Sans Thai", sans-serif;
   border: none;
   outline: none;
@@ -813,8 +818,6 @@ input:focus::placeholder {
   display: flex;
   width: 100%;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
 }
 
 .update_btn, .cancel_btn {
@@ -850,7 +853,7 @@ input:focus::placeholder {
 
 @media only screen and (max-width: 500px) {
   .update_pg {
-    position: relative;
+    position: fixed;
     top: 10vh !important;
     bottom: 10vh !important;
     height: 80vh !important;
@@ -860,6 +863,7 @@ input:focus::placeholder {
   }
   .update_box {
     width: 90%;
+    height: 70vh;
   }
 }
 .details_pg {

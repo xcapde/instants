@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function SignUp() {
     return(
-        <div className="signup_pg">
+        <section className="signup_pg">
 
             <div className="form_cnt">
                 <div className="form_header">
@@ -15,20 +15,20 @@ export function SignUp() {
                     <h1>CREATE AN ACCOUNT</h1>
                 </div>
                 <div className="form_body">
-                    <div className="inputs">
+                    <form className="inputs">
                         <div className="name_inputs">
-                            <input name="name" type="text" placeholder="Name"/>
-                            <input name="surname" type="text" placeholder="Surname"/>
+                            <input name="name" type="text" placeholder="Name" autoFocus required/>
+                            <input name="surname" type="text" placeholder="Surname" required/>
                         </div>
-                        <input name="email" type="text" placeholder="E-mail"/>
-                        <input name="password" type="password" placeholder="Password"/>
+                        <input name="email" type="text" placeholder="E-mail" required/>
+                        <input name="password" type="password" placeholder="Password" required/>
                         <button type="submit" className="singUp_btn">CREATE</button>
-                    </div>
+                    </form>
                 </div>
 
             </div>
 
 
-        </div>
+        </section>
     )
 }
