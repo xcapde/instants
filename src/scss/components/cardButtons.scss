@@ -8,7 +8,7 @@
 }
 
 .card_btns{
-    border-radius: 0.4rem;
+    @include mainRadius_all;
 }
 
 .card_btns button{
@@ -16,9 +16,8 @@
 }
 
 .reaction_btns, .gestion_btns{
+    @include mainRadius_bottom;
     width: 50%;
-    border-bottom-left-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
 }
 
 .reaction_btns{

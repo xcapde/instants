@@ -16,11 +16,6 @@ export function List () {
         console.log('create')
     }
 
-    const addInstant=()=>{
-        console.log('add')
-
-    }
-
     const showEdit=()=>{
         setEditIsActive(!editIsActive);
         console.log('showUpdate')

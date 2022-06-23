@@ -10,12 +10,12 @@
 }
 
 .modal_box{
+    @include mainRadius_all;
     display: flex;
     justify-content: space-between;
     margin-top: -2%;
     width: 60%;
     height: 10vh;
-    border-radius: 0.5rem;
     background-color: $colorWhite;
 
     &.modal_box h1{
@@ -25,9 +25,9 @@
 }
 
 .modal_box button{
+    @include inputRadius;
     background: none;
     border: none !important;
-    border-radius: 0.5rem;
     background-color: $colorDark;
     width: 3rem;
     height: 100%;

@@ -46,9 +46,7 @@
     display: none;
 }
 .searcher_list_pg .list_cnt{
-    margin-top: 1% ;
-    margin: 0 11vw;
-    padding-bottom: 0;
+    @include searcherCard;
 }
 
 .searcher_list_pg .card_cnt{
@@ -71,12 +69,12 @@
 }
 
 .searcher_list_pg .card_img{
+    @include detailRadius;
     background-color: inherit;
-    border-radius: 0.5rem;
 }
 
 .searcher_list_pg img{
-    border-radius: 0.2rem;
+    @include detailRadius;
 }
 
 
@@ -127,10 +125,6 @@
     }
 
     .searcher_list_pg .card_cnt{
-        width: 49vw;
-        height: 100%;
-        margin: 0.5vw;
-        padding: 0;
-        background: none;
+        @include searcherMobileCard;
     }
 }

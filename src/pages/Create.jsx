@@ -1,27 +1,47 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export function Create(props) {
+export function Create() {
 
-    const[newInstant, setNewInstant] = useState();
+    const[newInstant, setNewInstant] = useState({title:"",description:"", imgUrl:""});
+    // const[imagePreview, setImagePreview] = useState(false);
+
+    // useEffect(() => {
+    //     setNewInstant(newInstant);
+    //     },[newInstant]
+    //   )
 
     const onInputChange=(e)=>{
-        let value= e.target.value;
-        let name = e.target.name;
-        setNewInstant({...newInstant,[name]:value});
-    }
+        const name = e.target.name;
+        const value= e.target.value;
+        setNewInstant({...newInstant, [name]:value});
+
+        console.log(e.target.value)
+    }    
 
     const onHandleSubmit=(e)=>{
         e.preventDefault();
-
-        // props.addInstant();
-        console.log('patata! no agafa props.addInstant')
-
+        addInstant();        
+        resetInputs();
     }
 
     const resetInputs=()=>{
+        setNewInstant({
+            title:"",
+            description:"",
+            imgUrl:"",
+        })
 
+        console.log('reseting inputs')
     }
+
+    const addInstant=()=>{
+        console.log('add')
+    }
+
+    // const showImagePreview=()=>{
+    //     if(newInstant.imgUrl.length = 0)
+    // }
 
 
     return(
@@ -38,12 +58,12 @@ export function Create(props) {
                 </div>
                 <div className="form_body">
                     <div className="preview_cnt">
-                        <img src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTdiavqt-4NU5TmpRZT52pz7fXVxlCPEeoDAzPA_j1R5BiHYz0fElpYY2xL07NriyZq" alt="preview"/>                                                
+                        <img src={newInstant.imgUrl} alt="preview"/>                                                
                     </div>
                     <form onSubmit={onHandleSubmit} className="inputs">
-                        <input onChange={onInputChange}      name="title" type="text" placeholder="Title" autoFocus autocompleteatribut="on"/>
-                        <input onChange={onInputChange}  name="imageUrl" type="text" placeholder="Image URL"/>
-                        <textarea onChange={onInputChange}   name="description" placeholder="Description.."/>
+                        <input onChange={onInputChange} value={newInstant.title} name="title" type="text" placeholder="Title" autoFocus autocompleteatribut="on"/>
+                        <input onChange={onInputChange} value={newInstant.imgUrl} name="imgUrl" type="text" placeholder="Image URL"/>
+                        <textarea onChange={onInputChange} value={newInstant.description} name="description" placeholder="Description.."/>
                         <button type="submit" className="share_btn">SHARE</button>
                         <button onClick={resetInputs} className="mainBottom_btn" type="button">CLEAR ALL</button>
                     </form>

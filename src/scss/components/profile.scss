@@ -76,10 +76,7 @@
 }
 
 .tab_imageList .card_cnt{
-    width: 33vw;
-    height: 33vw;
-    margin: 0.167vw;
-    padding: 0;
+    @include profileCard;
 }
 
 

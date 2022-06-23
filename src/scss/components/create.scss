@@ -10,18 +10,18 @@
 }
 
 .preview_cnt{
+    @include inputRadius;
     width: 65%;
     height: 90%;
     margin-left: 3%;
     background-color: $colorGrey;
-    border-radius: 1.2rem;
 }
 
 .preview_cnt img{
+    @include mainRadius_all;
     z-index: 1;
     height: 100%;
     width: 100%;
-    border-radius: 0.4rem;
     object-fit: scale-down;
 }
 
@@ -35,13 +35,13 @@
 }
 
 .create_pg .form_body input{
+    @include inputRadius;
     border: none;
     outline: none;
     background: none;
     width: 55%;
     margin: 0.5rem 0;
     height: 3rem;
-    border-radius: 1.2rem;
     padding: 0 1.5rem;
     background-color: $colorWhite;
 }
@@ -55,6 +55,7 @@
 }
 
 .create_pg textarea{
+    @include inputRadius;
     font-family: "IBM Plex Sans Thai", sans-serif;
     outline: none;
     border: none;
@@ -64,19 +65,18 @@
     min-height: 3rem;
     max-height: 7rem;
     margin: 0.5rem 0;
-    border-radius: 1.2rem;
     padding: 1rem 1.5rem;
     background-color: $colorWhite;
 } 
 
 .create_pg .form_body button{
+    @include inputRadius;
     position: relative;
     background: none;
     border: none;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     margin-top: 1rem;
     padding: 0.5rem 1.3rem;
-    border-radius: 1.5rem;
     background-color: $colorSecondary;
     color: $colorWhite;
     font-size: small;

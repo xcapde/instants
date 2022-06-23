@@ -35,21 +35,21 @@
 }
 
 .inputs_box label{
+    @include inputRadius;
     width: 5rem;
     font-size: small;
     margin-top: 1rem;
     color: $colorSecondary;
-    border-radius: 1.5rem;
     padding: 1% 2%;
     font-weight: 400;
     width: 100%;
 }
 
 .inputs_box textarea, .inputs_box input, button{
+    @include mainRadius_all;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     border: none;
     outline: none;
-    border-radius: 0.5rem;
     margin-top: 0.3rem;
 }
 
@@ -108,9 +108,9 @@
 }
 
 .update_btn, .cancel_btn{
+    @include inputRadius;
     margin: 1.5rem 0.5rem !important;
     padding: 0.5rem 1.3rem;
-    border-radius: 1.5rem;
     color: $colorWhite;
     font-size: small;
     font-weight: 400; 

@@ -1,11 +1,12 @@
 .searcher{
+    @include flexCenterRow;
     z-index: 1;
     width: 100%;
-    @include flexCenterRow;
     position: relative;
 }
 
 .searcher input{
+    @include inputRadius;
     width: 95%;
     height: 6vh;
     min-width: 10rem;
@@ -13,10 +14,8 @@
     border: none;
     color: $colorHeader;
     padding: 0 4rem 0 1.5rem;
-    border-radius: 1.5rem;
     font-size: smaller;
     outline: none;
-
     background-color: $colorWhiteOpacityMore;
     --webkit-backdrop-filter: blur( 0.7rem );
 }
@@ -36,7 +35,6 @@ input:focus::placeholder{
 
 .searcher input:active, .searcher input:focus{
     background-color: $colorWhite;
-    padding-left: 1.5rem;
 }
 
 .searcher input:focus{

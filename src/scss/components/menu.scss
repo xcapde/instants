@@ -8,12 +8,12 @@
 }
 
 .menu_cnt button{
+    @include inputRadius;
     background: none;
     border: none;
     font-family: 'IBM Plex Sans Thai', sans-serif;
     margin-left: 0.5rem;
     padding: 0.5rem 1.3rem;
-    border-radius: 1.5rem;
     color: $colorWhite;
     font-size: small;
     font-weight: 400;
@@ -40,7 +40,7 @@
 
 // USER CARD
 .menu_cnt .user_cnt{
-    border-radius: 1.5rem;
+    @include inputRadius;
     padding: 0.5rem 1.3rem 0.5rem 0rem;
 }
 

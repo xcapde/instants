@@ -1,15 +1,9 @@
 .card_cnt{
+    @include mainCard;
+    @include mainRadius_all;
     display: flex;
-    flex-direction: column;
-    width: 18%;
-    margin: 1.5% 1%;
-    filter:drop-shadow(0rem 0rem .2rem $colorGrey);
+    flex-direction: column;   
     background-color: $colorHeaderActive;
-    border-radius: 0.4rem;
-}
-
-.card_cnt:hover{
-    filter:drop-shadow(0rem 0rem .2rem $colorGreyHeaderHover);
 }
 
 .card_img{
@@ -30,6 +24,7 @@
 }
 
 .like_count{
+    @include mainRadius_all;
     z-index: 2;
     position: absolute;
     bottom: 0;
@@ -38,21 +33,19 @@
     margin: 1%;
     color: $colorWhite;
     font-size: x-small;
-    border-radius: 0.4rem;
     background-color: $colorDarkOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
 }
 
 .card_txt{
+    @include mainRadius_top;
     width: 100%;
     background-color:$colorWhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-top-left-radius: 0.4rem;
-    border-top-right-radius: 0.4rem;
     padding-bottom: 1%;
 }
 
@@ -101,10 +94,7 @@
 
 @media only screen and (max-width: $breakPointSmall){
     .card_cnt{
-        width: 98%;
-        height: 22rem;
-        margin: 3% 1%;
-        filter:drop-shadow(0rem .1rem .15rem $colorDarkOpacity);
+        @include mainCard;
     }
 
     .like_count{
