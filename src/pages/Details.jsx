@@ -24,7 +24,8 @@ export function Details() {
             <div className="details_cnt">
 
                 <div className="details_photo">
-                        <img src={instantInfo.imgUrl} alt="preview"/>                                                
+                        <img src={instantInfo.imgUrl} alt="preview"/>                                           
+                        <div className="comment_count"><i class="fa-solid fa-message"></i>{instantInfo.comments}</div>   
                         <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
                 </div>
 
@@ -40,17 +41,27 @@ export function Details() {
                     </div>
 
                     <div className="details_photo_mobile">
-                        <img src={instantInfo.imgUrl} alt="preview"/>                                                
+                        <img src={instantInfo.imgUrl} alt="preview"/>  
+                        <div className="comment_count"><i class="fa-solid fa-message"></i>{instantInfo.comments}</div>                                              
                         <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
                     </div>
 
                     <div className="details_body">
-                        <p>{instantInfo.description}</p>  
+                        <div className="user_cnt">
+                            <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
+                            <h1 className="user_name">{instantInfo.userName}</h1>
+                        </div>  
+                        <div className="description_box">
+                            <p>{instantInfo.description}</p>
+                        </div>
+                        <div className="comments_box">
+                            Comments...
+                        </div>  
                     </div> 
 
                     <div className="reaction_btns">
                         <button className={instantInfo.isLike?"like_btn .liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
-                        <button className={instantInfo.isFav?"fav_btn .favorited":"fav_btn"}><i className="fa-solid fa-star"></i></button>
+                        <button className={instantInfo.isComment?"comment_btn .commented":"comment_btn"}><i className="fa-solid fa-message"></i></button>
                     </div>          
 
                 </div>                

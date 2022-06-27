@@ -52,13 +52,14 @@ export function Card(props){
                 <Link to={`/detail/${instant.id}`} instant={instant}>                            
                     <img src={instant.imgUrl} alt=""/>
                 </Link>
+                <div className="comment_count"><i class="fa-solid fa-message"></i>{instant.comments}</div>
                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likes}</div>
             </div>
 
                 <div className="card_btns">                    
                     <div className="reaction_btns">
-                        <button onClick={()=>markLiked(instant)} className={instant.isFav? "like_btn liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
-                        <button onClick={()=>markFavorite(instant)} className={instant.isLike? "comment_btn commented":"comment_btn"}><i class="fa-solid fa-message"></i></button>                      
+                        <button onClick={()=>markLiked(instant)} className={instant.isLike? "like_btn liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
+                        <button onClick={()=>markFavorite(instant)} className={instant.isComment? "comment_btn commented":"comment_btn"}><i class="fa-solid fa-message"></i></button>                      
                         {/* <button onClick={()=>markFavorite(instant)} className={instant.isLike? "fav_btn favorited":"fav_btn"}><i className="fa-solid fa-star"></i></button>                       */}
                     </div>
                     <div className="gestion_btns">

@@ -61,7 +61,6 @@
     background-color: $colorWhite;
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
-    overflow: auto;
 }
 
 .details_body p{
@@ -71,17 +70,22 @@
     font-size: smaller;
 }
 
-.details_info .like_count{
-    color: $colorWhiteOpacityLess;
-    display: flex;
-    align-content: center !important;
-    position: absolute;
-    bottom: 2%;
+.details_body .user_name{
+    color: $colorGrey !important;
 }
 
-.details_info .like_count i{
-    display: flex;
-    align-items: center;
+// .description_box{
+
+// }
+
+.comments_box{
+    border-top-width: 0.1rem;
+    border-top-color: $colorDarkOpacity;
+    border-top-style: solid;
+    color: $colorGrey !important;
+    // width: 100%;
+    // height: 80%;
+    // overflow-y: auto;
 }
 
 .details_info .reaction_btns{

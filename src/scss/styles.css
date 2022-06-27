@@ -349,7 +349,7 @@ input:focus::placeholder {
   object-fit: cover;
 }
 
-.like_count {
+.like_count, .comment_count {
   border-radius: 0.4rem;
   z-index: 2;
   position: absolute;
@@ -364,7 +364,12 @@ input:focus::placeholder {
   -webkit-backdrop-filter: blur(0.7rem);
 }
 
-.like_count i {
+.comment_count {
+  left: unset;
+  right: 0;
+}
+
+.like_count i, .comment_count i {
   margin-right: 0.5rem;
   color: rgba(249, 249, 249, 0.4745098039);
 }
@@ -441,7 +446,7 @@ input:focus::placeholder {
   }
 }
 @media only screen and (max-width: 500px) {
-  .like_count {
+  .like_count, .comment_count {
     font-size: smaller;
   }
 }
@@ -578,7 +583,7 @@ input:focus::placeholder {
   .gestion_btns button {
     margin-right: 20%;
   }
-  .like_btn, .fav_btn, .edit_btn, .delete_btn {
+  .like_btn, .fav_btn, .edit_btn, .delete_btn, .comment_btn {
     font-size: 1.3rem;
     width: 2.4rem;
     height: 2.4rem;
@@ -981,7 +986,6 @@ input:focus::placeholder {
   background-color: #F9F9F9;
   border-bottom-left-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
-  overflow: auto;
 }
 
 .details_body p {
@@ -991,17 +995,15 @@ input:focus::placeholder {
   font-size: smaller;
 }
 
-.details_info .like_count {
-  color: rgba(249, 249, 249, 0.6156862745);
-  display: flex;
-  align-content: center !important;
-  position: absolute;
-  bottom: 2%;
+.details_body .user_name {
+  color: #d3d3d3 !important;
 }
 
-.details_info .like_count i {
-  display: flex;
-  align-items: center;
+.comments_box {
+  border-top-width: 0.1rem;
+  border-top-color: rgba(36, 36, 36, 0.1019607843);
+  border-top-style: solid;
+  color: #d3d3d3 !important;
 }
 
 .details_info .reaction_btns {

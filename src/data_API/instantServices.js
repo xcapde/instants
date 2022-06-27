@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "https://62b965bcff109cd1dc9113d0.mockapi.io";
+const baseURL = "https://62b9c3f641bf319d2284f421.mockapi.io";
 export const instantServices = {
   getAllInstants() {
     const instants = axios.get(baseURL + "/instants").then((res) => {
