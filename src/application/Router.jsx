@@ -19,8 +19,7 @@ export default function Router(){
             <Navbar/>
             <Routes>
                 <Route path="/" element={<App/>}/>
-                {/* <Route path="/details/:id" element={<Details/>}/> */}
-                <Route path="/detail" element={<Details/>}/>
+                <Route path="/detail/:id" element={<Details/>}/>
                 <Route path="/signup" element={<SignUp/>}/>
                 <Route path="/login" element={<LogIn/>}/>
                 <Route path="/profile" element={<Profile/>}>

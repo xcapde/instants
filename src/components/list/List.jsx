@@ -1,36 +1,39 @@
 import { Card } from "../card/Card";
-import appData from "../../../src/data_API/appData.json";
+// import appData from "../../../src/data_API/appData.json";
 import { useState } from "react";
 import { Update } from "../update/Update";
+import { useEffect } from "react";
+import { instantServices } from "../../data_API/instantServices";
 
-export function List () {
+export function List (props) {
 
-    const[instants] = useState(appData);
-    const[createIsActive, setCreateIsActive] = useState(false);
+    const[instants, setInstants] = useState([]);
     const[editIsActive, setEditIsActive] = useState(false);
-    const[editIndex, setEditIndex] = useState('');
-    const[favList, setFavList] = useState([]);
-    const[likeList, setLikeList] = useState([]);
+    const[instantToEdit, setInstantToEdit] = useState('');
+    // const[favList, setFavList] = useState([]);
+    // const[likeList, setLikeList] = useState([]);
 
-    const createInstant=()=>{
-        console.log('create')
+    useEffect(() => {
+        getAllData();
+    },[]
+    );
+   
+    const getAllData=()=>{
+        instantServices.getAllInstants().then(res => {
+            setInstants(res);
+       })
     }
 
-    const showEdit=()=>{
+    const showEdit=(instant)=>{
         setEditIsActive(!editIsActive);
-        console.log('showUpdate')
-        console.log(editIsActive)
+        setInstantToEdit(instant);
     }
 
-    const updateInstant=()=>{
-        console.log('update')
-        showEdit();
-        console.log(editIsActive)
-    }
+    const deleteInstant=(id)=>{
 
-    const deleteInstant=()=>{
-        console.log('delete')
-
+        instantServices.deleteAInstant(parseInt(id)).then(res => {
+            if(res) getAllData();
+        });
     }
 
 
@@ -41,11 +44,13 @@ export function List () {
                 
                 {/* <Spinner/> */}
                 {/* <Modal/> */}
-                <Update editIsActive={editIsActive} showEdit={showEdit} updateInstant={updateInstant}/>
+                <Update editIsActive={editIsActive} showEdit={showEdit} instantToEdit={instantToEdit} getAllData={getAllData}/>
 
                 <>{instants.map((instant,key) =>
-                    <Card key={key} instant={instant} deleteInstant={deleteInstant} showEdit={showEdit} editIsActive={editIsActive}/>
-                    )}</>
+                    <Card key={key} instant={instant} deleteInstant={deleteInstant} showEdit={showEdit} editIsActive={editIsActive}
+                    getAllData={getAllData}/>
+                    ).reverse()}
+                </>
 
             </div>
         </section>

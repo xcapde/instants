@@ -16,13 +16,13 @@ export function Profile() {
 
                 <div className="profile_tabs">
                         <Link to="user_card">
-                            <button ><i class="fa-solid fa-address-card"></i></button>
+                            <button ><i className="fa-solid fa-address-card"></i></button>
                         </Link>
                         <Link to="user_list">
-                            <button ><i class="fa-solid fa-table-cells"></i></button>
+                            <button ><i className="fa-solid fa-table-cells"></i></button>
                         </Link>
-                        <button ><i class="fa-solid fa-list"></i></button>
-                        <button ><i class="fa-solid fa-star"></i></button>
+                        <button ><i className="fa-solid fa-list"></i></button>
+                        <button ><i className="fa-solid fa-star"></i></button>
                 </div>
 
                 <div className="profile_body">

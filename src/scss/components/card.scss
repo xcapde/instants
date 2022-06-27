@@ -38,6 +38,11 @@
     -webkit-backdrop-filter: blur( 0.7rem );
 }
 
+.like_count i{
+    margin-right: 0.5rem;
+    color: $colorWhiteOpacity;
+}
+
 .card_txt{
     @include mainRadius_top;
     width: 100%;

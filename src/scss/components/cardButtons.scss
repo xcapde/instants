@@ -39,7 +39,7 @@
     margin-right: 15%;
 }
 
-.like_btn, .fav_btn, .edit_btn, .delete_btn {
+.like_btn, .fav_btn, .edit_btn, .delete_btn, .comment_btn {
     background: none;
     border: none;
     width: 1.9rem;
@@ -74,6 +74,15 @@
     color: $colorFavActive;
 }
 
+.comment_btn:hover{
+    color:$colorComment;
+
+    &:active{
+        color:$colorCommentActive;
+    }
+}
+
+
 .edit_btn:hover, .delete_btn:hover{
     color:$colorDarkOpacityLess;
     background-color: $colorDarkOpacity;
@@ -81,6 +90,37 @@
 
 .edit_btn:active, .delete_btn:active{
     color:$colorGreyOpacity;
+}
+
+.favorited{
+    color: $colorFavActive !important;
+    &:hover{
+        color: $colorFav !important;
+    }
+    &:active{
+        color: $colorFavActive !important;        
+    }
+}
+
+.liked{
+    color: $colorLikeActive !important;
+    &:hover{
+        color: $colorLike !important;
+    }
+    &:active{
+        color: $colorLikeActive !important;
+    }
+}
+
+.commented{
+    color:$colorCommentActive !important;
+
+    &:hover{
+        color:$colorComment !important;
+    }
+    &:active{
+        color:$colorCommentActive !important;
+    }
 }
 
 @media only screen and (max-width: $breakPointSmall){

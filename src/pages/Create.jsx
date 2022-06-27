@@ -1,17 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { instantServices } from "../data_API/instantServices";
 
 export function Create() {
 
     const[newInstant, setNewInstant] = useState({title:"",description:"", imgUrl:""});
-    // const[imagePreview, setImagePreview] = useState(false);
+    const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     setNewInstant(newInstant);
-    //     },[newInstant]
-    //   )
-
-    const onInputChange=(e)=>{
+    const onInputChangeCreate=(e)=>{
         const name = e.target.name;
         const value= e.target.value;
         setNewInstant({...newInstant, [name]:value});
@@ -19,29 +15,28 @@ export function Create() {
         console.log(e.target.value)
     }    
 
-    const onHandleSubmit=(e)=>{
+    const onHandleSubmitCreate=(e)=>{
         e.preventDefault();
-        addInstant();        
-        resetInputs();
+
+        addInstant(newInstant); 
+
+        resetInputsCreate();
     }
 
-    const resetInputs=()=>{
+    const resetInputsCreate=()=>{
         setNewInstant({
             title:"",
             description:"",
             imgUrl:"",
         })
-
-        console.log('reseting inputs')
     }
 
-    const addInstant=()=>{
-        console.log('add')
-    }
+    const addInstant=(newInstantData)=>{
 
-    // const showImagePreview=()=>{
-    //     if(newInstant.imgUrl.length = 0)
-    // }
+        instantServices.postInstant(newInstantData).then(res => {
+            if(res)navigate("/");
+       });
+    }
 
 
     return(
@@ -58,14 +53,15 @@ export function Create() {
                 </div>
                 <div className="form_body">
                     <div className="preview_cnt">
-                        <img src={newInstant.imgUrl} alt="preview"/>                                                
+                        {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
                     </div>
-                    <form onSubmit={onHandleSubmit} className="inputs">
-                        <input onChange={onInputChange} value={newInstant.title} name="title" type="text" placeholder="Title" autoFocus autocompleteatribut="on"/>
-                        <input onChange={onInputChange} value={newInstant.imgUrl} name="imgUrl" type="text" placeholder="Image URL"/>
-                        <textarea onChange={onInputChange} value={newInstant.description} name="description" placeholder="Description.."/>
+                    <form onSubmit={onHandleSubmitCreate} className="inputs">
+                        <input onChange={onInputChangeCreate} value={newInstant.title} name="title" type="text" placeholder="Title" autoFocus autocompleteatribut="on"/>
+                        <input onChange={onInputChangeCreate} value={newInstant.imgUrl} name="imgUrl" type="text" placeholder="Image URL"/>
+                        <textarea onChange={onInputChangeCreate} value={newInstant.description} name="description" placeholder="Description.."/>
+                        
                         <button type="submit" className="share_btn">SHARE</button>
-                        <button onClick={resetInputs} className="mainBottom_btn" type="button">CLEAR ALL</button>
+                        <button onClick={resetInputsCreate} className="mainBottom_btn" type="button">CLEAR ALL</button>
                     </form>
                 </div>
             </div>
