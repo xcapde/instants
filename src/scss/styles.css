@@ -819,6 +819,7 @@ input:focus::placeholder {
   border: none;
   outline: none;
   margin-top: 0.3rem;
+  cursor: pointer;
 }
 
 .inputs_box textarea, .inputs_box input {

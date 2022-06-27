@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { instantServices } from "../../data_API/instantServices";
 
 export function Update(props) {
 
     const[newInstant, setNewInstant] = useState(props.instantToEdit)
     // const[newInstant, setNewInstant] = useState(props.instantToEdit?props.instantToEdit:{title:'', description:'', imgUrl:''})
-
+    
     useEffect(() => {
         setNewInstant(props.instantToEdit)
 
@@ -37,7 +38,7 @@ export function Update(props) {
 
     console.log(props.instantToEdit)
     return( 
-        <section className={props.editIsActive? "update_pg slidein" : "update_pg hidden"}>
+        <section className={props.editIsActive? "update_pg slidein" : "hidden"}>
 
             <div className="update_box">
                 <form onSubmit={onHandleSubmitUpdate} className="inputs_box">
