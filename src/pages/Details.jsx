@@ -55,14 +55,24 @@ export function Details() {
                             <p>{instantInfo.description}</p>
                         </div>
                         <div className="comments_box">
-                            Comments...
+                            <div className="comment_body">
+                                <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
+                                <h1 className="user_name">{instantInfo.userName}</h1>
+                                <h1 className="comment_text">Comment</h1>
+                            </div>
+                            More comments...
                         </div>  
                     </div> 
 
-                    <div className="reaction_btns">
+                    <div className="newComment_box">
+                    <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
+                        New comment...
+                    </div>
+
+                    {/* <div className="reaction_btns">
                         <button className={instantInfo.isLike?"like_btn .liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
                         <button className={instantInfo.isComment?"comment_btn .commented":"comment_btn"}><i className="fa-solid fa-message"></i></button>
-                    </div>          
+                    </div>           */}
 
                 </div>                
             </div>
