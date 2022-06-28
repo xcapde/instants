@@ -69,12 +69,10 @@
         font-weight: 400;
         font-size: medium;
     }
-    &:hover::placeholder{
+    &:hover::placeholder, &:focus::placeholder{
         color: $colorDarkOpacityLess !important;
+        transition: 0.3s all;
     }
-    // &:focus::placeholder{
-    //     color: $colorDarkOpacity !important;
-    // }
 
     &:hover{
         color: $colorHeader;

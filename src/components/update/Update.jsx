@@ -36,7 +36,7 @@ export function Update(props) {
         props.showEdit();
     }
 
-    console.log(props.instantToEdit)
+    // console.log(props.instantToEdit)
     return( 
         <section className={props.editIsActive? "update_pg slide_in" : "hidden"}>
 
@@ -48,7 +48,7 @@ export function Update(props) {
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="description">Description:</label>
-                        <textarea onChange={onInputChangeUpdate} value={newInstant.description} className="description_input"  name="description" id="description" placeholder="Write a description"/>
+                        <textarea onChange={onInputChangeUpdate} value={newInstant.description} className="description_input" name="description" id="description" placeholder="Write a description" type="text"/>
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="imgUrl">Image:</label>

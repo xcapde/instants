@@ -5,7 +5,7 @@ import { Update } from "../update/Update";
 import { useEffect } from "react";
 import { instantServices } from "../../data_API/instantServices";
 
-export function List (props) {
+export function List () {
 
     const[instants, setInstants] = useState([]);
     const[editIsActive, setEditIsActive] = useState(false);

@@ -70,7 +70,7 @@ export function Create() {
                     </div>
                     <div className="update_btns">
                         <Link to="/">
-                            <button  type="button" className="cancel_btn">CLOSE</button>                    
+                            <button  type="button" className="cancel_btn">CANCEL</button>                    
                         </Link>
                         <button onClick={resetInputsCreate} type="button" className="close_btn"><i class="fa-solid fa-xmark"></i><span className="close_txt">CLEAR</span></button>                        
                         <button type="submit" className="update_btn">SHARE</button>

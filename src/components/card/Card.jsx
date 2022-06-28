@@ -52,7 +52,7 @@ export function Card(props){
                 <Link to={`/detail/${instant.id}`} instant={instant}>                            
                     <img src={instant.imgUrl} alt=""/>
                 </Link>
-                <div className="comment_count"><i class="fa-solid fa-message"></i>{instant.comments}</div>
+                <div className="comment_count"><i className="fa-solid fa-message"></i>{instant.comments}</div>
                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likes}</div>
             </div>
 

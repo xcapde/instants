@@ -61,6 +61,8 @@
     background-color: $colorWhite;
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .details_body p{
@@ -70,6 +72,10 @@
     font-size: smaller;
 }
 
+.details_body .user_cnt{
+    margin-top: 2%;
+}
+
 .details_body .user_name{
     color: $colorGreyHeader !important;
     font-size: x-small;
@@ -77,9 +83,9 @@
 }
 
 .description_box{
-    height: auto;
-    max-height: 40%;
+    min-height: 15%;
     overflow-y: auto;
+    height: fit-content;
 }
 
 .comments_box{
@@ -88,106 +94,20 @@
     border-top-style: solid;
     color: $colorGrey !important;
     width: 100%;
-    min-height: 4rem;
-    max-height: 45%;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-}
-
-.comment_cnt{
-    display: flex;
-    align-items: center;
-    margin: 2% 0;
-}
-
-.comment_cnt .user_photo i{
-    font-size: x-large;
-}
-
-.comment_body{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.comment_body h1{
-    margin: 0 1%;
-    padding: 0;
-    font-size: smaller;
-    justify-content: unset;
-    word-break: break-all;
-    // overflow-y: auto; 
-    // text-overflow: ellipsis;
-}
-
-.comment_body .comment_txt{
-    color: $colorDark;
-    font-weight: 500;
-    font-size: 0.7rem;
-}
-
-.newComment_box{
-    display: flex;
-    justify-content: flex-start;
-    position: absolute;
-    bottom: 0;
+    overflow-y: auto;
+    position: relative;
     background-color: $colorWhite;
-    border-top-width: 0.1rem;
-    border-top-color: $colorDarkOpacity;
-    border-top-style: solid;
-    color: $colorGrey !important;
-    width: 100%;
-    height: 10%;
-    border-bottom-left-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
+    min-height: 35%;
 
-.user_photo{
-    display: flex;
-    align-items: center;
-    height: 100% !important;
-}
-
-.comment_input{
-    width: 100%;
-    cursor: pointer;
-    background-color: none;
-    border: none;
-    outline: none;
-
-    &:hover{
-        color: $colorHeader;
-    }
-    &:active,&:focus{
-        color:$colorHeader;
-        cursor:text;
-    }
-}
-
-.share_btn{
-    right: 0;
-    width: 1.5rem;
-    height: 100%;
-    margin: 0 0.5rem;
-    color: $colorGrey;
-    border: none;
-    background: none;
-    font-size: medium;
-
-    &:hover{
-        color:$colorComment;
-    }
-    &:active{
-        color:$colorCommentActive;
-    }
-}
 
     @media only screen and (max-width: $breakPointSmall){
-        position: fixed;
-        bottom: 0;
+        bottom: 4rem;
         border-radius: 0% !important;
         font-size: medium;
+        height: 10%;
     }
 }
 
@@ -234,12 +154,15 @@
     .details_info{
         min-width: unset;
         width: 100%;
-        // top: 10vh;
     }
 
     .details_body{
         border-radius: 0;
         height: 80vh;
+    }
+
+    .comments_box{
+        position: absolute;
     }
 
     .details_body p{

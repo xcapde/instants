@@ -1,0 +1,58 @@
+.newComment_box{
+    display: flex;
+    position: relative;
+    background-color: $colorWhite;
+    border-top-width: 0.1rem;
+    border-top-color: $colorDarkOpacity;
+    border-top-style: solid;
+    color: $colorGrey !important;
+    width: 100%;
+    height: 5rem;
+    @include mainRadius_bottom;
+
+    @media only screen and (max-width: $breakPointSmall){
+        position: absolute;
+        height: 4rem;
+        bottom: 0;
+    }
+}
+
+.user_photo{
+    display: flex;
+    align-items: center;
+    height: 100% !important;
+}
+
+.comment_input{
+    width: 100%;
+    cursor: pointer;
+    background-color: $colorWhite;
+    border: none;
+    outline: none;
+
+    &:hover{
+        color: $colorHeader;
+    }
+    &:active,&:focus{
+        color:$colorHeader;
+        cursor:text;
+    }
+}
+
+.share_btn{
+    right: 0;
+    width: 1.5rem;
+    height: 100%;
+    margin: 0 0.5rem;
+    color: $colorGrey;
+    border: none;
+    background: none;
+    font-size: medium;
+
+    &:hover{
+        color:$colorComment;
+    }
+    &:active{
+        color:$colorCommentActive;
+    }
+}
