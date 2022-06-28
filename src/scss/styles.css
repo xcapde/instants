@@ -749,13 +749,23 @@ input:focus::placeholder {
   height: 100%;
 }
 
+.update_input_box {
+  width: 100%;
+  height: auto;
+  padding: 1% 2%;
+}
+
+.title_box {
+  margin-top: 2%;
+}
+
 .inputs_box label {
   border-radius: 1.5rem;
+  margin-bottom: 1%;
+  display: flex;
   width: 5rem;
   font-size: small;
-  margin-top: 1rem;
   color: #e0c133;
-  padding: 1% 2%;
   font-weight: 400;
   width: 100%;
 }
@@ -795,10 +805,10 @@ input:focus::placeholder {
 }
 
 .inputs_box textarea {
-  padding-top: 2%;
+  padding: 0;
   width: initial;
   max-width: 100%;
-  height: 10rem;
+  height: 100%;
   min-height: 10rem;
   max-height: 15rem;
   font-size: medium;

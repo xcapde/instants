@@ -42,18 +42,21 @@ export function Update(props) {
 
             <div className="update_box">
                 <form onSubmit={onHandleSubmitUpdate} className="inputs_box">
-                    <label htmlFor="title">Title:</label>
-                    <input onChange={onInputChangeUpdate} value={newInstant.title} className="title_input" name="title" id="title" type="text" placeholder="Write a title"/>
-
-                    <label htmlFor="description">Description:</label>
-                    <textarea onChange={onInputChangeUpdate} value={newInstant.description} className="description_input"  name="description" id="description" placeholder="Share a description"/>
-                    
-                    <label htmlFor="imgUrl">Image:</label>
-                    <div className="preview_and_url">
-                        {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
-                        <input onChange={onInputChangeUpdate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="URL"/>          
+                    <div className="update_input_box title_box">
+                        <label htmlFor="title">Title:</label>
+                        <input onChange={onInputChangeUpdate} value={newInstant.title} className="title_input" name="title" id="title" type="text" placeholder="Write a title"/>
                     </div>
-
+                    <div className="update_input_box">
+                        <label htmlFor="description">Description:</label>
+                        <textarea onChange={onInputChangeUpdate} value={newInstant.description} className="description_input"  name="description" id="description" placeholder="Share a description"/>
+                    </div>
+                    <div className="update_input_box">
+                        <label htmlFor="imgUrl">Image:</label>
+                        <div className="preview_and_url">
+                            {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
+                            <input onChange={onInputChangeUpdate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="URL"/>          
+                        </div>
+                    </div>
                     <div className="update_btns">                    
                         <button onClick={props.showEdit} type="button" className="cancel_btn">CANCEL</button>
                         <button type="submit" className="update_btn">UPDATE</button>
