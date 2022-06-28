@@ -18,7 +18,9 @@ export function Details() {
 
     useEffect(() => {
         showDetails();
-      },[id]);
+    },[id]);
+
+ 
 
     return(
         <div className="details_pg">
@@ -27,7 +29,7 @@ export function Details() {
 
                 <div className="details_photo">
                         <img src={instantInfo.imgUrl} alt="preview"/>                                           
-                        <div className="comment_count"><i class="fa-solid fa-message"></i>{instantInfo.comments}</div>   
+                        <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.comments}</div>   
                         <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
                 </div>                
 
@@ -43,31 +45,31 @@ export function Details() {
                     </div>      
                         
                     <div className="details_body">
-
-                        <div className="details_photo_mobile">
-                            <img src={instantInfo.imgUrl} alt="preview"/>  
-                            <div className="comment_count"><i class="fa-solid fa-message"></i>{instantInfo.comments}</div>                                              
-                            <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
-                        </div>                          
-                        <div className="description_box">
-                            <div className="user_cnt">
-                                <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
-                                <h1 className="user_name">{instantInfo.userName}</h1>
-                            </div> 
-                            <p>{instantInfo.description} </p>
-                        </div>
+                        <div className="photoAndDescription_mbl_box">
+                            <div className="details_photo_mobile">
+                                <img src={instantInfo.imgUrl} alt="preview"/>  
+                                <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.comments}</div>                                              
+                                <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
+                            </div>                          
+                            <div className="description_box">
+                                <div className="user_cnt">
+                                    <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
+                                    <h1 className="user_name">{instantInfo.userName}</h1>
+                                </div> 
+                                <p>{instantInfo.description}</p>
+                            </div>
+                        </div>    
                         <div className="comments_box">
-                            <Comment/>
-                            <Comment/>
-                            <Comment/>
-                            <Comment/>
-                            <Comment/>
-                            <Comment/>
-                            <Comment/>
-                            <Comment/>
-                            <Comment/>                            
-                        </div>  
+                            <div className="users_comments">
+                                <Comment/>
+                                <Comment/>
+                                <Comment/>
+                                <Comment/>
+                                <Comment/>
+                                        
+                            </div>
                             <NewComment/>
+                        </div>                             
                     </div>                  
 
                 </div>                

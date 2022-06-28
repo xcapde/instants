@@ -63,6 +63,7 @@
     border-bottom-right-radius: 0.4rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .details_body p{
@@ -82,33 +83,39 @@
     font-weight: 400;
 }
 
+.photoAndDescription_mbl_box{
+    overflow: auto;
+    display: flex;
+    width: 100%;
+    @media only screen and (max-width: $breakPointSmall){
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
 .description_box{
-    min-height: 15%;
     overflow-y: auto;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
 }
 
 .comments_box{
     border-top-width: 0.1rem;
     border-top-color: $colorDarkOpacity;
     border-top-style: solid;
-    color: $colorGrey !important;
+    color: $colorGrey;
     width: 100%;
-    overflow-y: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    justify-content: flex-end;
     position: relative;
     background-color: $colorWhite;
-    min-height: 35%;
+    overflow: auto;
+}
 
-
-    @media only screen and (max-width: $breakPointSmall){
-        bottom: 4rem;
-        border-radius: 0% !important;
-        font-size: medium;
-        height: 10%;
-    }
+.users_comments{
+    overflow-y: auto;
 }
 
 @media only screen and (max-width: $breakPointSmall){
@@ -159,10 +166,6 @@
     .details_body{
         border-radius: 0;
         height: 80vh;
-    }
-
-    .comments_box{
-        position: absolute;
     }
 
     .details_body p{

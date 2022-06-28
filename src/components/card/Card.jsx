@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { NewComment } from "../comment/NewComment";
 
 export function Card(props){
 
@@ -54,6 +55,7 @@ export function Card(props){
                 </Link>
                 <div className="comment_count"><i className="fa-solid fa-message"></i>{instant.comments}</div>
                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likes}</div>
+                <div className="ubication"><i className="fa-solid fa-location-dot"></i>Location</div>
             </div>
 
                 <div className="card_btns">                    
@@ -66,7 +68,9 @@ export function Card(props){
                         <button onClick={()=>props.showEdit(instant)} className="edit_btn"><i className="fa-solid fa-pencil"></i></button>
                         <button onClick={()=>props.deleteInstant(instant.id)} className="delete_btn"><i className="fa-solid fa-trash-can"></i></button>
                     </div>
+                    {/* <NewComment/> */}
                 </div>
+
         </section>
     )
 }
