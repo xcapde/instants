@@ -39,31 +39,44 @@ export function Create() {
     }
 
 
-    return(
-        <section className="create_pg">
+    return( 
+        <section className="update_pg">
 
-            <div className="form_cnt">
-                <div className="form_header">
-                    <div className="back_cnt">
-                        <Link to="/">                    
-                            <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
+            <div className="form_header">
+                <div className="back_cnt">
+                    <Link to="/">                    
+                        <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
+                    </Link>
+                </div>
+                <h1>NEW INSTANT</h1>
+            </div>
+
+            <div className="update_box">
+                <form onSubmit={onHandleSubmitCreate} className="inputs_box">
+                    <div className="update_input_box title_box">
+                        <label htmlFor="title">Title:</label>
+                        <input onChange={onInputChangeCreate} value={newInstant.title} className="title_input" name="title" id="title" type="text" placeholder="Write a title"/>
+                    </div>
+                    <div className="update_input_box">
+                        <label htmlFor="description">Description:</label>
+                        <textarea onChange={onInputChangeCreate} value={newInstant.description} className="description_input"  name="description" id="description" placeholder="Write a description"/>
+                    </div>
+                    <div className="update_input_box">
+                        <label htmlFor="imgUrl">Image:</label>
+                        <div className="preview_and_url create">
+                            {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
+                            <input onChange={onInputChangeCreate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="Image URL"/>          
+                        </div>
+                    </div>
+                    <div className="update_btns">
+                        <Link to="/">
+                            <button  type="button" className="cancel_btn">CLOSE</button>                    
                         </Link>
-                    </div>
-                    <h1>NEW INSTANT</h1>
-                </div>
-                <div className="form_body">
-                    <div className="preview_cnt">
-                        {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
-                    </div>
-                    <form onSubmit={onHandleSubmitCreate} className="inputs">
-                        <input onChange={onInputChangeCreate} value={newInstant.title} name="title" type="text" placeholder="Title" autoFocus autocompleteatribut="on"/>
-                        <input onChange={onInputChangeCreate} value={newInstant.imgUrl} name="imgUrl" type="text" placeholder="Image URL"/>
-                        <textarea onChange={onInputChangeCreate} value={newInstant.description} name="description" placeholder="Description.."/>
-                        
-                        <button type="submit" className="share_btn">SHARE</button>
-                        <button onClick={resetInputsCreate} className="mainBottom_btn" type="button">CLEAR ALL</button>
-                    </form>
-                </div>
+                        <button onClick={resetInputsCreate} type="button" className="close_btn"><i class="fa-solid fa-xmark"></i><span className="close_txt">CLEAR</span></button>                        
+                        <button type="submit" className="update_btn">SHARE</button>
+                    </div>                    
+                </form>
+                
             </div>
 
         </section>

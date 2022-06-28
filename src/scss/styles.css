@@ -628,7 +628,7 @@ input:focus::placeholder {
   width: 65%;
   height: 90%;
   margin-left: 3%;
-  background-color: rgba(249, 249, 249, 0.4745098039);
+  background-color: #d3d3d3;
 }
 
 .preview_cnt img {
@@ -834,6 +834,10 @@ input:focus::placeholder {
   border-radius: 0.25rem;
 }
 
+.create img {
+  width: 15rem !important;
+}
+
 .update_btns {
   display: flex;
   justify-content: space-around;
@@ -872,6 +876,29 @@ input:focus::placeholder {
   background-color: rgb(190, 190, 190) !important;
 }
 
+.close_btn {
+  position: fixed;
+  top: 12vh;
+  right: 5vw;
+  background: none;
+  border: none;
+  color: #d3d3d3;
+  font-size: large;
+  display: flex;
+  align-items: center;
+}
+.close_btn:hover {
+  color: #25a77b;
+}
+.close_btn:active {
+  color: #36af87;
+}
+
+.close_txt {
+  font-size: x-small;
+  margin-left: 0.5rem;
+}
+
 @media only screen and (max-width: 500px) {
   .update_pg {
     position: fixed;
@@ -882,8 +909,12 @@ input:focus::placeholder {
   .update_box {
     width: 92%;
   }
+  .inputs_box textarea {
+    min-height: 15rem;
+    max-height: 15rem;
+  }
   .update_btns {
-    width: 90%;
+    width: 100%;
   }
 }
 .details_pg {
@@ -1307,7 +1338,7 @@ input:focus::placeholder {
 }
 
 .searcher_list_pg .list_cnt {
-  margin: 1% 10.5% 0 10.5%;
+  margin: 1% 11% 0 11%;
 }
 
 .searcher_list_pg .card_cnt {

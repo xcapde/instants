@@ -114,6 +114,10 @@
     @include detailRadius;
 }
 
+.create img{
+    width: 15rem !important;
+}
+
 .update_btns{
     display: flex;
     justify-content: space-around;
@@ -152,6 +156,29 @@
     }
 }
 
+.close_btn{
+    position: fixed;
+    top: 12vh;
+    right: 5vw;
+    background: none;
+    border: none;
+    color: $colorGrey;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    &:hover{
+        color: $colorHeaderHover;
+    }
+    &:active{
+        color:$colorHeaderActive;
+    }
+}
+
+.close_txt{
+    font-size: x-small;
+    margin-left: .5rem;
+}
+
 @media only screen and (max-width: $breakPointSmall){
     .update_pg{
         position: fixed;
@@ -164,7 +191,12 @@
         width: 92%;
     }
 
+    .inputs_box textarea{  
+        min-height: 15rem;
+        max-height: 15rem;
+    }
+
     .update_btns{
-        width: 90%;
+        width: 100%;
     }
 }

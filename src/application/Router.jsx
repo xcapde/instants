@@ -3,7 +3,6 @@ import React from "react";
 import { Details } from "../pages/Details";
 import { SignUp } from "../pages/SignUp";
 import { LogIn } from "../pages/LogIn";
-import { Create } from "../pages/Create";
 import App from "../App";
 import { Navbar } from "../components/navbar/Navbar";
 import { NavbarBottom } from "../components/navbar_bottom/NavbarBottom";
@@ -12,6 +11,7 @@ import { SearcherMobile } from "../pages/SearcherMobile";
 import { UserCard } from "../pages/profile/UserCard";
 import { SearcherList } from "../pages/SearcherList";
 import { UserList } from "../pages/profile/UserList";
+import { Create } from "../pages/Create";
 
 export default function Router(){
     return(
