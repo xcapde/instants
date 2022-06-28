@@ -413,7 +413,7 @@ input:focus::placeholder {
 
 .card_txt .user_cnt {
   width: 100%;
-  margin-top: 2%;
+  margin: 2% 0;
 }
 
 .card_txt .user_photo {
@@ -425,6 +425,7 @@ input:focus::placeholder {
   margin: 0;
   font-size: x-small;
   font-weight: 400;
+  color: #d3d3d3;
 }
 
 @media only screen and (max-width: 500px) {
@@ -967,9 +968,11 @@ input:focus::placeholder {
 }
 
 .details_info .form_header {
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
   background-color: #a8a8a8;
-  height: 10vh;
-  border-radius: 0.4rem;
+  height: 15%;
+  position: relative;
 }
 
 .details_info .form_header .back_btn:hover {
@@ -982,7 +985,8 @@ input:focus::placeholder {
 
 .details_body {
   width: 100%;
-  height: 83%;
+  height: 85%;
+  position: relative;
   background-color: #F9F9F9;
   border-bottom-left-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
@@ -996,7 +1000,15 @@ input:focus::placeholder {
 }
 
 .details_body .user_name {
-  color: #d3d3d3 !important;
+  color: #a8a8a8 !important;
+  font-size: x-small;
+  font-weight: 600;
+}
+
+.description_box {
+  height: auto;
+  max-height: 30%;
+  overflow-y: auto;
 }
 
 .comments_box {
@@ -1005,35 +1017,42 @@ input:focus::placeholder {
   border-top-style: solid;
   color: #d3d3d3 !important;
   width: 100%;
+  min-height: 4rem;
+  max-height: 55%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment_cnt {
+  display: flex;
+  align-items: center;
+  margin: 2% 0;
+}
+
+.comment_cnt .user_photo i {
+  font-size: x-large;
 }
 
 .comment_body {
   width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .comment_body h1 {
-  margin: 0;
+  margin: 0 1%;
   padding: 0;
   font-size: smaller;
   justify-content: unset;
-  margin-left: 1%;
+  word-break: break-all;
 }
 
-.details_info .reaction_btns {
-  background-color: #F9F9F9;
-  border-top-width: 0.1rem;
-  border-top-color: rgba(36, 36, 36, 0.1019607843);
-  border-top-style: solid;
-  color: #d3d3d3 !important;
-  width: 100%;
-  border-bottom-left-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
-  display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  bottom: 0;
-  height: 7vh;
+.comment_body .comment_txt {
+  color: #242424;
+  font-weight: 500;
+  font-size: 0.7rem;
 }
 
 .newComment_box {
@@ -1047,9 +1066,44 @@ input:focus::placeholder {
   border-top-style: solid;
   color: #d3d3d3 !important;
   width: 100%;
-  height: 7vh;
+  height: 10%;
   border-bottom-left-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
+}
+.newComment_box .user_photo {
+  display: flex;
+  align-items: center;
+  height: 100% !important;
+}
+.newComment_box .comment_input {
+  width: 100%;
+  cursor: pointer;
+  background-color: none;
+  border: none;
+  outline: none;
+}
+.newComment_box .comment_input:hover {
+  color: #289772;
+}
+.newComment_box .comment_input:active, .newComment_box .comment_input:focus {
+  color: #289772;
+  cursor: text;
+}
+.newComment_box .share_btn {
+  right: 0;
+  width: 1.5rem;
+  height: 100%;
+  margin: 0 0.5rem;
+  color: #d3d3d3;
+  border: none;
+  background: none;
+  font-size: medium;
+}
+.newComment_box .share_btn:hover {
+  color: #416dfc;
+}
+.newComment_box .share_btn:active {
+  color: #5d83ff;
 }
 @media only screen and (max-width: 500px) {
   .newComment_box {
@@ -1058,27 +1112,6 @@ input:focus::placeholder {
     border-radius: 0% !important;
     font-size: medium;
   }
-}
-
-.details_info .reaction_btns button {
-  color: #a8a8a8;
-  margin: 0 7%;
-  display: flex;
-  justify-content: center;
-}
-
-.details_info .like_btn:hover {
-  color: #EE3561;
-}
-.details_info .like_btn:active {
-  color: #F1557A;
-}
-
-.details_info .fav_btn:hover {
-  color: #FCA641;
-}
-.details_info .fav_btn:active {
-  color: #fcb462;
 }
 
 @media only screen and (max-width: 500px) {
@@ -1092,6 +1125,7 @@ input:focus::placeholder {
   .details_info .form_header {
     background-color: #289772;
     border-radius: 0;
+    height: 10vh;
   }
   .details_info .form_header .back_btn:hover {
     background-color: #25a77b;
@@ -1115,21 +1149,12 @@ input:focus::placeholder {
   .details_info {
     min-width: unset;
     width: 100%;
-    top: 10vh;
   }
   .details_body {
     border-radius: 0;
+    height: 80vh;
   }
   .details_body p {
-    font-size: medium;
-  }
-  .details_info .reaction_btns {
-    position: fixed;
-    bottom: 0;
-    border-radius: 0% !important;
-    font-size: medium;
-  }
-  .details_info .reaction_btns button {
     font-size: medium;
   }
 }
@@ -1204,7 +1229,7 @@ input:focus::placeholder {
   padding-bottom: 10vh;
 }
 
-.tab_imageList .card_txt, .tab_imageList .card_btns, .tab_imageList .card_img .like_count {
+.tab_imageList .card_txt, .tab_imageList .card_btns, .tab_imageList .like_count, .tab_imageList .comment_count {
   display: none;
 }
 
@@ -1224,10 +1249,6 @@ input:focus::placeholder {
 .searcher_pg {
   background-color: #F9F9F9;
   height: 100vh;
-}
-
-.searcher_pg .searcher {
-  justify-content: flex-end;
 }
 
 .searcher_pg .back_cnt {
@@ -1319,7 +1340,7 @@ input:focus::placeholder {
   align-items: flex-start;
 }
 
-.searcher_list_pg .user_cnt, .searcher_list_pg .card_btns, .searcher_list_pg .card_img .like_count {
+.searcher_list_pg .user_cnt, .searcher_list_pg .card_btns, .searcher_list_pg .card_img .like_count, .searcher_list_pg .card_img .comment_count {
   display: none;
 }
 
@@ -1364,6 +1385,7 @@ input:focus::placeholder {
     position: relative;
     height: 90vh;
     width: 100%;
+    justify-content: unset;
   }
   .searcher_list_pg h1 {
     font-size: x-small;
@@ -1596,7 +1618,7 @@ input:focus::placeholder {
   width: 1.5rem;
   height: 1.5rem;
   margin: 0 0.5rem;
-  color: #e4e4e4;
+  color: #d3d3d3;
 }
 
 .user_name {

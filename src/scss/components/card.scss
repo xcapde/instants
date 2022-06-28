@@ -87,7 +87,7 @@
 // USER CARD
 .card_txt .user_cnt{
     width: 100%;
-    margin-top: 2%;
+    margin: 2% 0;
 }
 
 .card_txt .user_photo{
@@ -99,6 +99,7 @@
     margin: 0;
     font-size: x-small;
     font-weight: 400;
+    color: $colorGrey;
 }
 
 

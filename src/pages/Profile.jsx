@@ -22,7 +22,7 @@ export function Profile() {
                             <button ><i className="fa-solid fa-table-cells"></i></button>
                         </Link>
                         <button ><i className="fa-solid fa-list"></i></button>
-                        <button ><i className="fa-solid fa-star"></i></button>
+                        <button ><i className="fa-solid fa-heart"></i></button>
                 </div>
 
                 <div className="profile_body">
@@ -36,7 +36,7 @@ export function Profile() {
                     {/* <div className="tab_list">
                         <List/>
                     </div> */}
-                    <div className="tab_favs">
+                    <div className="tab_likes">
                         {/* <List/> */}
                     </div>
 

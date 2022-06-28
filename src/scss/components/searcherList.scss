@@ -42,7 +42,7 @@
     align-items: flex-start;
 }
 
-.searcher_list_pg .user_cnt, .searcher_list_pg .card_btns, .searcher_list_pg .card_img .like_count{
+.searcher_list_pg .user_cnt, .searcher_list_pg .card_btns, .searcher_list_pg .card_img .like_count, .searcher_list_pg .card_img .comment_count{
     display: none;
 }
 .searcher_list_pg .list_cnt{
@@ -89,6 +89,7 @@
         position: relative;
         height: 90vh;        
         width: 100%;
+        justify-content: unset;
     }
 
     .searcher_list_pg h1{

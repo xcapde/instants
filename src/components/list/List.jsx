@@ -31,9 +31,13 @@ export function List (props) {
 
     const deleteInstant=(id)=>{
 
+        let confirmation = window.confirm('❌ Delete this photo?')
+
+        if(confirmation){
         instantServices.deleteAInstant(parseInt(id)).then(res => {
             if(res) getAllData();
         });
+        } return;
     }
 
 
