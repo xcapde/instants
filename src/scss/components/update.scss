@@ -62,16 +62,24 @@
     width: 100% !important;
     background: none;
     color: $colorDark;
+    padding: 0;
     
     &::placeholder{
         color: $colorGrey;
         font-weight: 400;
         font-size: medium;
     }
+    &:hover::placeholder{
+        color: $colorDarkOpacityLess !important;
+    }
+    // &:focus::placeholder{
+    //     color: $colorDarkOpacity !important;
+    // }
 
     &:hover{
-        color: $colorDarkOpacityLess;
+        color: $colorHeader;
         transition: 0.3s all;
+        cursor: text;
     }
     &:focus{
         color: $colorHeaderDark;
@@ -108,15 +116,15 @@
 }
 
 .preview_and_url img{
-    width: 5rem;
+    width: 10rem;
     height: auto;
     margin-right: 2%;
     @include detailRadius;
 }
 
-.create img{
-    width: 15rem !important;
-}
+// .create img{
+//     width: 10rem !important;
+// }
 
 .update_btns{
     display: flex;

@@ -48,13 +48,13 @@ export function Update(props) {
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="description">Description:</label>
-                        <textarea onChange={onInputChangeUpdate} value={newInstant.description} className="description_input"  name="description" id="description" placeholder="Share a description"/>
+                        <textarea onChange={onInputChangeUpdate} value={newInstant.description} className="description_input"  name="description" id="description" placeholder="Write a description"/>
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="imgUrl">Image:</label>
                         <div className="preview_and_url">
                             {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
-                            <input onChange={onInputChangeUpdate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="URL"/>          
+                            <input onChange={onInputChangeUpdate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="Image URL"/>          
                         </div>
                     </div>
                     <div className="update_btns">                    

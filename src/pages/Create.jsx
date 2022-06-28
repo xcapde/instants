@@ -55,7 +55,7 @@ export function Create() {
                 <form onSubmit={onHandleSubmitCreate} className="inputs_box">
                     <div className="update_input_box title_box">
                         <label htmlFor="title">Title:</label>
-                        <input onChange={onInputChangeCreate} value={newInstant.title} className="title_input" name="title" id="title" type="text" placeholder="Write a title"/>
+                        <input onChange={onInputChangeCreate} value={newInstant.title} className="title_input" name="title" id="title" type="text" placeholder="Write a title" autoFocus/>
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="description">Description:</label>

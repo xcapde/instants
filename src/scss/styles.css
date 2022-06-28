@@ -783,15 +783,20 @@ input:focus::placeholder {
   width: 100% !important;
   background: none;
   color: #242424;
+  padding: 0;
 }
 .inputs_box textarea::placeholder, .inputs_box input::placeholder {
   color: #d3d3d3;
   font-weight: 400;
   font-size: medium;
 }
+.inputs_box textarea:hover::placeholder, .inputs_box input:hover::placeholder {
+  color: rgba(36, 36, 36, 0.5803921569) !important;
+}
 .inputs_box textarea:hover, .inputs_box input:hover {
-  color: rgba(36, 36, 36, 0.5803921569);
+  color: #289772;
   transition: 0.3s all;
+  cursor: text;
 }
 .inputs_box textarea:focus, .inputs_box input:focus {
   color: #056344;
@@ -828,14 +833,10 @@ input:focus::placeholder {
 }
 
 .preview_and_url img {
-  width: 5rem;
+  width: 10rem;
   height: auto;
   margin-right: 2%;
   border-radius: 0.25rem;
-}
-
-.create img {
-  width: 15rem !important;
 }
 
 .update_btns {
