@@ -3,35 +3,29 @@
 }
 
 .update_pg{
-    // display: flex;
-    justify-content: center;
-    align-items: flex-start;
     z-index: 3;
     position: fixed;
     background-color:$colorWhite;
-    width: 100%;
+    width: 100vw;
     height: 90vh;
-    // top: 10vh;    
-}
-
-.full_blur{
-    background-color: $colorPrimary;
-    position: fixed;
-    width: 100%;
 }
 
 .update_box{
     width: 60%;
     height: 100%;
+    display: flex;
     justify-content: center;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .inputs_box{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    // height: 78vh;
+    height: 100%;
 }
 
 .inputs_box label{
@@ -50,12 +44,10 @@
     font-family: 'IBM Plex Sans Thai', sans-serif;
     border: none;
     outline: none;
-    margin-top: 0.3rem;
     cursor: pointer;
 }
 
 .inputs_box textarea, .inputs_box input{
-    padding: 1% 2%;
     font-size: medium;
     width: 100% !important;
     background: none;
@@ -99,13 +91,24 @@
     font-size: small !important;
     font-weight: 300 !important;  
 }
+.preview_and_url{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.preview_and_url img{
+    width: 5rem;
+    height: auto;
+    margin-right: 2%;
+    @include detailRadius;
+}
 
 .update_btns{
     display: flex;
-    width: 100%;
-    justify-content: center;
-    // position: absolute;
-    // bottom: 0;
+    justify-content: space-around;
+    width: 50%;
+    height: 15%;
 }
 
 .update_btn, .cancel_btn{
@@ -115,7 +118,7 @@
     color: $colorWhite;
     font-size: small;
     font-weight: 400; 
-    width: 10rem;   
+    width: 7rem; 
 }
 
 .update_btn{
@@ -147,12 +150,11 @@
         height: 80vh !important;
     } 
 
-    .full_blur{
-        position: fixed;
+    .update_box{
+        width: 92%;
     }
 
-    .update_box{
+    .update_btns{
         width: 90%;
-        height: 70vh;
     }
 }

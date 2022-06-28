@@ -6,15 +6,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    // padding-bottom: 7vh;
 }
 
 .preview_cnt{
-    @include inputRadius;
+    @include mainRadius_all;
     width: 65%;
     height: 90%;
     margin-left: 3%;
-    background-color: $colorGrey;
+    background-color: $colorWhiteOpacity;
 }
 
 .preview_cnt img{
@@ -25,33 +24,9 @@
     object-fit: scale-down;
 }
 
-.create_pg .inputs{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100% !important;
-}
 
 .create_pg .form_body input{
-    @include inputRadius;
-    border: none;
-    outline: none;
-    background: none;
-    width: 55%;
-    margin: 0.5rem 0;
-    height: 3rem;
-    padding: 0 1.5rem;
-    background-color: $colorWhite;
-}
-
-.create_pg input:hover, .create_pg textarea:hover{
-    background-color: $colorWhiteOpacity !important;
-}
-
-.create_pg input:focus, .create_pg textarea:focus{
-    background-color: $colorWhite !important;
+    width: 75%;
 }
 
 .create_pg textarea{
@@ -59,40 +34,26 @@
     font-family: "IBM Plex Sans Thai", sans-serif;
     outline: none;
     border: none;
-    width: 55%;
-    min-width: 55%;
-    max-width: 55%;
-    min-height: 3rem;
-    max-height: 7rem;
+    width: 75%;
+    min-width: 75%;
+    max-width: 75%;
+    min-height: 6rem;
+    max-height: 6rem;
     margin: 0.5rem 0;
     padding: 1rem 1.5rem;
     background-color: $colorWhite;
 } 
 
-.create_pg .form_body button{
-    @include inputRadius;
-    position: relative;
-    background: none;
-    border: none;
-    font-family: 'IBM Plex Sans Thai', sans-serif;
-    margin-top: 1rem;
-    padding: 0.5rem 1.3rem;
-    background-color: $colorSecondary;
-    color: $colorWhite;
-    font-size: small;
-    font-weight: 400;
+.create_pg textarea:hover{
+    background-color: $colorWhiteOpacity !important;
 }
 
-.create_pg .form_body button:hover{
-    background-color: $colorSecondaryHover;
-}
-
-.create_pg .form_body button:active{
-    background-color: $colorSecondaryActive;
+.create_pg textarea:focus{
+    background-color: $colorWhite !important;
 }
 
 .create_pg .mainBottom_btn {
-    width: 30%;
+    width: 20%;
     background-color: $colorPrimary !important; 
     color: $colorGreyHeader !important;
 
@@ -101,6 +62,7 @@
             color: $colorSecondaryHover !important;
         }
         &:active{
+            background-color:$colorPrimary !important;
             color: $colorSecondaryActive !important;
         }
 

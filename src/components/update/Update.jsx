@@ -38,7 +38,7 @@ export function Update(props) {
 
     console.log(props.instantToEdit)
     return( 
-        <section className={props.editIsActive? "update_pg slidein" : "hidden"}>
+        <section className={props.editIsActive? "update_pg slide_in" : "hidden"}>
 
             <div className="update_box">
                 <form onSubmit={onHandleSubmitUpdate} className="inputs_box">
@@ -48,9 +48,12 @@ export function Update(props) {
                     <label htmlFor="description">Description:</label>
                     <textarea onChange={onInputChangeUpdate} value={newInstant.description} className="description_input"  name="description" id="description" placeholder="Share a description"/>
                     
-                    <label htmlFor="imgUrl">Image URL:</label>
-                    <input onChange={onInputChangeUpdate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="URL"/>          
-                
+                    <label htmlFor="imgUrl">Image:</label>
+                    <div className="preview_and_url">
+                        {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
+                        <input onChange={onInputChangeUpdate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="URL"/>          
+                    </div>
+
                     <div className="update_btns">                    
                         <button onClick={props.showEdit} type="button" className="cancel_btn">CANCEL</button>
                         <button type="submit" className="update_btn">UPDATE</button>

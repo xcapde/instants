@@ -39,7 +39,7 @@
     margin-right: 15%;
 }
 
-.like_btn, .fav_btn, .edit_btn, .delete_btn, .comment_btn {
+.like_btn, .edit_btn, .delete_btn, .comment_btn {
     background: none;
     border: none;
     width: 1.9rem;
@@ -66,14 +66,6 @@
     color: $colorLikeActive;
 }
 
-.fav_btn:hover{
-    color: $colorFav;
-}
-
-.fav_btn:active{
-    color: $colorFavActive;
-}
-
 .comment_btn:hover{
     color:$colorComment;
 
@@ -90,16 +82,6 @@
 
 .edit_btn:active, .delete_btn:active{
     color:$colorGreyOpacity;
-}
-
-.favorited{
-    color: $colorFavActive !important;
-    &:hover{
-        color: $colorFav !important;
-    }
-    &:active{
-        color: $colorFavActive !important;        
-    }
 }
 
 .liked{
@@ -136,8 +118,8 @@
         margin-right: 20%;
     }
     
-    .like_btn, .fav_btn, .edit_btn, .delete_btn, .comment_btn {
-        font-size: 1.3rem;
+    .like_btn, .edit_btn, .delete_btn, .comment_btn {
+        font-size: 1.2rem;
         width: 2.4rem;
         height: 2.4rem;
     }

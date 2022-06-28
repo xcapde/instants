@@ -1,9 +1,8 @@
 
-.slidein{
+.slide_in{
     animation: moveFromLeft 0.5s ease-in;
     animation-delay: 10ms;
 }
-
 @keyframes moveFromLeft {
     0% {
         transform: translateX(-100vw);
@@ -12,12 +11,23 @@
         transform: translateX(0vw);
     } 
 }
+// WITH OPACITY!
+@keyframes moveFromLeft_opacity {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    } 
+}
 
-.slideout{
+
+.slide_out{
     animation: moveFromRight 0.5s ease-in;
     animation-delay: 10ms;
 }
-
 @keyframes moveFromRight {
     0% {
         transform: translateX(0vw);

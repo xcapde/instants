@@ -73,12 +73,12 @@
 .details_body .user_name{
     color: $colorGreyHeader !important;
     font-size: x-small;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .description_box{
     height: auto;
-    max-height: 30%;
+    max-height: 40%;
     overflow-y: auto;
 }
 
@@ -89,7 +89,7 @@
     color: $colorGrey !important;
     width: 100%;
     min-height: 4rem;
-    max-height: 55%;
+    max-height: 45%;
     overflow-y: auto;
     display: flex;
     flex-direction: column;

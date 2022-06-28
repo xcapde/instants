@@ -79,6 +79,10 @@
     @include profileCard;
 }
 
+.tab_imageList .card_img, .tab_imageList img{
+    // @include detailRadius;
+}
+
 
 // LIST
 
