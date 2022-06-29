@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Navbar } from "../components/navbar/Navbar";
 import { instantServices } from "../data_API/instantServices";
 
 export function Create() {
@@ -41,6 +42,8 @@ export function Create() {
 
     return( 
         <section className="update_pg">
+
+            {/* <Navbar/> */}
 
             <div className="form_header">
                 <div className="back_cnt">

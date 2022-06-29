@@ -1,14 +1,11 @@
-.searcher_pg{
-    display: none;
-}
-
 .searcher_list_pg{
+    z-index: 1;
     @include flexCenterRow;
-    position: relative;
     background-color: $colorPrimary;
     width: 100%;
     height: 90vh;
     top: 10vh;  
+    position: fixed;
 }
 
 .searcher_list_pg .back_cnt{
@@ -62,10 +59,18 @@
 }
 
 .searcher_list_pg h1{
-    color: $colorDarkOpacityLess;
-    font-size: small;
+    color: $colorDarkOpacityLess !important;
+    font-size: small !important;
     font-weight: 400;
     padding: 3% 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+}
+
+.searcher_list_pg .logo{
+    font-size: larger;
+    padding: 0;
 }
 
 .searcher_list_pg .card_img{
@@ -86,7 +91,6 @@
 
     .searcher_list_pg{
         top: 10vh;
-        position: relative;
         height: 90vh;        
         width: 100%;
         justify-content: unset;

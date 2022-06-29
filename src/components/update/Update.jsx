@@ -34,20 +34,18 @@ export function Update(props) {
         instantServices.putInstant(id, newInstantData).then((res) => {
             if(res);
             props.showEdit();
+            props.getAllData();
         });
     }
 
-    console.log(newInstant)
-    console.log(props.instantToEdit)
-    // console.log(newInstant.title)
     return( 
-        <section className={props.editIsActive? "update_pg slide_in" : "hidden"}>
+        <section className="update_pg slide_in">
 
             <div className="update_box">
                 <form onSubmit={onHandleSubmitUpdate} className="inputs_box">
                     <div className="update_input_box title_box">
                         <label htmlFor="title">Title:</label>
-                        <input onChange={onInputChangeUpdate} value={newInstant.title||''} className="title_input" name="title" id="title" type="text" placeholder="Write a title"/>
+                        <input onChange={onInputChangeUpdate} value={newInstant.title||''} className="title_input" name="title" id="title" type="text" placeholder="Write a title" autoFocus/>
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="description">Description:</label>

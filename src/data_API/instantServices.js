@@ -36,11 +36,25 @@ export const instantServices = {
     return instantById;
   },
 
-  getInstantBySearch() {
-    const instantBySearch = axios.get(baseURL + `/instants/`).then(res => {
-      return res.data;
+  getInstantsBySearch(text) {
+    const instantsBySearch = axios.get(baseURL + `/instants/`).then(res => {  
+      
+      let searchResult = []
+
+      // console.log(text)
+      // console.log(res.data)
+
+        for(let instant of res.data){
+          if (instant.title.includes(text) || instant.description.includes(text)){
+            searchResult.push(instant)
+          }
+          console.log(searchResult)
+          
+        } return searchResult;      
     });
-    return instantBySearch;
+
+    return instantsBySearch;
   },
+
 
 };

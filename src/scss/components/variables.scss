@@ -88,7 +88,7 @@ $tertiaryRadius:0.25rem;
     background-color: $background;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
-    border: 0.01rem solid $border;
+    border-bottom: 0.01rem solid $border;
 }
 
 // CARD
@@ -110,8 +110,9 @@ $tertiaryRadius:0.25rem;
     }
 }
 
+// Sense l'Scrollbar és 1 10 0 10
 @mixin searcherCard {
-    margin: 1% 11% 0 11%;
+    margin: 1% 10% 0 10%;
 }
 
 @mixin searcherMobileCard {

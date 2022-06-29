@@ -17,13 +17,17 @@
     background-color: $colorHeader;
     border-radius: 0;
     font-size: medium;
+
+    @media only screen and (min-width: $breakPointSmall){
+        display: none;
+    }
 }
 
 .searcher_pg .searcher input, .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active, .searcher_pg .searcher input:focus{
     padding: 0 4rem 0 4rem !important;
 }
 
-.searcher_pg .searcher input:hover{
+.searcher_pg .searcher input:hover, .searcher_pg .searcher input:active{
     background-color: $colorGrey;   
 }
 

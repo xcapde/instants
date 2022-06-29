@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { Navbar } from "../components/navbar/Navbar";
 
 
 export function SignUp() {
     return(
         <section className="signup_pg">
+            {/* <Navbar/> */}
 
             <div className="form_cnt">
                 <div className="form_header">

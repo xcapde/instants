@@ -4,13 +4,17 @@ import { useState } from "react";
 import { Update } from "../update/Update";
 import { useEffect } from "react";
 import { instantServices } from "../../data_API/instantServices";
+import { SearcherList } from "../../pages/SearcherList";
+import { Searcher } from "../navbar/searcher/Searcher";
+import { Navbar } from "../navbar/Navbar";
+import { NavbarBottom } from "../navbar_bottom/NavbarBottom";
 
 export function List () {
 
     const[instants, setInstants] = useState([]);
+    const[searchIsActive, setSearchIsActive] = useState(false);
     const[editIsActive, setEditIsActive] = useState(false);
     const[instantToEdit, setInstantToEdit] = useState('');
-    // const[favList, setFavList] = useState([]);
     // const[likeList, setLikeList] = useState([]);
 
     useEffect(() => {
@@ -29,6 +33,11 @@ export function List () {
         setInstantToEdit(instant);
     }
 
+    const showSearch=()=>{
+        setSearchIsActive(!searchIsActive);
+        console.log(searchIsActive)
+    }    
+
     const deleteInstant=(id)=>{
 
         let confirmation = window.confirm('❌ Delete this photo?')
@@ -40,15 +49,20 @@ export function List () {
         } return;
     }
 
-
     return(
-        <section className="list_pg">
-            
-            <div className="list_cnt">
+        <section className="list_pg">  
+
+        {/* <Navbar showSearch={showSearch} searchIsActive={searchIsActive} />           */}
+
+            <div className="list_cnt">                
                 
-                {/* <Spinner/> */}
-                {/* <Modal/> */}
-                <Update editIsActive={editIsActive} showEdit={showEdit} instantToEdit={instantToEdit} getAllData={getAllData}/>
+                {/* {searchIsActive?
+                    <SearcherList showSearch={showSearch}/>
+                :''} */}
+                
+                {editIsActive?
+                    <Update editIsActive={editIsActive} showEdit={showEdit} instantToEdit={instantToEdit} getAllData={getAllData}/>
+                :''}
 
                 <>{instants.map((instant,key) =>
                     <Card key={key} instant={instant} deleteInstant={deleteInstant} showEdit={showEdit} editIsActive={editIsActive}
@@ -56,7 +70,7 @@ export function List () {
                     ).reverse()}
                 </>
 
-            </div>
+            </div>            
         </section>
     )
 }

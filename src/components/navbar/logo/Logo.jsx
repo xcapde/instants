@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 export function Logo () {
 
+
     return (
         <div className="logo_cnt">
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Comment } from "../components/comment/Comment";
 import { NewComment } from "../components/comment/NewComment";
+import { Navbar } from "../components/navbar/Navbar";
 import { instantServices } from "../data_API/instantServices";
 
 export function Details() {
@@ -27,6 +28,7 @@ export function Details() {
 
     return(
         <div className="details_pg">
+            {/* <Navbar/> */}
 
             <div className="details_cnt">
 

@@ -12,7 +12,7 @@
     min-width: 10rem;
     position: relative;
     border: none;
-    color: $colorHeader;
+    color: $colorWhite;
     padding: 0 4rem 0 1.5rem;
     font-size: smaller;
     outline: none;
@@ -54,4 +54,71 @@ input:focus::placeholder{
 .searcher button i{
     background:none;
     color: $colorHeader ;
+}
+
+.searcher .closeSearch_btn{
+    margin-right: 2rem;
+    font-size: larger;
+
+    @media only screen and (max-width: $breakPointSmall){
+    margin-right: 3.5rem;
+    }
+}
+
+
+@media only screen and (max-width: $breakPointSmall){
+
+    .searcher_pg{
+        background-color: $colorWhite;
+        height: 100vh;
+    }
+    
+    .searcher_pg .back_cnt{
+        z-index: 2;
+    }
+    
+    .searcher_pg .searcher input{
+        width: 100%;
+        height: 100%;
+        background-color: $colorHeader;
+        border-radius: 0;
+        font-size: medium;
+        height: 10vh;
+    }
+    
+    .searcher_pg .searcher input, .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active, .searcher_pg .searcher input:focus{
+        padding: 0 4rem 0 4rem !important;
+    }
+    
+    .searcher_pg .searcher input:hover{
+        background-color: $colorGrey;   
+    }
+    
+    .searcher_pg .searcher input::placeholder{
+        color: $colorWhiteOpacity;
+        font-family: 'IBM Plex Sans Thai', sans-serif;
+        font-weight: 200 !important;
+    }
+    
+    .searcher_pg .searcher input:hover::placeholder{
+        color: $colorGreyHeader;
+    }
+    
+    .searcher_pg .searcher input:focus::placeholder{
+        color: $colorDarkOpacityLess !important;
+    }
+    
+    .searcher_pg .searcher button{
+        margin-right: 3%;
+    }
+    
+    .searcher_pg .searcher button i{
+        font-size: medium;
+        color: $colorWhiteOpacity;
+    }
+    
+    .searcher_pg .searcher:hover button i{
+        color: $colorDarkOpacityLess;
+    }
+
 }

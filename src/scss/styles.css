@@ -167,6 +167,7 @@
   background-color: #F9F9F9;
   width: 100vw;
   height: 90vh;
+  font-family: "Quicksand", sans-serif;
 }
 
 .update_box {
@@ -361,6 +362,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 .details_photo_mobile {
@@ -620,19 +622,16 @@
   top: 15vh;
 }
 
-.searcher_pg {
-  display: none;
-}
-
 .searcher_list_pg {
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   background-color: #edeeeb;
   width: 100%;
   height: 90vh;
   top: 10vh;
+  position: fixed;
 }
 
 .searcher_list_pg .back_cnt {
@@ -667,7 +666,7 @@
 }
 
 .searcher_list_pg .list_cnt {
-  margin: 1% 11% 0 11%;
+  margin: 1% 10% 0 10%;
 }
 
 .searcher_list_pg .card_cnt {
@@ -683,10 +682,18 @@
 }
 
 .searcher_list_pg h1 {
-  color: rgba(36, 36, 36, 0.5803921569);
-  font-size: small;
+  color: rgba(36, 36, 36, 0.5803921569) !important;
+  font-size: small !important;
   font-weight: 400;
   padding: 3% 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+}
+
+.searcher_list_pg .logo {
+  font-size: larger;
+  padding: 0;
 }
 
 .searcher_list_pg .card_img {
@@ -704,7 +711,6 @@
   }
   .searcher_list_pg {
     top: 10vh;
-    position: relative;
     height: 90vh;
     width: 100%;
     justify-content: unset;
@@ -843,7 +849,7 @@
   min-width: 10rem;
   position: relative;
   border: none;
-  color: #289772;
+  color: #F9F9F9;
   padding: 0 4rem 0 1.5rem;
   font-size: smaller;
   outline: none;
@@ -887,11 +893,65 @@ input:focus::placeholder {
   color: #289772;
 }
 
+.searcher .closeSearch_btn {
+  margin-right: 2rem;
+  font-size: larger;
+}
+@media only screen and (max-width: 500px) {
+  .searcher .closeSearch_btn {
+    margin-right: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .searcher_pg {
+    background-color: #F9F9F9;
+    height: 100vh;
+  }
+  .searcher_pg .back_cnt {
+    z-index: 2;
+  }
+  .searcher_pg .searcher input {
+    width: 100%;
+    height: 100%;
+    background-color: #289772;
+    border-radius: 0;
+    font-size: medium;
+    height: 10vh;
+  }
+  .searcher_pg .searcher input, .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active, .searcher_pg .searcher input:focus {
+    padding: 0 4rem 0 4rem !important;
+  }
+  .searcher_pg .searcher input:hover {
+    background-color: #d3d3d3;
+  }
+  .searcher_pg .searcher input::placeholder {
+    color: rgba(249, 249, 249, 0.4745098039);
+    font-family: "IBM Plex Sans Thai", sans-serif;
+    font-weight: 200 !important;
+  }
+  .searcher_pg .searcher input:hover::placeholder {
+    color: #a8a8a8;
+  }
+  .searcher_pg .searcher input:focus::placeholder {
+    color: rgba(36, 36, 36, 0.5803921569) !important;
+  }
+  .searcher_pg .searcher button {
+    margin-right: 3%;
+  }
+  .searcher_pg .searcher button i {
+    font-size: medium;
+    color: rgba(249, 249, 249, 0.4745098039);
+  }
+  .searcher_pg .searcher:hover button i {
+    color: rgba(36, 36, 36, 0.5803921569);
+  }
+}
 .navbar_cnt {
   background-color: rgba(12, 136, 95, 0.863);
   backdrop-filter: blur(0.7rem);
   -webkit-backdrop-filter: blur(0.7rem);
-  border: 0.01rem solid #289772;
+  border-bottom: 0.01rem solid #289772;
   z-index: 5;
   display: flex;
   position: fixed;
@@ -917,7 +977,7 @@ input:focus::placeholder {
   background-color: rgba(36, 36, 36, 0.5803921569);
   backdrop-filter: blur(0.7rem);
   -webkit-backdrop-filter: blur(0.7rem);
-  border: 0.01rem solid rgba(36, 36, 36, 0.1019607843);
+  border-bottom: 0.01rem solid rgba(36, 36, 36, 0.1019607843);
   z-index: 2;
   bottom: 0;
   left: 0;
@@ -1031,7 +1091,7 @@ input:focus::placeholder {
     background-color: rgba(12, 136, 95, 0.863);
     backdrop-filter: blur(0.7rem);
     -webkit-backdrop-filter: blur(0.7rem);
-    border: 0.01rem solid #289772;
+    border-bottom: 0.01rem solid #289772;
     z-index: 2;
     display: flex;
     position: fixed;
@@ -1056,12 +1116,17 @@ input:focus::placeholder {
   border-radius: 0;
   font-size: medium;
 }
+@media only screen and (min-width: 500px) {
+  .searcher_pg .searcher input {
+    display: none;
+  }
+}
 
 .searcher_pg .searcher input, .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active, .searcher_pg .searcher input:focus {
   padding: 0 4rem 0 4rem !important;
 }
 
-.searcher_pg .searcher input:hover {
+.searcher_pg .searcher input:hover, .searcher_pg .searcher input:active {
   background-color: #d3d3d3;
 }
 
@@ -1104,6 +1169,7 @@ input:focus::placeholder {
   display: flex;
   flex-direction: column;
   background-color: #36af87;
+  font-family: "Quicksand", sans-serif;
 }
 .card_cnt:hover {
   filter: drop-shadow(0rem 0rem 0.2rem rgb(190, 190, 190));
@@ -1784,7 +1850,7 @@ input:focus::placeholder {
   }
 }
 :root {
-  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 #root {

@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { Navbar } from "../components/navbar/Navbar";
 
 export function LogIn() {
     return(
         <section className="login_pg">
+            {/* <Navbar/> */}
 
             <div className="form_cnt">
                 <div className="form_header">
