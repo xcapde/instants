@@ -1,42 +1,21 @@
-.card_btns, .reaction_btns, .gestion_btns{
+.card_btns{
     z-index: 1;
     background-color:$colorWhite;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+    padding: 2%;
     height: 2.5rem;
-}
+    @include mainRadius_bottom;
 
-.card_btns{
-    @include mainRadius_all;
+    @media only screen and (max-width: $breakPointSmall){
+        height: 3rem;
+    }
 }
 
 .card_btns button{
     color: $colorGreyHeader;
-}
-
-.reaction_btns, .gestion_btns{
-    @include mainRadius_bottom;
-    width: 50%;
-}
-
-.reaction_btns{
-    justify-content: flex-start;
-}
-
-.reaction_btns button{
-    margin-left: 15%;
-    border-style: solid;
-    border-width: 0.1rem;
-    border-radius: 50%;
-}
-
-.gestion_btns{
-    justify-content: flex-end;
-}
-
-.gestion_btns button{
-    margin-right: 15%;
 }
 
 .like_btn, .edit_btn, .delete_btn, .comment_btn {
@@ -51,19 +30,42 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+    
+    @media only screen and (max-width: $breakPointSmall){
+        font-size: 1.2rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
 }
 
 .edit_btn, .delete_btn{
     height: 2rem;
     width: 2rem;
+    &:hover{
+        color:$colorDarkOpacityLess;
+        background-color: $colorDarkOpacity;
+    }
+    &:active{
+        color: $colorGreyOpacity;
+    }
+
+    @media only screen and (max-width: $breakPointSmall){
+        height: 2.3rem;
+        width: 2.3rem;
+    }
+}
+
+.like_btn, .comment_btn{
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 50%;
 }
 
 .like_btn:hover{
     color: $colorLike;
-}
-
-.like_btn:active{
-    color: $colorLikeActive;
+    &:active{
+        color: $colorLikeActive
+    }
 }
 
 .comment_btn:hover{
@@ -72,16 +74,6 @@
     &:active{
         color:$colorCommentActive;
     }
-}
-
-
-.edit_btn:hover, .delete_btn:hover{
-    color:$colorDarkOpacityLess;
-    background-color: $colorDarkOpacity;
-}
-
-.edit_btn:active, .delete_btn:active{
-    color:$colorGreyOpacity;
 }
 
 .liked{
@@ -103,29 +95,4 @@
     &:active{
         color:$colorCommentActive !important;
     }
-}
-
-@media only screen and (max-width: $breakPointSmall){
-    .card_btns, .reaction_btns, .gestion_btns{
-        height: 3rem;
-    }
-    
-    .reaction_btns button{
-        margin-left: 20%;
-    }
-
-    .gestion_btns button{
-        margin-right: 20%;
-    }
-    
-    .like_btn, .edit_btn, .delete_btn, .comment_btn {
-        font-size: 1.2rem;
-        width: 2.4rem;
-        height: 2.4rem;
-    }
-    
-    .edit_btn, .delete_btn{
-        height: 2.5rem;
-        width: 2.5rem;
-    }    
 }

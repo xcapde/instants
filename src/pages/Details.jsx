@@ -9,15 +9,18 @@ export function Details() {
     const [instantInfo, setInstantInfo] = useState({});
     const [id] = useState(useParams().id)
 
-    const showDetails = () => {
-
-        instantServices.getInstantById(id).then(res => {
-            setInstantInfo(res);
-          });
-    } 
 
     useEffect(() => {
+
+        const showDetails = () => {
+
+            instantServices.getInstantById(id).then(res => {
+                setInstantInfo(res);
+              });
+        }
+
         showDetails();
+        
     },[id]);
 
  
@@ -31,6 +34,7 @@ export function Details() {
                         <img src={instantInfo.imgUrl} alt="preview"/>                                           
                         <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.comments}</div>   
                         <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
+                        <div className="ubication"><i className="fa-solid fa-location-dot"></i>Location</div>
                 </div>                
 
                 <div className="details_info">    
@@ -45,11 +49,13 @@ export function Details() {
                     </div>      
                         
                     <div className="details_body">
+
                         <div className="photoAndDescription_mbl_box">
                             <div className="details_photo_mobile">
                                 <img src={instantInfo.imgUrl} alt="preview"/>  
                                 <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.comments}</div>                                              
                                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
+                                <div className="ubication"><i className="fa-solid fa-location-dot"></i>Location</div>
                             </div>                          
                             <div className="description_box">
                                 <div className="user_cnt">
@@ -58,9 +64,14 @@ export function Details() {
                                 </div> 
                                 <p>{instantInfo.description}</p>
                             </div>
-                        </div>    
+                        </div>
+
                         <div className="comments_box">
                             <div className="users_comments">
+                                <Comment/>
+                                <Comment/>
+                                <Comment/>
+                                <Comment/>
                                 <Comment/>
                                 <Comment/>
                                 <Comment/>
@@ -69,7 +80,8 @@ export function Details() {
                                         
                             </div>
                             <NewComment/>
-                        </div>                             
+                        </div>
+
                     </div>                  
 
                 </div>                

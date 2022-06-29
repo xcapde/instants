@@ -10,23 +10,6 @@ export function Card(props){
         setInstant(props.instant)
     }, [props.instant])
 
-
-    const markFavorite = (instant) => {
-
-        if(instant.isFav === false){instant.isFav = true 
-        // console.log(`✅ ${instant.title} added to favorites!`)
-        // console.log(instant.isFav)
-        }
-
-        else {instant.isFav = false;
-        // console.log(`❌ ${instant.title} removed from favorites!`)
-        // console.log(instant.isFav)
-        }
-
-        props.getAllData()
-        // console.log(instant.isFav)
-    };
-
     const markLiked = (instant) => {
 
         if(instant.isLike === false){instant.isLike = true 
@@ -59,16 +42,12 @@ export function Card(props){
             </div>
 
                 <div className="card_btns">                    
-                    <div className="reaction_btns">
                         <button onClick={()=>markLiked(instant)} className={instant.isLike? "like_btn liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
-                        <button onClick={()=>markFavorite(instant)} className={instant.isComment? "comment_btn commented":"comment_btn"}><i class="fa-solid fa-message"></i></button>                      
-                        {/* <button onClick={()=>markFavorite(instant)} className={instant.isLike? "fav_btn favorited":"fav_btn"}><i className="fa-solid fa-star"></i></button>                       */}
-                    </div>
-                    <div className="gestion_btns">
+                        <button className={instant.isComment? "comment_btn commented":"comment_btn"}><i className="fa-solid fa-message"></i></button>                      
+                        
                         <button onClick={()=>props.showEdit(instant)} className="edit_btn"><i className="fa-solid fa-pencil"></i></button>
                         <button onClick={()=>props.deleteInstant(instant.id)} className="delete_btn"><i className="fa-solid fa-trash-can"></i></button>
-                    </div>
-                    {/* <NewComment/> */}
+                    <NewComment/>
                 </div>
 
         </section>

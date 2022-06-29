@@ -1,20 +1,23 @@
 @import "./components/variables.scss";
-@import "./components/navbar.scss";
-@import "./components/navbarBottom.scss";
-@import "./components/navbarTopMobile.scss";
-@import "./components/list.scss";
+
+@import "./components/pages/list.scss";
+@import "./components/pages/login.scss";
+@import "./components/pages/signup.scss";
+@import "./components/pages/create.scss";
+@import "./components/pages/update.scss";
+@import "./components/pages/details.scss";
+@import "./components/pages/profile.scss";
+@import "./components/pages/searcherList.scss";
+
+@import "./components/nav/navbar.scss";
+@import "./components/nav/navbarBottom.scss";
+@import "./components/nav/navbarTopMobile.scss";
+@import "./components/nav/searcherMobile.scss";
+
 @import "./components/card.scss";
 @import "./components/cardButtons.scss";
-@import "./components/login.scss";
-@import "./components/signup.scss";
-@import "./components/create.scss";
-@import "./components/update.scss";
-@import "./components/details.scss";
 @import "./components/comment.scss";
 @import "./components/newComment.scss";
-@import "./components/profile.scss";
-@import "./components/searcherMobile.scss";
-@import "./components/searcherList.scss";
 @import "./components/form.scss";
 @import "./components/userCard.scss";
 @import "./components/modals.scss";

@@ -36,4 +36,11 @@ export const instantServices = {
     return instantById;
   },
 
+  getInstantBySearch() {
+    const instantBySearch = axios.get(baseURL + `/instants/`).then(res => {
+      return res.data;
+    });
+    return instantBySearch;
+  },
+
 };

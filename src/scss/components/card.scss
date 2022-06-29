@@ -1,3 +1,7 @@
+.card_cnt .newComment_box{
+    display: none
+}
+
 .card_cnt{
     @include mainCard;
     @include mainRadius_all;
@@ -67,17 +71,6 @@
     justify-content: center;
     align-items: flex-start;
     padding-bottom: 1%;
-}
-
-.card_txt h2{
-    width: auto;
-    color: $colorDark;
-    font-size: smaller;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: flex-end;
 }
 
 .card_txt h1{
