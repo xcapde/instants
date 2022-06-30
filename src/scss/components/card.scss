@@ -16,6 +16,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .card_img a{
@@ -26,7 +27,22 @@
     width: 100%;
     height: 100%;
     object-fit:cover;
+    transition: 1s all ease;
+
+    &:hover{
+        transform: scale;
+        -webkit-transform: scale(1.1);
+        transition: 1.5s all ease;
+    }
 }
+
+// .card_cnt:hover img{
+//     transform: scale;
+//         // -webkit-transform: scale(0.95);
+//         -webkit-transform: scale(1.1);
+//         transition: 1.5s all ease;
+//         overflow: hidden !important;
+// }
 
 .like_count, .comment_count, .ubication{
     @include mainRadius_all;

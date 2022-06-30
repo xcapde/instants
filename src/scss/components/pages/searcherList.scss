@@ -4,13 +4,14 @@
     background-color: $colorPrimary;
     width: 100%;
     height: 90vh;
-    top: 10vh;  
+    top: 10vh; 
+    right: 0; 
     position: fixed;
 }
 
 .searcher_list_pg .back_cnt{
     z-index: 2;
-    position: fixed;
+    position: fixed !important;
     top: 13vh;
     left: 2%;
     height: 2rem;
@@ -21,12 +22,15 @@
 
     &:hover{
         background-color: $colorHeader;
-        color: $colorWhite;
     }
 
     &:active{
         background-color: $colorHeaderActive;
     }
+}
+
+.searcher_list_pg .back_cnt button:hover i{
+        color: $colorWhite !important;
 }
 
 

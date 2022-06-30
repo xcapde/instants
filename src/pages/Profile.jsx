@@ -7,7 +7,7 @@ export function Profile() {
 
                 <div className="form_header">
                     <div className="back_cnt">
-                        <Link to="/">                    
+                        <Link to="/home">                    
                             <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
                         </Link>
                     </div>

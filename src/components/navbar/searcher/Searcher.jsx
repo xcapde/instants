@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { instantServices } from "../../../data_API/instantServices";
+import { SearcherList } from "../../../pages/SearcherList";
 
 export function Searcher(props){
 
@@ -39,11 +40,17 @@ export function Searcher(props){
     return (
         <form onSubmit={onHandleSubmitSearch} className="searcher">
             
-            <Link to="/searcher">
+            {/* <Link to="/searcher"> */}
                 <input onChange={onInputChangeSearch} value={searchValue.search ||''} placeholder="Search..." name="search" type="text"/>
-            </Link>
-            <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
+            {/* </Link> */}
+            <button className="search_submit_btn" type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
             {/* <button onClick={resetInputsSearch} className="closeSearch_btn" type="button"><i className="fa-solid fa-xmark"></i></button> */}
+
+            {props.searchIsActive?
+                <SearcherList/> 
+                : ''
+            }
+        
         </form>
     )
 }

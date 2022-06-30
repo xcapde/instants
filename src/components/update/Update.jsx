@@ -26,7 +26,7 @@ export function Update(props) {
         let id= newInstant.id;     
         updateOneInstant(id, newInstant); 
         
-        navigate("/")
+        navigate("/home")
     }
 
     const updateOneInstant=(id, newInstantData)=>{
@@ -53,7 +53,7 @@ export function Update(props) {
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="imgUrl">Image:</label>
-                        <div className="preview_and_url">
+                        <div className={newInstant.imgUrl? "preview_and_url reduced" : "preview_and_url"}>
                             {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
                             <input onChange={onInputChangeUpdate} value={newInstant.imgUrl||''} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="Image URL"/>          
                         </div>

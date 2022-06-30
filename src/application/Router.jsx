@@ -18,7 +18,7 @@ export default function Router(){
         <BrowserRouter>
             <Navbar/>
             <Routes>
-                <Route path="/" element={<App/>}/>
+                <Route path="/home" element={<App/>}/>
                 <Route path="/detail/:id" element={<Details/>}/>
                 <Route path="/signup" element={<SignUp/>}/>
                 <Route path="/login" element={<LogIn/>}/>
@@ -30,7 +30,7 @@ export default function Router(){
                 <Route path="/user_list" element={<UserList/>}/> */}
                 <Route path="/create" element={<Create/>}/>
                 <Route path="searcher_mobile" element={<SearcherMobile/>}/>
-                <Route path="searcher" element={<SearcherList/>}/>
+                {/* <Route path="searcher" element={<SearcherList/>}/> */}
             </Routes>
             <NavbarBottom/>
         </BrowserRouter>

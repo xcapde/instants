@@ -9,6 +9,15 @@
     width: 100vw;
     height: 90vh;
     font-family: 'Quicksand', sans-serif;
+    top: 10vh,
+}
+
+.update_pg .form_header{
+    display: none;
+    
+    @media only screen and (max-width: $breakPointSmall){
+        display: flex;
+    }
 }
 
 .update_box{
@@ -108,6 +117,42 @@
     font-size: small !important;
     font-weight: 300 !important;  
 }
+
+.reduced{
+    flex-direction: column;
+    align-items: unset !important;
+}
+
+.reduced img{
+    margin: 0 !important;
+    -webkit-box-reflect: below 0% linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.0), rgba(0,0,0,0.0),rgba(0, 0, 0, 0.267));
+    transition: 1s all ease-out;
+
+    // &:hover{
+    //     width: 15rem;
+    //     transition: 1.5s all ease-in;
+    // }
+
+    @media only screen and (max-width: $breakPointSmall){
+        &:hover{
+            width: 100%;
+            transition: 1.5s all ease-in;
+        }
+    }
+}
+
+.reduced input{
+    width: 10rem !important;
+    text-overflow: ellipsis !important;
+    // text-align: center !important;
+    transition: 1s all;
+
+    &:hover, &:active, &:focus{
+        width: 100% !important;
+        transition: 1s all;
+    }
+}
+
 .preview_and_url{
     display: flex;
     align-items: center;

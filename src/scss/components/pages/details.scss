@@ -31,6 +31,20 @@
     // object-fit:scale-down;
 }
 
+.details_photo .like_count,.details_photo_mobile .like_count,
+.details_photo .comment_count,.details_photo_mobile .comment_count,
+.details_photo .ubication,.details_photo_mobile .ubication{
+    opacity: 1;
+    transition: 1s all;
+}
+
+.details_photo:hover .like_count,.details_photo_mobile:hover .like_count,
+.details_photo:hover .comment_count,.details_photo_mobile:hover .comment_count,
+.details_photo:hover .ubication,.details_photo_mobile:hover .ubication{
+    opacity: 0;
+    transition: 1.5s all;
+}
+
 .details_info{
     position: relative;
     width: 20rem;

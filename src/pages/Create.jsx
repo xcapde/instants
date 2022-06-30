@@ -35,7 +35,7 @@ export function Create() {
     const addInstant=(newInstantData)=>{
 
         instantServices.postInstant(newInstantData).then(res => {
-            if(res)navigate("/");
+            if(res)navigate("/home");
        });
     }
 
@@ -47,7 +47,7 @@ export function Create() {
 
             <div className="form_header">
                 <div className="back_cnt">
-                    <Link to="/">                    
+                    <Link to="/home">                    
                         <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
                     </Link>
                 </div>
@@ -72,10 +72,10 @@ export function Create() {
                         </div>
                     </div>
                     <div className="update_btns">
-                        <Link to="/">
+                        <Link to="/home">
                             <button  type="button" className="cancel_btn">CANCEL</button>                    
                         </Link>
-                        <button onClick={resetInputsCreate} type="button" className="close_btn"><i class="fa-solid fa-xmark"></i><span className="close_txt">CLEAR</span></button>                        
+                        <button onClick={resetInputsCreate} type="button" className="close_btn"><i className="fa-solid fa-xmark"></i><span className="close_txt">CLEAR</span></button>                        
                         <button type="submit" className="update_btn">SHARE</button>
                     </div>                    
                 </form>

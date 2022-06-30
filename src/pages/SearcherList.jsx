@@ -15,11 +15,11 @@ export function SearcherList() {
 
     return(
         <div className="searcher_list_pg">
-            <Link to="/">
+            <Link to="/home">
                 <div className="back_cnt"><button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button></div>
             </Link>
             
-            <SearcherMobile/>
+            {/* <SearcherMobile/> */}
             <List/>
 
         </div>

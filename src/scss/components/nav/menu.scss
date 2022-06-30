@@ -29,6 +29,16 @@
     background-color: $colorHeaderActive;
 }
 
+.menu_active{
+    background-color: $colorHeaderHover !important;
+    &:hover{
+        background-color: $colorHeaderActive !important;
+    }
+    &:active{
+        background-color: $colorHeaderHover !important;
+    }
+}
+
 .nav_icon{
     margin-right: 0.5rem;
     display: none;

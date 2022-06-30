@@ -12,10 +12,12 @@
     justify-content: flex-start;
     margin: 0 1.8rem 0 2.3rem;
     font-weight: 200;
+    transition: 0.5s all;
 }
 
 .logo:hover{
-    color:$colorHeaderDark;
+    // color:$colorHeaderDark;
+    color: $colorWhite
 }
 
 @media only screen and (max-width: $breakPointSmall){

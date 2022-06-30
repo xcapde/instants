@@ -34,7 +34,7 @@ export function Create1() {
     const addInstant=(newInstantData)=>{
 
         instantServices.postInstant(newInstantData).then(res => {
-            if(res)navigate("/");
+            if(res)navigate("/home");
        });
     }
 
@@ -45,7 +45,7 @@ export function Create1() {
             <div className="form_cnt">
                 <div className="form_header">
                     <div className="back_cnt">
-                        <Link to="/">                    
+                        <Link to="/home">                    
                             <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
                         </Link>
                     </div>

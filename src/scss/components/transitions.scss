@@ -1,7 +1,6 @@
 
 .slide_in{
     animation: moveFromLeft 0.5s ease-in;
-    animation-delay: 10ms;
 }
 @keyframes moveFromLeft {
     0% {
@@ -23,10 +22,25 @@
     } 
 }
 
+.slide_in_slow{
+    animation: moveFromLeft 1s ease-in;
+}
+
+// WITH OPACITY!
+@keyframes moveFromLeft_opacity {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    } 
+}
+
 
 .slide_out{
     animation: moveFromRight 0.5s ease-in;
-    animation-delay: 10ms;
 }
 @keyframes moveFromRight {
     0% {
@@ -35,4 +49,17 @@
     100% {
         transform: translateX(-100vw);
     }     
+}
+
+.scale{
+    transform: scale;
+    -webkit-transform: scale(1.1);
+    transition: 1.5s all ease;
+}
+
+.rotate{
+    transition: 1.5s all ease;
+    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    transform: rotateZ(180deg);
 }
