@@ -86,8 +86,11 @@ input:focus::placeholder{
         height: 10vh;
     }
     
-    .searcher_pg .searcher input, .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active, .searcher_pg .searcher input:focus{
+    .searcher_pg .searcher input{
         padding: 0 4rem 0 4rem !important;
+            &:hover, &:active, &:focus{
+               padding: inherit; 
+            }
     }
     
     .searcher_pg .searcher input:hover{

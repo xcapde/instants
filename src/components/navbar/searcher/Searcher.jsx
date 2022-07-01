@@ -1,56 +1,48 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { instantServices } from "../../../data_API/instantServices";
 import { SearcherList } from "../../../pages/SearcherList";
 
-export function Searcher(props){
+export function Searcher(){
 
-    const [searchValue, setSearchValue] = useState({value:""})
+    const [searchValue, setSearchValue] = useState('');
     const [searchList, setSearchList] = useState([]);
+    const [searchIsActive, setSearchIsActive] = useState(false);
 
-    useEffect(() => {
-        setSearchValue(searchValue)
-        onHandleSubmitSearch()
-    }, [searchValue])
-
-    const onHandleSubmitSearch=(e)=>{
-        // e.preventDefault();
-        // showSearchList(); 
-        console.log('show result')
-    }
- 
     const onInputChangeSearch=(e)=>{
-        const name = e.target.name
-        const value = e.target.value
-        setSearchValue({...searchValue, [name]:value});
-        
-        instantServices.getInstantsBySearch(value).then(res => {
-            if(res) setSearchList(res);  
-            console.log(res)          
-         })
+        const value = e.target.value;
 
-        // console.log(searchList)
+        setSearchValue(value);      
+        if(value.length > 2){
+            getSearch(searchValue.toLowerCase().trim())
+        } return
     }    
 
-    // const resetInputsSearch=()=>{
-    //     setSearchValue('')
-    //     console.log('cleaned!')
-    // }    
+    const onHandleSubmitSearch=()=>{
+
+        getSearch(searchValue.toLowerCase().trim())
+        console.log('👁️‍🗨️Result', searchValue)
+    }
+    
+    const getSearch=(value)=>{
+        instantServices.getInstantsBySearch(value).then(res => {
+            if(res) setSearchList(res);  
+            
+            console.log('🔎',res.length, res)          
+        })
+    }     
+  
 
     return (
         <form onSubmit={onHandleSubmitSearch} className="searcher">
             
-            {/* <Link to="/searcher"> */}
-                <input onChange={onInputChangeSearch} value={searchValue.search ||''} placeholder="Search..." name="search" type="text"/>
-            {/* </Link> */}
+            <input onChange={onInputChangeSearch} value={searchValue ||''} placeholder="Search..." name="search" type="text"/>
             <button className="search_submit_btn" type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-            {/* <button onClick={resetInputsSearch} className="closeSearch_btn" type="button"><i className="fa-solid fa-xmark"></i></button> */}
 
-            {props.searchIsActive?
-                <SearcherList/> 
+            {searchValue.length > 0?
+                <SearcherList searchList={searchList}/>
                 : ''
             }
-        
+         
         </form>
     )
 }

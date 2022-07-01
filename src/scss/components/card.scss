@@ -36,13 +36,6 @@
     }
 }
 
-// .card_cnt:hover img{
-//     transform: scale;
-//         // -webkit-transform: scale(0.95);
-//         -webkit-transform: scale(1.1);
-//         transition: 1.5s all ease;
-//         overflow: hidden !important;
-// }
 
 .like_count, .comment_count, .ubication{
     @include mainRadius_all;
@@ -57,9 +50,12 @@
     background-color: $colorDarkOpacity;
     backdrop-filter: blur( 0.7rem );
     -webkit-backdrop-filter: blur( 0.7rem );
+    transition: 0.3s all ease-out;
+
     &:hover{
-        background-color: $colorHeaderOpacity;
+        background-color: $colorDarkOpacityLess;
         cursor: default;
+        transition: .3s all ease-in;
     }
 }
 

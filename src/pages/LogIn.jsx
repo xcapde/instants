@@ -4,15 +4,10 @@ import { Navbar } from "../components/navbar/Navbar";
 export function LogIn() {
     return(
         <section className="login_pg">
-            {/* <Navbar/> */}
+            <Navbar/>
 
             <div className="form_cnt">
-                <div className="form_header">
-                    <div className="back_cnt">
-                        <Link to="/home">                    
-                            <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
-                        </Link>
-                    </div>
+                <div className="form_header">                    
                     <h1>WELCOME!</h1>
                 </div>
                 <div className="form_body">

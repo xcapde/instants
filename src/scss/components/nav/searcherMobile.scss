@@ -3,14 +3,6 @@
     height: 100vh;
 }
 
-// .searcher_pg .searcher{
-//     justify-content: flex-end;
-// }
-
-.searcher_pg .back_cnt{
-    z-index: 2;
-}
-
 .searcher_pg .searcher input{
     width: 100%;
     height: 100%;
@@ -23,8 +15,12 @@
     }
 }
 
-.searcher_pg .searcher input, .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active, .searcher_pg .searcher input:focus{
-    padding: 0 4rem 0 4rem !important;
+.searcher_pg .searcher input{
+    padding: 0 4rem 0 2rem !important;
+    transition: .3s all ease-out;
+    &:focus{
+        padding: 0 4rem 0 4rem !important;
+    }
 }
 
 .searcher_pg .searcher input:hover, .searcher_pg .searcher input:active{

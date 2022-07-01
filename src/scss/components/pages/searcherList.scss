@@ -1,13 +1,28 @@
+
 .searcher_list_pg{
     z-index: 1;
-    @include flexCenterRow;
+    @include flexCenterRow;    
+    align-items: flex-start;
     background-color: $colorPrimary;
-    width: 100%;
-    height: 90vh;
+    width: 100vw;
+    height: 90vh;    
+    position: fixed;
     top: 10vh; 
     right: 0; 
-    position: fixed;
+    overflow-y: auto;
+    display: flex;
 }
+
+//BOX
+
+.search_box{
+    width: 75%;
+    display: flex;    
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+// BACK BUTTON
 
 .searcher_list_pg .back_cnt{
     z-index: 2;
@@ -15,6 +30,12 @@
     top: 13vh;
     left: 2%;
     height: 2rem;
+
+    @media only screen and (max-width: $breakPointSmall){
+        display: block;        
+        top: 3vh;
+        left: 1rem;
+    }
 }
 
 .searcher_list_pg .back_cnt button{
@@ -27,113 +48,65 @@
     &:active{
         background-color: $colorHeaderActive;
     }
+
+    @media only screen and (min-width: $breakPointSmall){
+        position: relative;
+        color: $colorWhite;
+    }
+}
+
+.searcher_list_pg .back_cnt button i{
+    font-size: large !important;
 }
 
 .searcher_list_pg .back_cnt button:hover i{
-        color: $colorWhite !important;
+    color: $colorWhite !important;
 }
 
+// RESULTS
 
-// IMAGE LIST
-.searcher_list_pg .list_pg{
-    background-color: $colorWhite;
-    height: 90vh;
-    overflow-y: auto;
-    display: flex;
-    align-items: flex-start;
-}
-
-.searcher_list_pg .user_cnt, .searcher_list_pg .card_btns, .searcher_list_pg .card_img .like_count, .searcher_list_pg .card_img .comment_count, .searcher_list_pg .card_img .ubication{
+.searcher_list_pg .user_cnt, 
+.searcher_list_pg .card_btns, 
+.searcher_list_pg .card_img .like_count, 
+.searcher_list_pg .card_img .comment_count, 
+.searcher_list_pg .card_img .ubication{
     display: none;
-}
-.searcher_list_pg .list_cnt{
-    @include searcherCard;
 }
 
 .searcher_list_pg .card_cnt{
-    width: 25vw;
-    height: 100%;
-    margin: 0.5vw;
-    padding: 0;
+    @include searcherCard;    
     background: none;
+    height: fit-content !important;
+
+    @media only screen and (max-width: $breakPointSmall){
+        @include searcherMobileCard;
+    }
 }
 
-.searcher_list_pg .card_cnt .card_txt{
+.searcher_list_pg .card_txt{
     background-color: inherit;
 }
 
 .searcher_list_pg h1{
     color: $colorDarkOpacityLess !important;
     font-size: small !important;
-    font-weight: 400;
-    padding: 3% 0 0 0;
-    width: 100%;
     display: flex;
     justify-content: center !important;
-}
+    font-weight: 400;
+    padding-top: 3%;
+    width: 100%;
 
-.searcher_list_pg .logo{
-    font-size: larger;
-    padding: 0;
+    @media only screen and (max-width: $breakPointSmall){
+        font-size: x-small;
+    }
 }
 
 .searcher_list_pg .card_img{
     @include detailRadius;
     background-color: inherit;
+    height: unset !important;
 }
 
 .searcher_list_pg img{
     @include detailRadius;
-}
-
-
-@media only screen and (max-width: $breakPointSmall){
-
-    .searcher_pg{
-        display: flex;
-    }
-
-    .searcher_list_pg{
-        top: 10vh;
-        height: 90vh;        
-        width: 100%;
-        justify-content: unset;
-    }
-
-    .searcher_list_pg h1{
-        font-size: x-small;
-    }
-
-    .searcher_list_pg .list_pg{
-        height: 90vh;
-        top: 10vh;
-    }
-    
-    .searcher_list_pg .back_cnt{
-        display: none;
-    }
-
-    .searcher_pg .back_cnt{
-        top: unset;
-        height: 100%;
-        position: absolute;
-        left: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .searcher_pg .back_cnt button{
-        position: relative;
-        color: $colorWhite;
-    }
-
-    .searcher_list_pg .list_cnt{
-        margin: 1% 0 0 0 ;
-        padding-bottom: 10vh;
-    }
-
-    .searcher_list_pg .card_cnt{
-        @include searcherMobileCard;
-    }    
 }

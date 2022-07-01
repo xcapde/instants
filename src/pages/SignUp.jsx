@@ -5,7 +5,7 @@ import { Navbar } from "../components/navbar/Navbar";
 export function SignUp() {
     return(
         <section className="signup_pg">
-            {/* <Navbar/> */}
+            <Navbar/>
 
             <div className="form_cnt">
                 <div className="form_header">

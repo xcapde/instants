@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Navbar } from "../components/navbar/Navbar";
 import { instantServices } from "../data_API/instantServices";
@@ -12,8 +12,6 @@ export function Create() {
         const name = e.target.name;
         const value= e.target.value;
         setNewInstant({...newInstant, [name]:value});
-
-        console.log(e.target.value)
     }    
 
     const onHandleSubmitCreate=(e)=>{
@@ -43,14 +41,9 @@ export function Create() {
     return( 
         <section className="update_pg">
 
-            {/* <Navbar/> */}
+            <Navbar/>
 
             <div className="form_header">
-                <div className="back_cnt">
-                    <Link to="/home">                    
-                        <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
-                    </Link>
-                </div>
                 <h1>NEW INSTANT</h1>
             </div>
 
@@ -66,7 +59,7 @@ export function Create() {
                     </div>
                     <div className="update_input_box">
                         <label htmlFor="imgUrl">Image:</label>
-                        <div className="preview_and_url create">
+                        <div className={newInstant.imgUrl? "preview_and_url reduced" : "preview_and_url"}>
                             {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
                             <input onChange={onInputChangeCreate} value={newInstant.imgUrl} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="Image URL"/>          
                         </div>

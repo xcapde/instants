@@ -2,7 +2,13 @@
 .comment_cnt{
     display: flex;
     align-items: center;
-    margin: 2% 0;
+    margin: 0;
+    padding: 4% 1%;
+
+    &:hover{
+        background-color: $colorDarkOpacity;
+        transition: 0.4s all ease-in;
+    }
 }
 
 .comment_cnt .user_photo i{
@@ -29,4 +35,15 @@
     color: $colorDark;
     font-weight: 500;
     font-size: 0.7rem;
+}
+
+.comment_date{
+    color: $colorDark;
+    font-weight: 500;
+    font-size: x-small !important;
+}
+
+.comment_txt_box{
+    display: flex;
+    justify-content: space-between;
 }

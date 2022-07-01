@@ -37,6 +37,13 @@
     &:active{
         background-color: $colorHeaderHover !important;
     }
+
+    @media only screen and (max-width: $breakPointSmall){
+        background-color: $colorHeaderOpacityMore !important;
+        &:hover{
+            background-color: $colorHeaderOpacity !important;
+        }
+    }
 }
 
 .nav_icon{
@@ -56,11 +63,11 @@
 
 .menu_cnt .user_cnt:hover{
     cursor: pointer;
-    background-color: $colorHeaderHover;
+    // background-color: $colorHeaderHover;
 }
     
 .menu_cnt .user_cnt:active{
-    background-color: $colorHeaderActive;
+    // background-color: $colorHeaderActive;
 }
 
 .menu_cnt .user_photo{

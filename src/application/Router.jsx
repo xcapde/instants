@@ -4,19 +4,16 @@ import { Details } from "../pages/Details";
 import { SignUp } from "../pages/SignUp";
 import { LogIn } from "../pages/LogIn";
 import App from "../App";
-import { Navbar } from "../components/navbar/Navbar";
 import { NavbarBottom } from "../components/navbar_bottom/NavbarBottom";
 import { Profile } from "../pages/Profile";
 import { UserCard } from "../pages/profile/UserCard";
 import { UserList } from "../pages/profile/UserList";
 import { Create } from "../pages/Create";
 import { SearcherMobile } from "../pages/SearcherMobile";
-import { SearcherList } from "../pages/SearcherList";
 
 export default function Router(){
     return(
         <BrowserRouter>
-            <Navbar/>
             <Routes>
                 <Route path="/home" element={<App/>}/>
                 <Route path="/detail/:id" element={<Details/>}/>
@@ -30,7 +27,6 @@ export default function Router(){
                 <Route path="/user_list" element={<UserList/>}/> */}
                 <Route path="/create" element={<Create/>}/>
                 <Route path="searcher_mobile" element={<SearcherMobile/>}/>
-                {/* <Route path="searcher" element={<SearcherList/>}/> */}
             </Routes>
             <NavbarBottom/>
         </BrowserRouter>

@@ -1,27 +1,22 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { List } from "../components/list/List";
-import { SearcherMobile } from "./SearcherMobile";
+import { useNavigate } from "react-router-dom";
+import { Card } from "../components/card/Card";
 
-export function SearcherList() {
+export function SearcherList({searchList}) {
 
-    // const [searchList, setSearchList] = useState([])
-
-    // useEffect(() => {
-    //     getSearchInstants()
-    //     setSearchList(searchList)
-
-    // }, [searchList])
+    const navigate = useNavigate();
 
     return(
         <div className="searcher_list_pg">
-            <Link to="/home">
-                <div className="back_cnt"><button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button></div>
-            </Link>
+            <div className="back_cnt">
+                <button onClick={()=>navigate(-1)} className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
+            </div>
+           
+            <div className="search_box">
+                <>{searchList.map((instant,key) =>
+                    <Card key={key} instant={instant}/>).reverse()}
+                </>
+            </div>
             
-            {/* <SearcherMobile/> */}
-            <List/>
-
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Comment } from "../components/comment/Comment";
 import { NewComment } from "../components/comment/NewComment";
 import { Navbar } from "../components/navbar/Navbar";
@@ -9,6 +9,8 @@ export function Details() {
 
     const [instantInfo, setInstantInfo] = useState({});
     const [id] = useState(useParams().id)
+    const navigate = useNavigate();
+
 
 
     useEffect(() => {
@@ -28,7 +30,7 @@ export function Details() {
 
     return(
         <div className="details_pg">
-            {/* <Navbar/> */}
+            <Navbar/>
 
             <div className="details_cnt">
 
@@ -43,9 +45,7 @@ export function Details() {
 
                     <div className="form_header">
                         <div className="back_cnt">
-                            <Link to="/home">                    
-                                <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
-                            </Link>
+                            <button onClick={() => navigate(-1)} className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
                         </div>
                         <h1>{instantInfo.title}</h1>
                     </div>      

@@ -5,7 +5,6 @@ import { instantServices } from "../../data_API/instantServices";
 export function Update(props) {
 
     const[newInstant, setNewInstant] = useState(props.instantToEdit)
-    // const[newInstant, setNewInstant] = useState(props.instantToEdit?props.instantToEdit:{title:'', description:'', imgUrl:''})
     const navigate = useNavigate();
 
     useEffect(() => {

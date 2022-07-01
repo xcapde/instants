@@ -4,17 +4,14 @@ import { useState } from "react";
 import { Update } from "../update/Update";
 import { useEffect } from "react";
 import { instantServices } from "../../data_API/instantServices";
-import { SearcherList } from "../../pages/SearcherList";
-import { Searcher } from "../navbar/searcher/Searcher";
 import { Navbar } from "../navbar/Navbar";
-import { NavbarBottom } from "../navbar_bottom/NavbarBottom";
 
 export function List () {
 
     const[instants, setInstants] = useState([]);
-    const[searchIsActive, setSearchIsActive] = useState(false);
     const[editIsActive, setEditIsActive] = useState(false);
     const[instantToEdit, setInstantToEdit] = useState('');
+
     // const[likeList, setLikeList] = useState([]);
 
     useEffect(() => {
@@ -32,12 +29,7 @@ export function List () {
         setEditIsActive(!editIsActive);
         setInstantToEdit(instant);
     }
-
-    const showSearch=()=>{
-        setSearchIsActive(!searchIsActive);
-        console.log(searchIsActive)
-    }    
-
+   
     const deleteInstant=(id)=>{
 
         let confirmation = window.confirm('❌ Delete this photo?')
@@ -52,14 +44,10 @@ export function List () {
     return(
         <section className="list_pg">  
 
-        {/* <Navbar showSearch={showSearch} searchIsActive={searchIsActive} />           */}
+            <Navbar/>          
 
-            <div className="list_cnt">                
-                
-                {/* {searchIsActive?
-                    <SearcherList showSearch={showSearch}/>
-                :''} */}
-                
+            <div className="list_cnt">              
+
                 {editIsActive?
                     <Update editIsActive={editIsActive} showEdit={showEdit} instantToEdit={instantToEdit} getAllData={getAllData}/>
                 :''}

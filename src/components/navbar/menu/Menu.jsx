@@ -3,14 +3,12 @@ import { UserCard } from "../../../pages/profile/UserCard";
 
 export function Menu () {
 
-    // const params = useParams();
     const  params = useLocation().pathname;
-    console.log(params)
 
     return (
         <div className="menu_cnt">
 
-            <Link to="/home">
+        <Link to="/home">
             <button className={params.includes('/home')?"home_btn menu_active" : "home_btn"}>
             <span className='nav_icon'><i className="fa-solid fa-house"></i></span>
             <span className='nav_name'>HOME</span></button>

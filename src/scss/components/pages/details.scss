@@ -35,14 +35,14 @@
 .details_photo .comment_count,.details_photo_mobile .comment_count,
 .details_photo .ubication,.details_photo_mobile .ubication{
     opacity: 1;
-    transition: 1s all;
+    transition: 1.5s all;
 }
 
-.details_photo:hover .like_count,.details_photo_mobile:hover .like_count,
-.details_photo:hover .comment_count,.details_photo_mobile:hover .comment_count,
-.details_photo:hover .ubication,.details_photo_mobile:hover .ubication{
+.details_photo:active .like_count,.details_photo_mobile:active .like_count,
+.details_photo:active .comment_count,.details_photo_mobile:active .comment_count,
+.details_photo:active .ubication,.details_photo_mobile:active .ubication{
     opacity: 0;
-    transition: 1.5s all;
+    transition: .5s all;
 }
 
 .details_info{

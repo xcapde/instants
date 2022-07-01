@@ -19,6 +19,7 @@ $colorGreyHeader: #a8a8a8;
 $colorGreyHeaderHover: rgb(190, 190, 190);
 
 $colorHeaderOpacity: rgba(12, 136, 95, 0.863);
+$colorHeaderOpacityMore: rgba(12, 136, 95, 0.479);
 $colorHeader:#289772;
 $colorHeaderHover:#25a77b;
 $colorHeaderActive:#36af87;
@@ -111,14 +112,13 @@ $tertiaryRadius:0.25rem;
 }
 
 @mixin searcherCard {
-    margin: 1% 11% 0 11%;
+    margin: 1% 2.5%;
+    width: 20%;
 }
 
 @mixin searcherMobileCard {
-    width: 49vw;
-    height: 100%;
-    margin: 0.5vw;
-    padding: 0;
+    margin: 1%;
+    width: 100%;
 }
 
 @mixin profileCard {

@@ -5,12 +5,7 @@ export function Profile() {
     return(
         <div className="profile_pg">
 
-                <div className="form_header">
-                    <div className="back_cnt">
-                        <Link to="/home">                    
-                            <button className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
-                        </Link>
-                    </div>
+                <div className="form_header">                    
                     <h1>PROFILE</h1>
                 </div>
 
@@ -32,12 +27,8 @@ export function Profile() {
                     </div>
                     <div className="tab_imageList">
                         <List/>
-                    </div>
-                    {/* <div className="tab_list">
-                        <List/>
-                    </div> */}
+                    </div>    
                     <div className="tab_likes">
-                        {/* <List/> */}
                     </div>
 
                 </div>
