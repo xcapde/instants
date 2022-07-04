@@ -1,4 +1,5 @@
 .newComment_box{
+    z-index: 2;
     display: flex;
     position: relative;
     background-color: $colorWhite;
@@ -37,20 +38,38 @@
     }
 }
 
-.share_btn{
+.commentBox_btns{
     right: 0;
-    width: 1.5rem;
-    height: 100%;
-    margin: 0 0.5rem;
-    color: $colorGrey;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.commentBox_btns button{
     border: none;
     background: none;
-    font-size: medium;
-
+    width: 1.5rem;
+    margin: 0 0.5rem;
+    height: 100%;
+    color: $colorGreyHeader;
+    
     &:hover{
         color:$colorComment;
     }
     &:active{
         color:$colorCommentActive;
+    }
+
+    @media only screen and (max-width: $breakPointSmall){
+        margin: 0 1rem;    
+    }
+}
+
+.newComment_box .close:hover{
+    color:$colorLike !important;
+    
+    &:active{
+        color:$colorLikeActive !important;
     }
 }

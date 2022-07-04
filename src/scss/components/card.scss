@@ -1,7 +1,3 @@
-.card_cnt .newComment_box{
-    display: none
-}
-
 .card_cnt{
     @include mainCard;
     @include mainRadius_all;
@@ -9,14 +5,20 @@
     flex-direction: column;   
     background-color: $colorHeaderActive;
     font-family: 'Quicksand', sans-serif;
+
+    @media only screen and (max-width: $breakPointSmall){
+        height: 100% !important;
+    }
 }
 
 .card_img{
+    z-index: 3;
     background-color: $colorGrey;
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
 }
 
 .card_img a{
@@ -37,7 +39,7 @@
 }
 
 
-.like_count, .comment_count, .ubication{
+.like_count, .comment_count, .ubication, .expands{
     @include mainRadius_all;
     z-index: 2;
     position: absolute;
@@ -70,6 +72,26 @@
     bottom: unset;
 }
 
+.expands{
+    display: none;
+    top: 0;
+    right:0;
+    left: unset;
+    bottom: unset;
+    font-size: large;
+    background: none;
+
+    &:hover{
+        background: none !important;
+    }
+}
+
+.card_img:hover .expands {
+    display: flex;
+    transition: 0.5s all ease-out;
+    color: $colorWhite;
+}
+
 .like_count i, .comment_count i, .ubication i{
     margin-right: 0.5rem;
     color: $colorWhiteOpacity;
@@ -84,6 +106,11 @@
     justify-content: center;
     align-items: flex-start;
     padding-bottom: 1%;
+    height: 15vh;
+
+    @media only screen and (max-width: $breakPointSmall){
+        height: unset !important;
+    }
 }
 
 .card_txt h1{
@@ -98,6 +125,36 @@
     justify-content: flex-start;
     margin: 0 5%;
     line-height: 1.3rem;
+}
+
+.title_txt{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis !important;
+    word-break: break-all;
+}
+
+.card_cnt .description_txt{
+    text-overflow: ellipsis !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 0.7rem;
+    max-height: 1.5rem;
+    transition: 1s all;
+
+    &:hover, &:active, &:focus{
+        overflow-y: auto;
+        -webkit-line-clamp: 4;
+        transition: 1.5s all ease-out;
+        max-height: 10rem;
+        display: block;
+    }
+
+    &::-webkit-scrollbar{
+        width: 0;
+    }
 }
 
 // USER CARD
@@ -122,6 +179,16 @@
     position: fixed !important;
     z-index: 1;
     @include mainRadius_bottom;
+    animation: moveFromUp 0.5s ease-in;
+}
+
+@keyframes moveFromUp {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0vh);
+    }     
 }
 
 .card_btns .share_btn, .card_btns .user_photo{

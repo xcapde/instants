@@ -65,6 +65,19 @@
 
 // RESULTS
 
+.results_info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    color: $colorHeader;
+    margin-top: 2%;
+
+    @media only screen and (max-width: $breakPointSmall){
+        font-size: medium;;
+    }
+}
+
 .searcher_list_pg .user_cnt, 
 .searcher_list_pg .card_btns, 
 .searcher_list_pg .card_img .like_count, 

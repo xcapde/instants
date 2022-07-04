@@ -71,16 +71,12 @@
     padding-bottom: 10vh;
 }
 
-.tab_imageList .card_txt, .tab_imageList .card_btns, .tab_imageList .like_count, .tab_imageList .comment_count, .tab_imageList .ubication{
+.tab_imageList .card_txt, .tab_imageList .card_btns, .tab_imageList .like_count, .tab_imageList .comment_count, .tab_imageList .ubication, .tab_imageList .expands{
     display: none;
 }
 
 .tab_imageList .card_cnt{
     @include profileCard;
-}
-
-.tab_imageList .card_img, .tab_imageList img{
-    // @include detailRadius;
 }
 
 

@@ -6,7 +6,6 @@ export function Searcher(){
 
     const [searchValue, setSearchValue] = useState('');
     const [searchList, setSearchList] = useState([]);
-    const [searchIsActive, setSearchIsActive] = useState(false);
 
     const onInputChangeSearch=(e)=>{
         const value = e.target.value;
@@ -17,17 +16,16 @@ export function Searcher(){
         } return
     }    
 
-    const onHandleSubmitSearch=()=>{
+    const onHandleSubmitSearch=(e)=>{
+
+        e.preventDefault();
 
         getSearch(searchValue.toLowerCase().trim())
-        console.log('👁️‍🗨️Result', searchValue)
     }
     
     const getSearch=(value)=>{
         instantServices.getInstantsBySearch(value).then(res => {
-            if(res) setSearchList(res);  
-            
-            console.log('🔎',res.length, res)          
+            if(res) setSearchList(res);             
         })
     }     
   

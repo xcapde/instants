@@ -88,9 +88,6 @@ input:focus::placeholder{
     
     .searcher_pg .searcher input{
         padding: 0 4rem 0 4rem !important;
-            &:hover, &:active, &:focus{
-               padding: inherit; 
-            }
     }
     
     .searcher_pg .searcher input:hover{

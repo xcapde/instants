@@ -1,10 +1,10 @@
 import { Card } from "../card/Card";
 // import appData from "../../../src/data_API/appData.json";
 import { useState } from "react";
-import { Update } from "../update/Update";
 import { useEffect } from "react";
 import { instantServices } from "../../data_API/instantServices";
 import { Navbar } from "../navbar/Navbar";
+import { MainForm } from "../mainForm/MainForm";
 
 export function List () {
 
@@ -49,7 +49,7 @@ export function List () {
             <div className="list_cnt">              
 
                 {editIsActive?
-                    <Update editIsActive={editIsActive} showEdit={showEdit} instantToEdit={instantToEdit} getAllData={getAllData}/>
+                    <MainForm editIsActive={editIsActive} showEdit={showEdit} instantToEdit={instantToEdit} getAllData={getAllData}/>
                 :''}
 
                 <>{instants.map((instant,key) =>

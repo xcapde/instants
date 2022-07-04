@@ -8,10 +8,12 @@ export function SearcherList({searchList}) {
     return(
         <div className="searcher_list_pg">
             <div className="back_cnt">
-                <button onClick={()=>navigate(-1)} className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
+                <button onClick={()=>navigate(-0)} className="back_btn"><i className="fa-solid fa-arrow-left"></i></button>
             </div>
            
             <div className="search_box">
+                <div className="results_info">{searchList.length > 0? `${searchList.length} results` : `Nothing found`}</div>
+
                 <>{searchList.map((instant,key) =>
                     <Card key={key} instant={instant}/>).reverse()}
                 </>

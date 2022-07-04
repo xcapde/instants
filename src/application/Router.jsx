@@ -8,8 +8,8 @@ import { NavbarBottom } from "../components/navbar_bottom/NavbarBottom";
 import { Profile } from "../pages/Profile";
 import { UserCard } from "../pages/profile/UserCard";
 import { UserList } from "../pages/profile/UserList";
-import { Create } from "../pages/Create";
 import { SearcherMobile } from "../pages/SearcherMobile";
+import { MainForm } from "../components/mainForm/MainForm";
 
 export default function Router(){
     return(
@@ -23,9 +23,7 @@ export default function Router(){
                     <Route path="user_card" element={<UserCard/>}/>
                     <Route path="user_list" element={<UserList/>}/>
                 </Route>
-                {/* <Route path="/user_card" element={<UserCard/>}/>
-                <Route path="/user_list" element={<UserList/>}/> */}
-                <Route path="/create" element={<Create/>}/>
+                <Route path="/create" element={<MainForm/>}/>
                 <Route path="searcher_mobile" element={<SearcherMobile/>}/>
             </Routes>
             <NavbarBottom/>

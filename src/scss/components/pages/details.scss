@@ -28,7 +28,6 @@
     height: 100%;
     border-radius: 0.4rem;
     object-fit: cover;
-    // object-fit:scale-down;
 }
 
 .details_photo .like_count,.details_photo_mobile .like_count,
@@ -135,6 +134,10 @@
 
 .users_comments{
     overflow-y: auto;
+}
+
+.comments_box .close{
+    display: none !important;
 }
 
 @media only screen and (max-width: $breakPointSmall){
