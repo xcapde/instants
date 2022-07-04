@@ -1047,6 +1047,11 @@ input:focus::placeholder {
 .card_cnt .description_txt::-webkit-scrollbar {
   width: 0;
 }
+@media only screen and (max-width: 500px) {
+  .card_cnt .description_txt .card_cnt:hover, .card_cnt .description_txt:active, .card_cnt .description_txt:focus {
+    max-height: 70rem;
+  }
+}
 
 .card_txt .user_cnt {
   width: 100%;
