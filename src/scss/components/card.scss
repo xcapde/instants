@@ -160,6 +160,7 @@
         .card_cnt:hover, &:active, &:focus{
             max-height: 70rem;
             // max-height: 100%;
+            transition: 3s all ease-out;
         }
     }
 }

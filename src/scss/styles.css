@@ -1050,6 +1050,7 @@ input:focus::placeholder {
 @media only screen and (max-width: 500px) {
   .card_cnt .description_txt .card_cnt:hover, .card_cnt .description_txt:active, .card_cnt .description_txt:focus {
     max-height: 70rem;
+    transition: 3s all ease-out;
   }
 }
 
