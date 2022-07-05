@@ -87,14 +87,25 @@
     border-radius: 1.2rem;
     padding: 0 1.5rem;
     background-color: $colorWhite;
-}
 
-.form_body input:hover{
-    background-color: $colorWhiteOpacity;
-}
-
-.form_body input:focus{
-    background-color: $colorWhite;
+    &::placeholder{
+        color: $colorGreyHeader;
+    }
+    &:hover{
+        color: $colorWhite;
+        background-color: $colorGreyHeader;
+        transition: 0.15s all ease-in;
+    }
+    &:hover::placeholder{
+        color: $colorWhite;
+    }
+    &:focus{
+        color: $colorDark;
+        background-color: $colorWhite;
+    }
+    &:focus::placeholder{
+        color: $colorSecondary !important;
+    }
 }
 
 .form_body button{

@@ -1678,13 +1678,23 @@ input:focus::placeholder {
   padding: 0 1.5rem;
   background-color: #F9F9F9;
 }
-
-.form_body input:hover {
-  background-color: rgba(249, 249, 249, 0.4745098039);
+.form_body input::placeholder {
+  color: #a8a8a8;
 }
-
+.form_body input:hover {
+  color: #F9F9F9;
+  background-color: #a8a8a8;
+  transition: 0.15s all ease-in;
+}
+.form_body input:hover::placeholder {
+  color: #F9F9F9;
+}
 .form_body input:focus {
+  color: #242424;
   background-color: #F9F9F9;
+}
+.form_body input:focus::placeholder {
+  color: #e0c133 !important;
 }
 
 .form_body button {
