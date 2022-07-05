@@ -5,28 +5,24 @@ import { NewComment } from "../comment/NewComment";
 export function Card(props){
 
     const [instant, setInstant] = useState(props.instant);
+    const [isLiked, setIsLiked] = useState(false);
     const [commentIsActive, setCommentIsActive] = useState(false);
 
     useEffect(() => {
         setInstant(props.instant)
     }, [props.instant])
 
-    const markLiked = (instant) => {
-
-        if(instant.isLike === false){instant.isLike = true 
-        // console.log(`✅ ${instant.title} Liked!`)
-    }
-
-        else instant.isLike = false;
+    const markLiked = () => {
+        // setIsLiked(!isLiked)        
+        // props.getAllData()
+        // console.log(`✅ ${instant.title} Liked or not!`)
         // console.log(`❌ ${instant.title} removed from liked!`)
-
-        props.getAllData()
     };
 
     const showCommentInput = () =>{
         setCommentIsActive(!commentIsActive)
         console.log(commentIsActive)        
-    }
+    };
 
     return (
         <section className="card_cnt">
@@ -50,7 +46,7 @@ export function Card(props){
             </div>
 
                 <div className="card_btns">                    
-                        <button onClick={()=>markLiked(instant)} className={instant.isLike? "like_btn liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
+                        <button onClick={()=>markLiked()} className={instant.isLike? "like_btn liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
                         <button onClick={()=>showCommentInput()} className={instant.isComment? "comment_btn commented":"comment_btn"}><i className="fa-solid fa-message"></i></button>                      
                         
                         <button onClick={()=>props.showEdit(instant)} className="edit_btn"><i className="fa-solid fa-pencil"></i></button>

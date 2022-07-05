@@ -5,14 +5,15 @@ import { useEffect } from "react";
 import { instantServices } from "../../data_API/instantServices";
 import { Navbar } from "../navbar/Navbar";
 import { MainForm } from "../mainForm/MainForm";
+import { Spinner } from "../spinner/Spinner";
 
 export function List () {
 
     const[instants, setInstants] = useState([]);
     const[editIsActive, setEditIsActive] = useState(false);
     const[instantToEdit, setInstantToEdit] = useState('');
+    const[isLoading, setIsLoading] = useState(false);
 
-    // const[likeList, setLikeList] = useState([]);
 
     useEffect(() => {
         getAllData();
@@ -20,8 +21,10 @@ export function List () {
     );
    
     const getAllData=()=>{
+        setIsLoading(true)
         instantServices.getAllInstants().then(res => {
             setInstants(res);
+            setIsLoading(false);
        })
     }
 
@@ -37,6 +40,7 @@ export function List () {
         if(confirmation){
         instantServices.deleteAInstant(parseInt(id)).then(res => {
             if(res) getAllData();
+            alert(`${res.title} deleted!`)
         });
         } return;
     }
@@ -44,14 +48,18 @@ export function List () {
     return(
         <section className="list_pg">  
 
-            <Navbar/>          
+            <Navbar/> 
+
+            {isLoading?
+                <Spinner/>
+                :''}
 
             <div className="list_cnt">              
 
                 {editIsActive?
                     <MainForm editIsActive={editIsActive} showEdit={showEdit} instantToEdit={instantToEdit} getAllData={getAllData}/>
                 :''}
-
+                
                 <>{instants.map((instant,key) =>
                     <Card key={key} instant={instant} deleteInstant={deleteInstant} showEdit={showEdit} editIsActive={editIsActive}
                     getAllData={getAllData}/>

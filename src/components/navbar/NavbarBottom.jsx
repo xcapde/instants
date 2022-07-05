@@ -1,4 +1,4 @@
-import { Menu } from "../navbar/menu/Menu";
+import { Menu } from "../navbar/Menu";
 
 export function NavbarBottom () {
 

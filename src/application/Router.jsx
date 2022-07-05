@@ -4,7 +4,7 @@ import { Details } from "../pages/Details";
 import { SignUp } from "../pages/SignUp";
 import { LogIn } from "../pages/LogIn";
 import App from "../App";
-import { NavbarBottom } from "../components/navbar_bottom/NavbarBottom";
+import { NavbarBottom } from "../components/navbar/NavbarBottom";
 import { Profile } from "../pages/Profile";
 import { UserCard } from "../pages/profile/UserCard";
 import { UserList } from "../pages/profile/UserList";

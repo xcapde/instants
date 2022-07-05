@@ -1,6 +1,6 @@
-import { Logo } from "./logo/Logo";
-import { Menu } from "./menu/Menu";
-import { Searcher } from "./searcher/Searcher";
+import { Logo } from "./Logo";
+import { Menu } from "./Menu";
+import { Searcher } from "./Searcher";
 
 export function Navbar () {
 

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { Card } from "../components/card/Card";
+import { Card } from "../card/Card";
 
-export function SearcherList({searchList}) {
+export function SearcherList({searchList,searchValue}) {
 
     const navigate = useNavigate();
 
@@ -12,11 +12,11 @@ export function SearcherList({searchList}) {
             </div>
            
             <div className="search_box">
-                <div className="results_info">{searchList.length > 0? `${searchList.length} results` : `Nothing found`}</div>
+                <div className="results_info">{searchList.length === 0 && searchValue.length < 3? 'Press "enter" for results' : searchList.length === 0? 'No results' : `${searchList.length} results`}</div>
 
-                <>{searchList.map((instant,key) =>
-                    <Card key={key} instant={instant}/>).reverse()}
-                </>
+                {searchList.map((instant,key) =>
+                <Card key={key} instant={instant}/>).reverse()}
+                
             </div>
             
         </div>

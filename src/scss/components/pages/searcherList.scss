@@ -82,7 +82,8 @@
 .searcher_list_pg .card_btns, 
 .searcher_list_pg .card_img .like_count, 
 .searcher_list_pg .card_img .comment_count, 
-.searcher_list_pg .card_img .ubication{
+.searcher_list_pg .card_img .ubication,
+.searcher_list_pg .card_img:hover .expands{
     display: none;
 }
 

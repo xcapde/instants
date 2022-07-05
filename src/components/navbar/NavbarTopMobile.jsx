@@ -1,4 +1,4 @@
-import { Logo } from "../navbar/logo/Logo";
+import { Logo } from "../navbar/Logo";
 
 
 export function NavbarTopMobile () {

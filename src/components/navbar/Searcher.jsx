@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { instantServices } from "../../../data_API/instantServices";
-import { SearcherList } from "../../../pages/SearcherList";
+import { instantServices } from "../../data_API/instantServices";
+import { SearcherList } from "../list/SearchList";
 
 export function Searcher(){
 
@@ -10,17 +10,21 @@ export function Searcher(){
     const onInputChangeSearch=(e)=>{
         const value = e.target.value;
 
-        setSearchValue(value);      
+        setSearchValue(value);  
+        
+        if(value.length == 0){
+            setSearchList([]);
+            console.log('resetinglist')
+        }
         if(value.length > 2){
             getSearch(searchValue.toLowerCase().trim())
         } return
     }    
 
     const onHandleSubmitSearch=(e)=>{
-
         e.preventDefault();
 
-        getSearch(searchValue.toLowerCase().trim())
+        getSearch(searchValue.toLowerCase().trim())        
     }
     
     const getSearch=(value)=>{
@@ -37,7 +41,7 @@ export function Searcher(){
             <button className="search_submit_btn" type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
 
             {searchValue.length > 0?
-                <SearcherList searchList={searchList}/>
+                <SearcherList searchList={searchList} searchValue={searchValue}/>
                 : ''
             }
          

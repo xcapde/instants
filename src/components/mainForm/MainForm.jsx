@@ -32,6 +32,7 @@ export function MainForm(props) {
             if(res);
             props.showEdit();
             props.getAllData();
+            alert(`${res.title} updated!`)
             navigate("/home")
         });
     }
@@ -40,6 +41,7 @@ export function MainForm(props) {
 
         instantServices.postInstant(newInstantData).then(res => {
             if(res)navigate("/home");
+            alert(`${res.title} created`)
        });
     }
 

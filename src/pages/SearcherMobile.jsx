@@ -1,4 +1,4 @@
-import { Searcher } from "../components/navbar/searcher/Searcher";
+import { Searcher } from "../components/navbar/Searcher";
 
 export function SearcherMobile() {
     return(

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { UserCard } from "../../../pages/profile/UserCard";
+import { UserCard } from "../../pages/profile/UserCard";
 
 export function Menu () {
 
