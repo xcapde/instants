@@ -10,7 +10,7 @@ export function NewComment (props) {
     return(
         <form className="newComment_box">
             <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
-            <input type="text" className="comment_input" placeholder="Write a comment..."/>
+            <input type="text" className="comment_input" placeholder="New comment..."/>
             <div className="commentBox_btns">
                 <button type="button" className="commentBox_btn close">
                     <i onClick={()=>props.showCommentInput()} className="fa-solid fa-xmark"></i> 
