@@ -91,13 +91,9 @@
     &::placeholder{
         color: $colorGreyHeader;
     }
-    &:hover{
-        color: $colorWhite;
-        background-color: $colorGreyHeader;
-        transition: 0.15s all ease-in;
-    }
     &:hover::placeholder{
-        color: $colorWhite;
+        color: $colorSecondaryActive;
+        transition: 0.15s all ease-in;
     }
     &:focus{
         color: $colorDark;

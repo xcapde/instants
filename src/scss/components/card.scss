@@ -33,7 +33,7 @@
 
     &:hover{
         transform: scale;
-        -webkit-transform: scale(1.1);
+        -webkit-transform: scale(1.04);
         transition: 1.5s all ease;
     }
 }
@@ -80,16 +80,14 @@
     bottom: unset;
     font-size: large;
     background: none;
-
-    &:hover{
-        background: none !important;
-    }
 }
 
 .card_img:hover .expands {
     display: flex;
     transition: 0.5s all ease-out;
-    color: $colorWhite;
+    color: $colorWhiteOpacityLess;
+    background: none;
+    backdrop-filter:none;
 }
 
 .like_count i, .comment_count i, .ubication i{

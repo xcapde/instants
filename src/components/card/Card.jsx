@@ -5,7 +5,7 @@ import { NewComment } from "../comment/NewComment";
 export function Card(props){
 
     const [instant, setInstant] = useState(props.instant);
-    const [isLiked, setIsLiked] = useState(false);
+    // const [isLiked, setIsLiked] = useState(false);
     const [commentIsActive, setCommentIsActive] = useState(false);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ export function Card(props){
                 </Link>
                 <div className="comment_count"><i className="fa-solid fa-message"></i>{instant.comments}</div>
                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likes}</div>
-                <div className="ubication"><i className="fa-solid fa-location-dot"></i>Location</div>
+                <div className="ubication"><i className="fa-solid fa-location-dot"></i>{instant.location}</div>
                 <div className="expands"><i className="fa-solid fa-expand"></i></div>                
             </div>
 

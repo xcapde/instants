@@ -11,6 +11,10 @@
     right: 0; 
     overflow-y: auto;
     display: flex;
+
+    @media only screen and (max-width: $breakPointSmall){
+        height: 80vh;
+    }
 }
 
 //BOX
@@ -83,8 +87,9 @@
 .searcher_list_pg .card_img .like_count, 
 .searcher_list_pg .card_img .comment_count, 
 .searcher_list_pg .card_img .ubication,
-.searcher_list_pg .card_img:hover .expands{
-    display: none;
+.searcher_list_pg .card_img:hover .expands,
+.search_box .description_txt{
+    display: none !important;
 }
 
 .searcher_list_pg .card_cnt{
@@ -99,6 +104,7 @@
 
 .searcher_list_pg .card_txt{
     background-color: inherit;
+    height: unset;
 }
 
 .searcher_list_pg h1{
