@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { instantServices } from "../../data_API/instantServices";
+// import { instantServices } from "../../data_API/instantServices";
 import { instantServicesIJ } from "../../data_API/instantServicesIJ";
 import { Navbar } from "../navbar/Navbar";
 

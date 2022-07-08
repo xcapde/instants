@@ -37,6 +37,7 @@ export const instantServicesIJ = {
   },
 
   getInstantsBySearch(value) {
+    // const instantsBySearch = axios.get(baseURL + `/instants?search=${search}`).then(res => {  
     const instantsBySearch = axios.get(baseURL + `/instants`).then(res => {  
 
       if(res){

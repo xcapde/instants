@@ -1,8 +1,8 @@
 import { Card } from "../card/Card";
 // import appData from "../../../src/data_API/appData.json";
+// import { instantServices } from "../../data_API/instantServices";
 import { useState } from "react";
 import { useEffect } from "react";
-import { instantServices } from "../../data_API/instantServices";
 import { Navbar } from "../navbar/Navbar";
 import { MainForm } from "../mainForm/MainForm";
 import { Spinner } from "../spinner/Spinner";

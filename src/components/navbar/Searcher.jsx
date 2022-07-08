@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { instantServices } from "../../data_API/instantServices";
+// import { instantServices } from "../../data_API/instantServices";
 import { instantServicesIJ } from "../../data_API/instantServicesIJ";
 import { SearcherList } from "../list/SearchList";
 
@@ -13,7 +13,7 @@ export function Searcher(){
 
         setSearchValue(value);  
         
-        if(value.length == 0){
+        if(value.length === 0){
             setSearchList([]);
             console.log('resetinglist')
         }

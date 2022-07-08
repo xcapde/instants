@@ -28,17 +28,17 @@ export function NewComment (props) {
 
     }
 
-    const getDate = () => {
+    // const getDate = () => {
 
-        let today = new Date();
-        let day = today.getDate();
-        let month = today.getMonth();
-        let year = today.getFullYear();
-        let date = `${day}/${month}/${year}`;
-        console.log(date)
+    //     let today = new Date();
+    //     let day = today.getDate();
+    //     let month = today.getMonth();
+    //     let year = today.getFullYear();
+    //     let date = `${day}/${month}/${year}`;
+    //     console.log(date)
 
-        console.log('date')
-    }
+    //     console.log('date')
+    // }
 
     return(
         <form onSubmit={onHandleSubmit} className="newComment_box">
