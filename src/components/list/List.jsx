@@ -6,6 +6,7 @@ import { instantServices } from "../../data_API/instantServices";
 import { Navbar } from "../navbar/Navbar";
 import { MainForm } from "../mainForm/MainForm";
 import { Spinner } from "../spinner/Spinner";
+import { instantServicesIJ } from "../../data_API/instantServicesIJ";
 
 export function List () {
 
@@ -22,7 +23,7 @@ export function List () {
    
     const getAllData=()=>{
         setIsLoading(true)
-        instantServices.getAllInstants().then(res => {
+        instantServicesIJ.getAllInstants().then(res => {
             setInstants(res);
             setIsLoading(false);
        })
@@ -38,9 +39,10 @@ export function List () {
         let confirmation = window.confirm('❌ Delete this photo?')
 
         if(confirmation){
-        instantServices.deleteAInstant(parseInt(id)).then(res => {
-            if(res) getAllData();
+        instantServicesIJ.deleteAInstant(parseInt(id)).then(res => {
+            if(res){getAllData();
             alert(`${res.title} deleted!`)
+            }
         });
         } return;
     }

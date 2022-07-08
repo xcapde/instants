@@ -25,11 +25,13 @@ export function Menu () {
                 <UserCard/>
             </button>
         </Link>
+
         <Link to="/create">
             <button className={params.includes('create')?"create_btn menu_active" : "create_btn"}>            
             <span className='nav_icon'><i className="fa-solid fa-plus"></i></span>
             <span className='nav_name'> CREATE</span></button>
-        </Link>        
+        </Link>   
+             
         <Link to="/login">
             <button className={params.includes('login')?"login_btn menu_active" : "login_btn"}>
             <span className='nav_icon'><i className="fa-solid fa-user"></i></span>

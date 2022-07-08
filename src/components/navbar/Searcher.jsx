@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { instantServices } from "../../data_API/instantServices";
+import { instantServicesIJ } from "../../data_API/instantServicesIJ";
 import { SearcherList } from "../list/SearchList";
 
 export function Searcher(){
@@ -28,7 +29,7 @@ export function Searcher(){
     }
     
     const getSearch=(value)=>{
-        instantServices.getInstantsBySearch(value).then(res => {
+        instantServicesIJ.getInstantsBySearch(value).then(res => {
             if(res) setSearchList(res);             
         })
     }     

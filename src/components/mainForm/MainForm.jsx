@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { instantServices } from "../../data_API/instantServices";
+import { instantServicesIJ } from "../../data_API/instantServicesIJ";
 import { Navbar } from "../navbar/Navbar";
 
 export function MainForm(props) {
@@ -28,7 +29,7 @@ export function MainForm(props) {
 
     const updateOneInstant=(id, newInstantData)=>{
 
-        instantServices.putInstant(id, newInstantData).then((res) => {
+        instantServicesIJ.putInstant(id, newInstantData).then((res) => {
             if(res);
             props.showEdit();
             props.getAllData();
@@ -39,7 +40,7 @@ export function MainForm(props) {
 
     const addInstant=(newInstantData)=>{
 
-        instantServices.postInstant(newInstantData).then(res => {
+        instantServicesIJ.postInstant(newInstantData).then(res => {
             if(res)navigate("/home");
             alert(`${res.title} created`)
        });
