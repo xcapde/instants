@@ -1044,20 +1044,16 @@ input:focus::placeholder {
   max-height: 1.5rem;
   transition: 1s all;
 }
-.card_cnt .description_txt:hover, .card_cnt .description_txt:active, .card_cnt .description_txt:focus {
-  overflow-y: auto;
-  -webkit-line-clamp: 4;
-  transition: 1.5s all ease-out;
-  max-height: 10rem;
-  display: block;
-}
-.card_cnt .description_txt::-webkit-scrollbar {
-  width: 0;
-}
 @media only screen and (max-width: 500px) {
-  .card_cnt .description_txt .card_cnt:hover, .card_cnt .description_txt:active, .card_cnt .description_txt:focus {
-    max-height: 70rem;
-    transition: 3s all ease-out;
+  .card_cnt .description_txt:hover, .card_cnt .description_txt:active, .card_cnt .description_txt:focus {
+    overflow-y: auto;
+    -webkit-line-clamp: 4;
+    transition: 1.5s all ease-out;
+    max-height: 30rem;
+    display: block;
+  }
+  .card_cnt .description_txt::-webkit-scrollbar {
+    width: 0;
   }
 }
 
@@ -1086,6 +1082,12 @@ input:focus::placeholder {
   animation: moveFromUp 0.5s ease-in;
 }
 
+@media only screen and (max-width: 500px) {
+  .card_btns .commentBox_btn {
+    font-size: medium;
+  }
+}
+
 @keyframes moveFromUp {
   0% {
     transform: translateY(-100%);
@@ -1094,7 +1096,7 @@ input:focus::placeholder {
     transform: translateY(0vh);
   }
 }
-.card_btns .share_btn, .card_btns .user_photo {
+.card_btns .share, .card_btns .user_photo {
   height: unset !important;
 }
 

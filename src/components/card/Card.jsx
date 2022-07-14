@@ -29,7 +29,7 @@ export function Card(props){
             <div className="card_txt">
                 <div className="user_cnt">
                     <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
-                    <h1 className="user_name">{instant.userName}</h1>
+                    <h1 className="user_name">{instant.creator.name} {instant.creator.surname}</h1>
                 </div>
                 <h1 className="title_txt">{instant.title}</h1>
                 <h1 className="description_txt">{instant.description}</h1>
@@ -39,7 +39,7 @@ export function Card(props){
                 <Link to={`/detail/${instant.id}`} instant={instant}>                            
                     <img src={instant.imgUrl} alt=""/>
                 </Link>
-                <div className="comment_count"><i className="fa-solid fa-message"></i>{instant.comments}</div>
+                <div className="comment_count"><i className="fa-solid fa-message"></i>{instant.commentsCount}</div>
                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likes}</div>
                 <div className="ubication"><i className="fa-solid fa-location-dot"></i>{instant.location}</div>
                 <div className="expands"><i className="fa-solid fa-expand"></i></div>                

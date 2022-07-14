@@ -15,35 +15,26 @@ export function NewComment (props) {
     const onHandleSubmit=(e)=>{
         e.preventDefault();
         createComment(newComment);
+        setNewComment('');
     }
 
-    const createComment=(data)=>{
+    const createComment=(newComment)=>{
 
-        commentServicesIJ.postComment(data).then(res => {
-            if(res)navigate(-0);
-            alert(`${res.comment} added!`)
+        commentServicesIJ.postComment(newComment).then(res => {
+            // if(res)navigate(-0);
+            alert(`${res.newComment} added!`)
+            console.log('added')
        });
 
        console.log('create')
 
     }
 
-    // const getDate = () => {
-
-    //     let today = new Date();
-    //     let day = today.getDate();
-    //     let month = today.getMonth();
-    //     let year = today.getFullYear();
-    //     let date = `${day}/${month}/${year}`;
-    //     console.log(date)
-
-    //     console.log('date')
-    // }
 
     return(
         <form onSubmit={onHandleSubmit} className="newComment_box">
             <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
-            <input onChange={onInputChange} type="text" className="comment_input" placeholder="New comment..."/>
+            <input onChange={onInputChange} value={newComment || ''} type="text" className="comment_input" placeholder="New comment..."/>
             <div className="commentBox_btns">
                 <button type="button" className="commentBox_btn close">
                     <i onClick={()=>props.showCommentInput()} className="fa-solid fa-xmark"></i> 
