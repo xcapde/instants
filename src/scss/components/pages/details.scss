@@ -114,6 +114,13 @@
     width: 100%;
 }
 
+.description_box .user_avatar{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin: 0 2% 0;
+}
+
 .comments_box{
     display: flex;
     flex-direction: column;

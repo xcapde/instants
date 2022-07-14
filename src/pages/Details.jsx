@@ -8,39 +8,44 @@ import { commentServicesIJ } from "../data_API/commentServicesIJ";
 // import { instantServices } from "../data_API/instantServices";
 import { instantServicesIJ } from "../data_API/instantServicesIJ";
 
-export function Details() {
+export function Details(props) {
 
     const [instantInfo, setInstantInfo] = useState({});
-    const [commentsList, setCommentsList] = useState([]);
+    const[comments, setComments] = useState();
     const[isLoading, setIsLoading] = useState(false);
     const [id] = useState(useParams().id)
     const navigate = useNavigate();
 
 
-
     useEffect(() => {
+        if(!id)return
 
         const showDetails = () => {
             setIsLoading(true)
             instantServicesIJ.getInstantById(id).then(res => {
-                setInstantInfo(res);
-                setIsLoading(false);
+                if(res){
+                    setInstantInfo(res);
+                    // setIsLoading(false);
+                }
               });
+            setIsLoading(false);
         }
-
+        
         showDetails();
+        
+    },[id, instantInfo.commentsCount]);
 
-        const getAllComments=()=>{
-            commentServicesIJ.getCommentsByInstantId().then(res => {
-                setCommentsList(res);
+
+    useEffect(()=>{
+
+        const getAllCommentsByInstantId=()=>{
+            commentServicesIJ.getCommentsByInstantId(id).then(res => {
+                setComments(res);
            })
         }
 
-        getAllComments();
-        
-    },[id]);
-
- 
+        getAllCommentsByInstantId(id);
+    },[id])  
 
     return(
         <div className="details_pg">
@@ -73,15 +78,14 @@ export function Details() {
                         <div className="photoAndDescription_mbl_box">
                             <div className="details_photo_mobile">
                                 <img src={instantInfo.imgUrl} alt="preview"/>  
-                                <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.comments}</div>                                              
+                                <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.commentsCount}</div>                                              
                                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likes}</div>
-                                <div className="ubication"><i className="fa-solid fa-location-dot"></i>Location</div>
+                                <div className="ubication"><i className="fa-solid fa-location-dot"></i>{instantInfo.location}</div>
                             </div>                          
                             <div className="description_box">
                                 <div className="user_cnt">
-                                    <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
-                                    <h1 className="user_name">User</h1>
-                                    {/* <h1 className="user_name">{instantInfo.creator.name} {instantInfo.creator.surname}</h1> */}
+                                    <img className="user_avatar" src={instantInfo && instantInfo.creator? instantInfo.creator.avatar : '' } alt="creator avatar"/>
+                                    <h1 className="user_name">{instantInfo && instantInfo.creator? instantInfo.creator.name : ''} {instantInfo && instantInfo.creator? instantInfo.creator.surname : ''}</h1>
                                 </div> 
                                 <p>{instantInfo.description}</p>
                             </div>
@@ -89,15 +93,16 @@ export function Details() {
 
                         <div className="comments_box">
                             <div className="users_comments">
-                                <Comment/>
+                                {/* <Comment/> */}
                                 
-                                <>{commentsList.map((comment,key) =>
-                                    <Comment key={key} comment={comment}/>
-                                    ).reverse()}
+                                <>{comments? comments.map((comment,key) =>
+                                    <Comment key={key} comment={comment} />
+                                    ).reverse()
+                                    : ''}
                                 </>
                                         
                             </div>
-                            <NewComment/>
+                            <NewComment id={id}/>
                         </div>
 
                     </div>                  

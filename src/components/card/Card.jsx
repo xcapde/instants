@@ -5,8 +5,8 @@ import { NewComment } from "../comment/NewComment";
 export function Card(props){
 
     const [instant, setInstant] = useState(props.instant);
-    // const [isLiked, setIsLiked] = useState(false);
     const [commentIsActive, setCommentIsActive] = useState(false);
+    // const [isLiked, setIsLiked] = useState(false);
 
     useEffect(() => {
         setInstant(props.instant)
@@ -28,7 +28,10 @@ export function Card(props){
         <section className="card_cnt">
             <div className="card_txt">
                 <div className="user_cnt">
-                    <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
+                    {instant.creator.avatar?
+                    <img className="user_avatar" src={instant.creator.avatar} alt="creator avatar"/>
+                    :
+                    <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>}
                     <h1 className="user_name">{instant.creator.name} {instant.creator.surname}</h1>
                 </div>
                 <h1 className="title_txt">{instant.title}</h1>
@@ -53,7 +56,7 @@ export function Card(props){
                         <button onClick={()=>props.deleteInstant(instant.id)} className="delete_btn"><i className="fa-solid fa-trash-can"></i></button>
                     
                     {commentIsActive? 
-                        <NewComment showCommentInput={showCommentInput} />
+                        <NewComment showCommentInput={showCommentInput} id={instant.id} getAllData={props.getAllData} commentIsActive={commentIsActive}/>
                         :
                         null
                     }

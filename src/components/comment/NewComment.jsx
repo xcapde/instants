@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { commentServicesIJ } from "../../data_API/commentServicesIJ";
 
 export function NewComment (props) {
     const [newComment, setNewComment] = useState('');
-    const navigate = useNavigate();
+    const [instantId, setInstantId] = useState(props.id);
 
 
     const onInputChange=(e)=>{
@@ -14,19 +13,21 @@ export function NewComment (props) {
 
     const onHandleSubmit=(e)=>{
         e.preventDefault();
-        createComment(newComment);
+        createComment(newComment, instantId);
         setNewComment('');
+        
+        if(props.commentIsActive){
+            props.getAllData();
+        }
     }
 
-    const createComment=(newComment)=>{
+    const createComment=()=>{
 
-        commentServicesIJ.postComment(newComment).then(res => {
-            // if(res)navigate(-0);
-            alert(`${res.newComment} added!`)
-            console.log('added')
+        commentServicesIJ.postComment(newComment, instantId).then(res => {
+            console.log(newComment, instantId, res)
+            if(res);
+            alert(`Comment added!`)
        });
-
-       console.log('create')
 
     }
 

@@ -1,20 +1,22 @@
-export function Comment () {
+import { useEffect, useState } from "react"
 
-    const getAllComments= ()=>{
+export function Comment (props) {
 
-    }
+const [comment, setComment] = useState(props.comment);
+
+useEffect(() => {
+    setComment(props.comment)
+}, [props.comment])
 
 return(
         <div className="comment_cnt">
-            <div className="user_photo">
-                <i className="fa-solid fa-circle-user"></i>
-            </div>
+            {comment.creator.avatar? <img className="user_avatar" src={comment.creator.avatar} alt="creator avatar"/>
+            :
+            <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>}
+
             <div className="comment_body">
-                <h1 className="user_name">User</h1>
-                <div className="comment_txt_box">
-                    <h1 className="comment_txt">Comment</h1>
-                    {/* <h1 className="comment_date">date</h1>  */}
-                </div>                              
+                <h1 className="user_name">{comment.creator.name} {comment.creator.surname}</h1>
+                <div className="comment_txt_box"><h1 className="comment_txt">{comment.comment}</h1></div>                              
             </div>
         </div>
     )

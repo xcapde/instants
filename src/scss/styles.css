@@ -171,6 +171,13 @@
   width: 100%;
 }
 
+.description_box .user_avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin: 0 2% 0;
+}
+
 .comments_box {
   display: flex;
   flex-direction: column;
@@ -1058,13 +1065,15 @@ input:focus::placeholder {
 }
 
 .card_txt .user_cnt {
-  width: 100%;
+  width: 90%;
   margin: 2% 0;
 }
 
-.card_txt .user_photo {
-  width: 1.1rem;
-  height: 1.1rem;
+.card_txt .user_photo, .card_txt .user_avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin: 0 2% 0;
 }
 
 .card_txt .user_name {
@@ -1228,15 +1237,18 @@ input:focus::placeholder {
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 4% 1%;
+  padding: 4% 2%;
 }
 .comment_cnt:hover {
   background-color: rgba(36, 36, 36, 0.1019607843);
   transition: 0.4s all ease-in;
 }
 
-.comment_cnt .user_photo i {
-  font-size: x-large;
+.comment_cnt .user_avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 2%;
 }
 
 .comment_body {

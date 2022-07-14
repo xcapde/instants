@@ -1,6 +1,7 @@
 import axios from "axios";
 const baseURL = "http://localhost:8080";
 export const instantServicesIJ = {
+  
   getAllInstants() {
     const instants = axios.get(baseURL + "/instants").then((res) => {
       return res.data;

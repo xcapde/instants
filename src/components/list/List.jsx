@@ -15,7 +15,6 @@ export function List () {
     const[instantToEdit, setInstantToEdit] = useState('');
     const[isLoading, setIsLoading] = useState(false);
 
-
     useEffect(() => {
         getAllData();
     },[]
