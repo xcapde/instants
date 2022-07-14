@@ -3,7 +3,7 @@ import { commentServicesIJ } from "../../data_API/commentServicesIJ";
 
 export function NewComment (props) {
     const [newComment, setNewComment] = useState('');
-    const [instantId, setInstantId] = useState(props.id);
+    const [instantId] = useState(props.id);
 
 
     const onInputChange=(e)=>{
@@ -13,6 +13,12 @@ export function NewComment (props) {
 
     const onHandleSubmit=(e)=>{
         e.preventDefault();
+
+        if(!newComment.length > 0){
+            alert('Comment is empty')
+            return
+        }
+        
         createComment(newComment, instantId);
         setNewComment('');
         
@@ -21,7 +27,7 @@ export function NewComment (props) {
         }
     }
 
-    const createComment=()=>{
+    const createComment=(newComment, instantId)=>{
 
         commentServicesIJ.postComment(newComment, instantId).then(res => {
             console.log(newComment, instantId, res)

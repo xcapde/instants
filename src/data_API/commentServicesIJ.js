@@ -3,10 +3,7 @@ const baseURL = "http://localhost:8080";
 export const commentServicesIJ = {
 
   getCommentsByInstantId(instantId) {
-    const comments = axios.get(baseURL + "/instants/" + instantId + "/comments").then(res => {
-      console.log(instantId, res.data)
-
-      return res.data});
+    const comments = axios.get(baseURL + "/instants/" + instantId + "/comments").then(res => res.data);
     return comments;
   },
 

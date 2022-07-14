@@ -11,7 +11,7 @@ import { instantServicesIJ } from "../data_API/instantServicesIJ";
 export function Details(props) {
 
     const [instantInfo, setInstantInfo] = useState({});
-    const[comments, setComments] = useState();
+    const[comments, setComments] = useState([]);
     const[isLoading, setIsLoading] = useState(false);
     const [id] = useState(useParams().id)
     const navigate = useNavigate();
@@ -33,11 +33,10 @@ export function Details(props) {
         
         showDetails();
         
-    },[id, instantInfo.commentsCount]);
-
+    // },[id, instantInfo.comments]);
+    },[id]);
 
     useEffect(()=>{
-
         const getAllCommentsByInstantId=()=>{
             commentServicesIJ.getCommentsByInstantId(id).then(res => {
                 setComments(res);
@@ -75,7 +74,7 @@ export function Details(props) {
                         
                     <div className="details_body">
 
-                        <div className="photoAndDescription_mbl_box">
+                        <div className="details_box">
                             <div className="details_photo_mobile">
                                 <img src={instantInfo.imgUrl} alt="preview"/>  
                                 <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.commentsCount}</div>                                              
@@ -89,27 +88,25 @@ export function Details(props) {
                                 </div> 
                                 <p>{instantInfo.description}</p>
                             </div>
-                        </div>
-
-                        <div className="comments_box">
-                            <div className="users_comments">
-                                {/* <Comment/> */}
-                                
-                                <>{comments? comments.map((comment,key) =>
-                                    <Comment key={key} comment={comment} />
-                                    ).reverse()
-                                    : ''}
-                                </>
-                                        
+                            <div className="comments_box">
+                                {comments.length > 0?
+                                <div className="users_comments">                                    
+                                    <>{comments.map((comment,key) =>
+                                        <Comment key={key} comment={comment} />
+                                        )}
+                                    </>                                            
+                                </div>
+                                :
+                                <h1 className="results_info">No comments yet</h1>
+                                }                            
                             </div>
-                            <NewComment id={id}/>
                         </div>
+                        
+                        <NewComment id={id}/>
 
-                    </div>                  
-
+                    </div>                 
                 </div>                
             </div>
-
         </div>
     )
 }

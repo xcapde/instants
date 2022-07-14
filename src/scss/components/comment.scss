@@ -8,42 +8,37 @@
     &:hover{
         background-color: $colorDarkOpacity;
         transition: 0.4s all ease-in;
+        cursor: default;
     }
-}
 
-.comment_cnt .user_avatar{
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    margin-right: 2%;
+    & .user_avatar{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        margin-right: 2%;
+    }
 }
 
 .comment_body{
     width: 100%;
     display: flex;
     flex-direction: column;
-}
 
-.comment_body h1{
-    margin: 0 1%;
-    padding: 0;
-    font-size: smaller;
-    justify-content: unset;
-    word-break: break-all;
-    // overflow-y: auto; 
-    // text-overflow: ellipsis;
-}
+    & .comment_txt{
+        color: $colorDark;
+        font-weight: 500;
+        font-size: 0.7rem;
+    }
 
-.comment_body .comment_txt{
-    color: $colorDark;
-    font-weight: 500;
-    font-size: 0.7rem;
-}
-
-.comment_date{
-    color: $colorDark;
-    font-weight: 500;
-    font-size: x-small !important;
+    & h1{
+        margin: 0 1%;
+        padding: 0;
+        font-size: smaller;
+        justify-content: unset;
+        word-break: break-all;
+        // overflow-y: auto; 
+        // text-overflow: ellipsis;
+    }
 }
 
 .comment_txt_box{

@@ -3,10 +3,6 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-.details_photo_mobile{
-    display: none;
-}
-
 .details_cnt{
     @include flexCenterRow;
     max-width: 85%;
@@ -14,34 +10,57 @@
     border-radius: 0.4rem;
     filter:drop-shadow(0rem .1rem .15rem $colorGreyOpacity);
     background:none;
+
+    @media only screen and (max-width: $breakPointSmall){
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 0;
+        max-width: unset;
+    }
 }
 
 .details_photo{
     height: 100%;
     background-color: $colorGrey;
     border-radius: 0.4rem;
-    position: relative;
+    position: relative;   
+    @media only screen and (max-width: $breakPointSmall){
+        display: none;
+    }
 }
 
-.details_photo img, .details_photo_mobile img{
-    width: 100%;
-    height: 100%;
-    border-radius: 0.4rem;
-    object-fit: cover;
+.details_photo_mobile{
+    display: none;
+    @media only screen and (max-width: $breakPointSmall){
+        display: flex;
+        width: 100vw;
+        height: unset;
+        margin: 0 auto;
+        position: relative;    
+    }
 }
 
-.details_photo .like_count,.details_photo_mobile .like_count,
-.details_photo .comment_count,.details_photo_mobile .comment_count,
-.details_photo .ubication,.details_photo_mobile .ubication{
+.details_photo, .details_photo_mobile {
+    & .like_count, & .comment_count, & .ubication{
     opacity: 1;
     transition: 1.5s all;
-}
+    }
 
-.details_photo:active .like_count,.details_photo_mobile:active .like_count,
-.details_photo:active .comment_count,.details_photo_mobile:active .comment_count,
-.details_photo:active .ubication,.details_photo_mobile:active .ubication{
-    opacity: 0;
-    transition: .5s all;
+    &:active .like_count, &:active .comment_count, &:active .ubication{
+        opacity: 0;
+        transition: .5s all; 
+    }
+
+    & img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0.4rem;
+        object-fit: cover;
+        @media only screen and (max-width: $breakPointSmall){
+            border-radius: 0rem;
+        }  
+    }
 }
 
 .details_info{
@@ -50,22 +69,37 @@
     min-width: 20rem;
     height: 100%;
     border-radius: 0.4rem;
-}
+    @media only screen and (max-width: $breakPointSmall){
+        min-width: unset;
+        width: 100%;    
+    }
 
-.details_info .form_header{
-    @include mainRadius_top;
-    background-color: $colorGreyHeader;
-    // height: 10vh;
-    height: 15%;
-    position: relative;
-}
+    & .form_header{
+        @include mainRadius_top;
+        background-color: $colorGreyHeader;
+        // height: 10vh;
+        height: 15%;
+        position: relative;
+        @media only screen and (max-width: $breakPointSmall){
+            background-color: $colorHeader;
+            border-radius: 0;
+            height: 10vh;
+        }
 
-.details_info .form_header .back_btn:hover{
-    background-color: $colorGreyHeaderHover;
-}
+        & .back_btn:hover{
+            background-color: $colorGreyHeaderHover;
+            &:active{
+                background-color: $colorGrey;
+            }
+            @media only screen and (max-width: $breakPointSmall){
+                background-color: $colorHeaderHover;
+                &:active{
+                    background-color: $colorHeaderActive;
+                }
+            }
+        }
+    }
 
-.details_info .form_header .back_btn:active{
-    background-color: $colorGrey;
 }
 
 .details_body{
@@ -78,48 +112,61 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media only screen and (max-width: $breakPointSmall){
+        border-radius: 0;
+        height: 80vh;
+    }
+
+    & p{
+        margin: 0;
+        padding: 4%;
+        color: $colorDark;
+        font-size: smaller;
+        @media only screen and (max-width: $breakPointSmall){
+            font-size: medium;
+        }
+    }
+
+    & .user_cnt{
+        margin-top: 2%;
+    }
+
+    & .user_name{
+        color: $colorGreyHeader !important;
+        font-size: x-small;
+        font-weight: 400;
+    }
+
+    & .close{
+        display: none !important;
+    }
 }
 
-.details_body p{
-    margin: 0;
-    padding: 4%;
-    color: $colorDark;
-    font-size: smaller;
-}
 
-.details_body .user_cnt{
-    margin-top: 2%;
-}
-
-.details_body .user_name{
-    color: $colorGreyHeader !important;
-    font-size: x-small;
-    font-weight: 400;
-}
-
-.photoAndDescription_mbl_box{
+.details_box{
     overflow: auto;
     display: flex;
     width: 100%;
-    min-height: fit-content;
-    max-height: 50%;
+    display: flex;
+    flex-direction: column;
     @media only screen and (max-width: $breakPointSmall){
-        flex-direction: column;
-        max-height: 75%;
     }
 }
 
 .description_box{
     overflow-y: auto;
     width: 100%;
+    height: fit-content;
+    min-height: 30%;
+
+    & .user_avatar{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        margin: 0 2% 0;
+    }
 }
 
-.description_box .user_avatar{
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    margin: 0 2% 0;
-}
 
 .comments_box{
     display: flex;
@@ -131,73 +178,17 @@
     border-top-style: solid;
     color: $colorGrey;
     width: 100%;
-    height: fit-content;
-    max-height: 80%;
     overflow: auto;
     @media only screen and (max-width: $breakPointSmall){
-        max-height: 25%;
+    }
+
+    & .results_info{
+        color: $colorGrey;
+        font-size: small;
+        font-weight: 100;
     }
 }
 
 .users_comments{
     overflow-y: auto;
-}
-
-.comments_box .close{
-    display: none !important;
-}
-
-@media only screen and (max-width: $breakPointSmall){
-
-    .details_cnt{
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        border-radius: 0;
-        max-width: unset;
-    }
-
-    .details_info .form_header{
-        background-color: $colorHeader;
-        border-radius: 0;
-        height: 10vh;
-    }
-
-    .details_info .form_header .back_btn:hover{
-        background-color: $colorHeaderHover;
-    }
-    
-    .details_info .form_header .back_btn:active{
-        background-color: $colorHeaderActive;
-    }
-    
-    .details_photo{
-        display: none;
-    }
-
-    .details_photo_mobile{
-        display: flex;
-        width: 100vw;
-        height: unset;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .details_photo_mobile img{
-        border-radius: 0rem;
-    }
-
-    .details_info{
-        min-width: unset;
-        width: 100%;
-    }
-
-    .details_body{
-        border-radius: 0;
-        height: 80vh;
-    }
-
-    .details_body p{
-        font-size: medium;
-    }
 }
