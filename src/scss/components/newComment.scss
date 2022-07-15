@@ -36,6 +36,9 @@
     border: none;
     outline: none;
     cursor: pointer;
+    @media only screen and (max-width: $breakPointSmall){
+        font-size: medium;
+    }
 
     &:hover{
         color: $colorHeader;
@@ -48,10 +51,16 @@
 
 .commentBox_btns{
     right: 0;
-    font-size: medium;
     display: flex;
     align-items: center;
     width: auto;
+    font-size: unset;
+
+    & .commentBox_btn{
+        @media only screen and (max-width: $breakPointSmall){
+            font-size: large;
+        }
+    }
 
     & button{
         border: none;
@@ -60,16 +69,21 @@
         margin: 0 0.5rem;
         height: 100%;
         color: $colorGreyHeader;
-        
-        &:hover{
-            color:$colorComment;
-        }
-        &:active{
-            color:$colorCommentActive;
-        }
-    
         @media only screen and (max-width: $breakPointSmall){
             margin: 0 1rem;    
         }
+
+        &.readyToShare{
+            color: $colorHeaderActive;
+        }
+        
+        &:hover{
+            color:$colorComment !important;
+        }
+
+        &:active{
+            color:$colorCommentActive !important;
+        }
+
     }
 }

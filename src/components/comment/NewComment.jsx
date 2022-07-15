@@ -43,10 +43,12 @@ export function NewComment (props) {
             <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
             <input onChange={onInputChange} value={newComment || ''} type="text" className="comment_input" placeholder="New comment..."/>
             <div className="commentBox_btns">
+                {newComment.length === 0?
                 <button type="button" className="commentBox_btn close">
-                    <i onClick={()=>props.showCommentInput()} className="fa-solid fa-xmark"></i> 
+                    <i onClick={()=>props.showCommentInput()} className="fa-solid fa-xmark"></i>
                 </button>
-                <button type="submit" className="commentBox_btn share">
+                : ''}
+                <button type="submit" className={newComment.length === 0?"commentBox_btn share" : "commentBox_btn share readyToShare"}>
                     <i className="fa-solid fa-paper-plane"></i>
                 </button>
             </div>

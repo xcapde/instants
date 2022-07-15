@@ -37,12 +37,19 @@ export const instantServicesIJ = {
     return instantById;
   },
 
-  //BACK
   getInstantsBySearch(search) {
     const instantsBySearch = axios.get(baseURL + `/instants?search=${search}`).then(res => {           
       return res.data;
     });
     return instantsBySearch;
+  },
+
+  getLikedInstants() {
+    const likedInstants = axios.get(baseURL + `/instants`).then(res => {  
+      console.log(res.data)         
+      return res.data;
+    });
+    return likedInstants;
   },
 
 };

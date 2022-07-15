@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { instantServicesIJ } from "../../data_API/instantServicesIJ";
 import { NewComment } from "../comment/NewComment";
 
 export function Card(props){
 
     const [instant, setInstant] = useState(props.instant);
     const [commentIsActive, setCommentIsActive] = useState(false);
-    // const [isLiked, setIsLiked] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
 
     useEffect(() => {
         setInstant(props.instant)
     }, [props.instant])
 
     const markLiked = () => {
-        // setIsLiked(!isLiked)        
-        // props.getAllData()
+        setIsLiked(!isLiked) 
+        if(instant.isLiked)
+        instantServicesIJ.putInstant().then(res =>{
+            if(res)
+            props.getAllData()
+        })     
         // console.log(`✅ ${instant.title} Liked or not!`)
         // console.log(`❌ ${instant.title} removed from liked!`)
     };
@@ -43,7 +48,7 @@ export function Card(props){
                     <img src={instant.imgUrl} alt=""/>
                 </Link>
                 <div className="comment_count"><i className="fa-solid fa-message"></i>{instant.commentsCount}</div>
-                <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likes}</div>
+                <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likesCount}</div>
                 <div className="ubication"><i className="fa-solid fa-location-dot"></i>{instant.location}</div>
                 <div className="expands"><i className="fa-solid fa-expand"></i></div>                
             </div>

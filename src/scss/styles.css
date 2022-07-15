@@ -217,8 +217,8 @@
   min-height: 30%;
 }
 .description_box .user_avatar {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   margin: 0 2% 0;
 }
@@ -1308,6 +1308,11 @@ input:focus::placeholder {
   outline: none;
   cursor: pointer;
 }
+@media only screen and (max-width: 500px) {
+  .comment_input {
+    font-size: medium;
+  }
+}
 .comment_input:hover {
   color: #289772;
 }
@@ -1318,10 +1323,15 @@ input:focus::placeholder {
 
 .commentBox_btns {
   right: 0;
-  font-size: medium;
   display: flex;
   align-items: center;
   width: auto;
+  font-size: unset;
+}
+@media only screen and (max-width: 500px) {
+  .commentBox_btns .commentBox_btn {
+    font-size: large;
+  }
 }
 .commentBox_btns button {
   border: none;
@@ -1331,16 +1341,19 @@ input:focus::placeholder {
   height: 100%;
   color: #a8a8a8;
 }
-.commentBox_btns button:hover {
-  color: #416dfc;
-}
-.commentBox_btns button:active {
-  color: #5d83ff;
-}
 @media only screen and (max-width: 500px) {
   .commentBox_btns button {
     margin: 0 1rem;
   }
+}
+.commentBox_btns button.readyToShare {
+  color: #36af87;
+}
+.commentBox_btns button:hover {
+  color: #416dfc !important;
+}
+.commentBox_btns button:active {
+  color: #5d83ff !important;
 }
 
 .hidden {
@@ -1411,7 +1424,7 @@ input:focus::placeholder {
   display: flex;
   width: 5rem;
   font-size: small;
-  color: #e0c133;
+  color: #289772;
   font-weight: 400;
   width: 100%;
 }
