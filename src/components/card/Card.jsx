@@ -8,10 +8,15 @@ export function Card(props){
     const [instant, setInstant] = useState(props.instant);
     const [commentIsActive, setCommentIsActive] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
+    // const [isCommented, setIsCommented] = useState(false);
 
     useEffect(() => {
         setInstant(props.instant)
     }, [props.instant])
+
+    // const markCommented=()=>{
+
+    // }
 
     const markLiked = () => {
         setIsLiked(!isLiked) 

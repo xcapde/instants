@@ -35,12 +35,13 @@ export function List () {
    
     const deleteInstant=(id)=>{
 
-        let confirmation = window.confirm('❌ Delete this photo?')
+        let selectedInstant = instants.filter(i => i.id === id);
+        let confirmation = window.confirm(`❌ Delete ${selectedInstant[0].title}?`)
 
         if(confirmation){
         instantServicesIJ.deleteAInstant(parseInt(id)).then(res => {
             if(res){getAllData();
-            alert(`${res.title} deleted!`)
+            alert(`❌ Deleted!`)
             }
         });
         } return;
