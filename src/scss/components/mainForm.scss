@@ -32,6 +32,8 @@
     justify-content: center;
     margin: 0 auto;
     overflow: hidden;
+    overflow-y: auto;
+
 
     @media only screen and (max-width: $breakPointSmall){
         width: 92%;

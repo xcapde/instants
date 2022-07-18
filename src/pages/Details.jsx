@@ -58,9 +58,9 @@ export function Details(props) {
 
                 <div className="details_photo">
                         <img src={instantInfo.imgUrl} alt="preview"/>                                           
-                        <div className="comment_count"><i className="fa-solid fa-message"></i>{instantInfo.commentsCount}</div>   
-                        <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likesCount}</div>
-                        <div className="ubication"><i className="fa-solid fa-location-dot"></i>{instantInfo.location}</div>
+                        <div className={!instantInfo.commentsCount? "comment_count inputHidden" : "comment_count"}><i className="fa-solid fa-message"></i>{instantInfo.commentsCount}</div>   
+                        <div className={!instantInfo.likesCount? "like_count inputHidden" : "like_count"}><i className="fa-solid fa-heart"></i>{instantInfo.likesCount}</div>
+                        <div className={!instantInfo.location? "ubication inputHidden" : "ubication"}><i className="fa-solid fa-location-dot"></i>{instantInfo.location}</div>
                 </div>                
 
                 <div className="details_info">    
