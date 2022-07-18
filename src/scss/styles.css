@@ -1490,8 +1490,8 @@ input:focus::placeholder {
   padding: 0;
   width: initial;
   max-width: 100%;
-  min-height: 7rem;
   max-height: 15rem;
+  max-height: fit-content !important;
   font-size: medium;
   min-width: inherit;
 }
