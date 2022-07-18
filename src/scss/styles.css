@@ -924,6 +924,12 @@ input:focus::placeholder {
   position: relative;
   overflow: hidden;
   display: flex;
+  max-height: 10rem;
+}
+@media only screen and (max-width: 500px) {
+  .card_img {
+    max-height: unset;
+  }
 }
 
 .card_img a {
@@ -940,6 +946,10 @@ input:focus::placeholder {
   transform: scale;
   -webkit-transform: scale(1.04);
   transition: 1.5s all ease;
+}
+
+.inputHidden {
+  display: none;
 }
 
 .like_count, .comment_count, .ubication, .expands {
@@ -1007,7 +1017,6 @@ input:focus::placeholder {
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 1%;
-  height: 15vh;
 }
 @media only screen and (max-width: 500px) {
   .card_txt {
@@ -1320,6 +1329,9 @@ input:focus::placeholder {
   color: #289772;
   cursor: text;
 }
+.comment_input.inputError::placeholder {
+  color: #F1557A;
+}
 
 .commentBox_btns {
   right: 0;
@@ -1465,12 +1477,11 @@ input:focus::placeholder {
 .inputs_box textarea:focus, .inputs_box input:focus {
   color: #056344;
 }
-
-.title_input {
-  display: flex;
-  height: 2rem;
-  font-size: xx-large !important;
-  font-weight: 600;
+.inputs_box textarea.inputError::placeholder, .inputs_box input.inputError::placeholder {
+  color: #F1557A !important;
+}
+.inputs_box textarea:hover.inputError::placeholder, .inputs_box input:hover.inputError::placeholder {
+  color: #EE3561 !important;
 }
 
 .inputs_box textarea {

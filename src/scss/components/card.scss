@@ -19,6 +19,10 @@
     position: relative;
     overflow: hidden;
     display: flex;
+    max-height: 10rem;
+    @media only screen and (max-width: $breakPointSmall){
+        max-height: unset;
+    }
 }
 
 .card_img a{
@@ -38,6 +42,9 @@
     }
 }
 
+.inputHidden{
+    display: none;
+}
 
 .like_count, .comment_count, .ubication, .expands{
     @include mainRadius_all;
@@ -104,7 +111,7 @@
     justify-content: center;
     align-items: flex-start;
     padding-bottom: 1%;
-    height: 15vh;
+    // height: 15vh;
 
     @media only screen and (max-width: $breakPointSmall){
         height: unset !important;

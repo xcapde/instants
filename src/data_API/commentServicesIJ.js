@@ -8,7 +8,8 @@ export const commentServicesIJ = {
   },
 
   postComment(data, instantId) {
-    const postComment = axios.post(baseURL + `/comments`, {data, instantId}).then(res => {
+    const postComment = axios.post(baseURL + `/comments`, {creatorId:1, data, instantId}).then(res => {
+    // const postComment = axios.post(baseURL + `/comments`, {data, instantId}).then(res => {
       console.log(data, instantId, res)
       return res.data;
     });

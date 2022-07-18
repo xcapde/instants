@@ -1,37 +1,47 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { instantServicesIJ } from "../../data_API/instantServicesIJ";
+// import { instantServicesIJ } from "../../data_API/instantServicesIJ";
 import { NewComment } from "../comment/NewComment";
 
 export function Card(props){
 
     const [instant, setInstant] = useState(props.instant);
     const [commentIsActive, setCommentIsActive] = useState(false);
-    const [isLiked, setIsLiked] = useState(false);
-    // const [isCommented, setIsCommented] = useState(false);
+    // const [likedList, setLikedList] = useState([]);
 
     useEffect(() => {
-        setInstant(props.instant)
-    }, [props.instant])
+        setInstant(props.instant);
+        props.getAllData();
+    }, [props])
 
-    // const markCommented=()=>{
 
-    // }
+    // const getLikedList = () => {
+    // //     instantServicesIJ.getLikedInstants().then(res => {
+    // //         if(res) 
+    // //         setLikedList(res);
+    // //     })
+    // //     console.log(likedList)
+    // };
 
-    const markLiked = () => {
-        setIsLiked(!isLiked) 
-        if(instant.isLiked)
-        instantServicesIJ.putInstant().then(res =>{
-            if(res)
-            props.getAllData()
-        })     
-        // console.log(`✅ ${instant.title} Liked or not!`)
-        // console.log(`❌ ${instant.title} removed from liked!`)
+    const markLiked = (instant) => {
+
+        // let card = instant;
+
+        // if(card.liked === false){ card.liked = true;
+        //     alert(`✅ ${card.title} liked!`)} 
+
+        // else if(card.liked === true){card.liked = false;
+        //     alert(`❌ ${card.title} unliked!`)};
+
+        // instantServicesIJ.putInstant(card.id, card).then(res =>{            
+        //     if(res)
+        //     props.getAllData();
+        //     // getLikedList();
+        // })
     };
 
     const showCommentInput = () =>{
         setCommentIsActive(!commentIsActive)
-        console.log(commentIsActive)        
     };
 
     return (
@@ -52,15 +62,15 @@ export function Card(props){
                 <Link to={`/detail/${instant.id}`} instant={instant}>                            
                     <img src={instant.imgUrl} alt=""/>
                 </Link>
-                <div className="comment_count"><i className="fa-solid fa-message"></i>{instant.commentsCount}</div>
-                <div className="like_count"><i className="fa-solid fa-heart"></i>{instant.likesCount}</div>
-                <div className="ubication"><i className="fa-solid fa-location-dot"></i>{instant.location}</div>
+                <div className={!instant.commentsCount?"comment_count inputHidden" : "comment_count"}><i className="fa-solid fa-message"></i>{instant.commentsCount}</div>
+                <div className={!instant.likesCount?"like_count inputHidden" : "like_count"}><i className="fa-solid fa-heart"></i>{instant.likesCount}</div>
+                <div className={!instant.location? "ubication inputHidden" : "ubication"}><i className="fa-solid fa-location-dot"></i>{instant.location}</div>
                 <div className="expands"><i className="fa-solid fa-expand"></i></div>                
             </div>
 
                 <div className="card_btns">                    
-                        <button onClick={()=>markLiked()} className={instant.isLike? "like_btn liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
-                        <button onClick={()=>showCommentInput()} className={instant.isComment? "comment_btn commented":"comment_btn"}><i className="fa-solid fa-message"></i></button>                      
+                        <button onClick={()=>markLiked(instant)} className={instant.liked? "like_btn liked":"like_btn"}><i className="fa-solid fa-heart"></i></button>
+                        <button onClick={()=>showCommentInput()} className={instant.commented? "comment_btn commented":"comment_btn"}><i className="fa-solid fa-message"></i></button>                      
                         
                         <button onClick={()=>props.showEdit(instant)} className="edit_btn"><i className="fa-solid fa-pencil"></i></button>
                         <button onClick={()=>props.deleteInstant(instant.id)} className="delete_btn"><i className="fa-solid fa-trash-can"></i></button>

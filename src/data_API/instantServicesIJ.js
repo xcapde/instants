@@ -46,9 +46,9 @@ export const instantServicesIJ = {
 
   getLikedInstants() {
     const likedInstants = axios.get(baseURL + `/instants`).then(res => {  
-      console.log(res.data)         
-      return res.data;
+      return res.data.filter(instant => instant.liked === true);
     });
+    console.log(likedInstants)
     return likedInstants;
   },
 

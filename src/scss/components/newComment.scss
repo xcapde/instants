@@ -47,6 +47,9 @@
         color:$colorHeader;
         cursor:text;
     }
+    &.inputError::placeholder{
+        color: $colorLikeActive;
+    }
 }
 
 .commentBox_btns{

@@ -96,23 +96,28 @@
         color: $colorDarkOpacityLess !important;
         transition: 0.3s all;
     }
-
     &:hover{
         color: $colorHeader;
         transition: 0.3s all;
         cursor: text;
-    }
+    }    
     &:focus{
         color: $colorHeaderDark;
     }
+    &.inputError::placeholder{
+        color: $colorLikeActive !important;
+    }
+    &:hover.inputError::placeholder{
+        color: $colorLike !important;
+    }
 }
 
-.title_input{
-    display: flex;
-    height: 2rem;
-    font-size: xx-large !important;
-    font-weight: 600;
-}
+// .title_input{
+//     display: flex;
+//     height: 2rem;
+//     font-size: xx-large !important;
+//     font-weight: 600;
+// }
 
 .inputs_box textarea{
     padding: 0;
@@ -181,6 +186,7 @@
     margin-right: 2%;
     @include detailRadius;
 }
+
 
 .mainForm_btns{
     display: flex;

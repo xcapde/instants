@@ -4,6 +4,7 @@ import { commentServicesIJ } from "../../data_API/commentServicesIJ";
 export function NewComment (props) {
     const [newComment, setNewComment] = useState('');
     const [instantId] = useState(props.id);
+    const [error, setError] = useState(false);
 
 
     const onInputChange=(e)=>{
@@ -14,8 +15,8 @@ export function NewComment (props) {
     const onHandleSubmit=(e)=>{
         e.preventDefault();
 
-        if(!newComment.length > 0){
-            alert('Comment is empty')
+        if(!newComment){
+            setError(true);
             return
         }
         
@@ -37,18 +38,17 @@ export function NewComment (props) {
 
     }
 
-
     return(
         <form onSubmit={onHandleSubmit} className="newComment_box">
             <div className="user_photo"><i className="fa-solid fa-circle-user"></i></div>
-            <input onChange={onInputChange} value={newComment || ''} type="text" className="comment_input" placeholder="New comment..."/>
+            <input onChange={onInputChange} value={newComment || ''} type="text" className={error?"comment_input inputError" : "comment_input"} placeholder="Write a comment..." autoFocus />
             <div className="commentBox_btns">
-                {newComment.length === 0?
+                {!newComment?
                 <button type="button" className="commentBox_btn close">
                     <i onClick={()=>props.showCommentInput()} className="fa-solid fa-xmark"></i>
                 </button>
                 : ''}
-                <button type="submit" className={newComment.length === 0?"commentBox_btn share" : "commentBox_btn share readyToShare"}>
+                <button type="submit" className={!newComment?"commentBox_btn share" : "commentBox_btn share readyToShare"}>
                     <i className="fa-solid fa-paper-plane"></i>
                 </button>
             </div>

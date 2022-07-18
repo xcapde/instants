@@ -7,6 +7,7 @@ import { Navbar } from "../navbar/Navbar";
 export function MainForm(props) {
 
     const [newInstant, setNewInstant] = useState(props.editIsActive?props.instantToEdit : {title:"",description:"", imgUrl:"", date:""})
+    const [error, setError] = useState(false);
     const navigate = useNavigate();
 
     const onInputChange=(e)=>{
@@ -19,6 +20,11 @@ export function MainForm(props) {
         e.preventDefault();
         let id= newInstant.id;
 
+        if(!newInstant.title || !newInstant.imgUrl){
+            setError(true)
+            alert('Some information is required')
+            return;}
+        
         if(props.editIsActive){
         updateOneInstant(id, newInstant)
         } else{
@@ -74,7 +80,7 @@ export function MainForm(props) {
                             <span className="form_icon"><i className="fa-solid fa-angles-right"></i></span>
                             Title:
                         </label>
-                        <input onChange={onInputChange} value={newInstant.title||''} className="title_input" name="title" id="title" type="text" placeholder="Write a title" maxLength="30" autoFocus required/>
+                        <input onChange={onInputChange} value={newInstant.title||''} className={error && !newInstant.title? "title_input inputError" : "title.input"} name="title" id="title" type="text" placeholder="Write a title" maxLength="30" autoFocus/>
                     </div>
                     <div className="mainForm_input_box">
                         <label htmlFor="location">
@@ -88,7 +94,7 @@ export function MainForm(props) {
                             <span className="form_icon"><i className="fa-solid fa-align-left"></i></span>
                             Description:
                         </label>
-                        <textarea onChange={onInputChange} value={newInstant.description||''} className="description_input"  name="description" id="description" placeholder="Write a description"/>
+                        <textarea onChange={onInputChange} value={newInstant.description||''} className="description_input" name="description" id="description" placeholder="Write a description"/>
                     </div>
                     <div className="mainForm_input_box">
                         <label htmlFor="imgUrl">
@@ -97,7 +103,7 @@ export function MainForm(props) {
                         </label>
                         <div className={newInstant.imgUrl? "preview_and_url reduced" : "preview_and_url"}>
                             {newInstant.imgUrl?<img src={newInstant.imgUrl} alt="preview"/>:''}                                                
-                            <input onChange={onInputChange} value={newInstant.imgUrl||''} className="imgurl_input" name="imgUrl" id="imgUrl" type="text" placeholder="Image URL"/>          
+                            <input onChange={onInputChange} value={newInstant.imgUrl||''} className={error && !newInstant.imgUrl? "imgurl_input inputError" : "imgurl_input"} name="imgUrl" id="imgUrl" type="text" placeholder="Image URL"/>          
                         </div>
                     </div>
                     <div className="mainForm_btns">
