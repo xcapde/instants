@@ -5,6 +5,7 @@
     flex-direction: column;   
     background-color: $colorHeaderActive;
     font-family: 'Quicksand', sans-serif;
+    height: 16rem;
 
     @media only screen and (max-width: $breakPointSmall){
         height: 100% !important;

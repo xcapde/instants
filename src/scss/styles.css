@@ -898,6 +898,7 @@ input:focus::placeholder {
   flex-direction: column;
   background-color: #36af87;
   font-family: "Quicksand", sans-serif;
+  height: 16rem;
 }
 .card_cnt:hover {
   filter: drop-shadow(0rem 0rem 0.2rem rgb(190, 190, 190));
