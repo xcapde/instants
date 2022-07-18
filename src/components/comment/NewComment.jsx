@@ -26,13 +26,18 @@ export function NewComment (props) {
         if(props.commentIsActive){
             props.getAllData();
         }
+        else{props.showDetails()}
     }
 
     const createComment=(newComment, instantId)=>{
 
-        commentServicesIJ.postComment(newComment, instantId).then(res => {
-            console.log(newComment, instantId, res)
-            if(res);
+        let data = {
+            comment:newComment,
+            instantId:instantId,
+        };
+
+        commentServicesIJ.postComment(data).then(res => {
+            if(!res) return;
             alert(`Comment added!`)
        });
 

@@ -896,7 +896,7 @@ input:focus::placeholder {
   border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
-  background-color: #36af87;
+  background-color: rgba(36, 36, 36, 0.1019607843);
   font-family: "Quicksand", sans-serif;
   height: 20rem;
 }
@@ -1491,7 +1491,6 @@ input:focus::placeholder {
   width: initial;
   max-width: 100%;
   max-height: 15rem;
-  max-height: fit-content !important;
   font-size: medium;
   min-width: inherit;
 }

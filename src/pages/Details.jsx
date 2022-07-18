@@ -11,8 +11,8 @@ import { instantServicesIJ } from "../data_API/instantServicesIJ";
 export function Details(props) {
 
     const [instantInfo, setInstantInfo] = useState({});
-    const[comments, setComments] = useState([]);
-    const[isLoading, setIsLoading] = useState(false);
+    const [comments, setComments] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const [id] = useState(useParams().id)
     const navigate = useNavigate();
 
@@ -25,18 +25,13 @@ export function Details(props) {
             instantServicesIJ.getInstantById(id).then(res => {
                 if(res){
                     setInstantInfo(res);
-                    // setIsLoading(false);
                 }
               });
             setIsLoading(false);
         }
         
         showDetails();
-        
-    // },[id, instantInfo.comments]);
-    },[id]);
 
-    useEffect(()=>{
         const getAllCommentsByInstantId=()=>{
             commentServicesIJ.getCommentsByInstantId(id).then(res => {
                 setComments(res);
@@ -44,7 +39,9 @@ export function Details(props) {
         }
 
         getAllCommentsByInstantId(id);
-    },[id])  
+        
+    },[id]); 
+
 
     return(
         <div className="details_pg">

@@ -6,7 +6,7 @@ import { Navbar } from "../navbar/Navbar";
 
 export function MainForm(props) {
 
-    const [newInstant, setNewInstant] = useState(props.editIsActive?props.instantToEdit : {title:"",description:"", imgUrl:"", date:""})
+    const [newInstant, setNewInstant] = useState(props.editIsActive?props.instantToEdit : {title:"", description:"", imgUrl:"", location:""})
     const [error, setError] = useState(false);
     const navigate = useNavigate();
 
@@ -57,6 +57,7 @@ export function MainForm(props) {
             title:"",
             description:"",
             imgUrl:"",
+            location:"",
         })
     }
 
@@ -107,7 +108,9 @@ export function MainForm(props) {
                         </div>
                     </div>
                     <div className="mainForm_btns">
-                        <button onClick={resetInputs} type="button" className="close_btn"><i className="fa-solid fa-xmark"></i><span className="close_txt">CLEAR</span></button>                                            
+                        {props.editIsActive?
+                            '' : <button onClick={resetInputs} type="button" className="close_btn"><i className="fa-solid fa-xmark"></i><span className="close_txt">CLEAR</span></button>                                            
+                        }
                         <button onClick={props.editIsActive? props.showEdit : () => navigate(-1)} type="button" className="cancel_btn">CANCEL</button>
                         <button type="submit" className="mainForm_btn">{props.editIsActive?'UPDATE':'SHARE'}</button>
                     </div>                       
