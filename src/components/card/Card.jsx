@@ -11,8 +11,7 @@ export function Card(props){
 
     useEffect(() => {
         setInstant(props.instant);
-        props.getAllData();
-    }, [props])
+    }, [props.instant])
 
 
     // const getLikedList = () => {

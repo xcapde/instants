@@ -44,12 +44,12 @@ export const instantServicesIJ = {
     return instantsBySearch;
   },
 
-  getLikedInstants() {
-    const likedInstants = axios.get(baseURL + `/instants`).then(res => {  
-      return res.data.filter(instant => instant.liked === true);
-    });
-    console.log(likedInstants)
-    return likedInstants;
-  },
+  // getLikedInstants() {
+  //   const likedInstants = axios.get(baseURL + `/instants`).then(res => {  
+  //     return res.data.filter(instant => instant.liked === true);
+  //   });
+  //   console.log(likedInstants)
+  //   return likedInstants;
+  // },
 
 };
