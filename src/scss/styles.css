@@ -898,7 +898,7 @@ input:focus::placeholder {
   flex-direction: column;
   background-color: #36af87;
   font-family: "Quicksand", sans-serif;
-  height: 16rem;
+  height: 20rem;
 }
 .card_cnt:hover {
   filter: drop-shadow(0rem 0rem 0.2rem rgb(190, 190, 190));
@@ -925,7 +925,7 @@ input:focus::placeholder {
   position: relative;
   overflow: hidden;
   display: flex;
-  max-height: 10rem;
+  max-height: 15rem;
 }
 @media only screen and (max-width: 500px) {
   .card_img {
