@@ -159,6 +159,9 @@
     width: 100%;
     height: fit-content;
     min-height: 25%;
+    @media (max-width:$breakPointSmall){
+        min-height: 20%;
+    }
 
     & .user_avatar{
         width: 2.5rem;
@@ -169,7 +172,10 @@
 }
 
 .noDesciption{
-    min-height: 13%;
+    min-height: 12.7%;
+    @media (max-width:$breakPointSmall){
+        min-height: 10%;
+    }
 }
 
 
@@ -188,6 +194,7 @@
     & .results_info{
         color: $colorGrey;
         font-size: small;
+        font-weight: 300;
         display: flex;
         justify-content: flex-start;
         position: relative;

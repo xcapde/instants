@@ -225,6 +225,11 @@
   height: fit-content;
   min-height: 25%;
 }
+@media (max-width: 500px) {
+  .description_box {
+    min-height: 20%;
+  }
+}
 .description_box .user_avatar {
   width: 2.5rem;
   height: 2.5rem;
@@ -233,7 +238,12 @@
 }
 
 .noDesciption {
-  min-height: 13%;
+  min-height: 12.7%;
+}
+@media (max-width: 500px) {
+  .noDesciption {
+    min-height: 10%;
+  }
 }
 
 .comments_box {
@@ -251,6 +261,7 @@
 .comments_box .results_info {
   color: #d3d3d3;
   font-size: small;
+  font-weight: 300;
   display: flex;
   justify-content: flex-start;
   position: relative;
