@@ -150,8 +150,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    @media only screen and (max-width: $breakPointSmall){
-    }
+    height: 100%;
 }
 
 .description_box{
@@ -180,14 +179,17 @@
     color: $colorGrey;
     width: 100%;
     overflow: auto;
-    @media only screen and (max-width: $breakPointSmall){
-    }
 
     & .results_info{
         color: $colorGrey;
         font-size: small;
-        font-weight: 100;
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        margin: 3%;
+        width: unset;
     }
+
 }
 
 .users_comments{
