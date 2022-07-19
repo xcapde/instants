@@ -5,16 +5,16 @@
     height: unset;
     flex-wrap: wrap;
     overflow-y: auto;
-}
 
-// .list_cnt .searcher{
-//     display: none;
-// }
-
-
-@media only screen and (max-width: $breakPointSmall){
-    .list_cnt{
+    @media only screen and (max-width: $breakPointSmall){
         margin-top: 3%;
         padding-bottom: 10vh;
+    }
+
+    .card_img img{
+        @media only screen and (max-width: $breakPointSmall){
+            max-height: 23rem;
+            object-fit: contain;
+        }
     }
 }

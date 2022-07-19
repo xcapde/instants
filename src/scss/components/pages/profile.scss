@@ -77,6 +77,13 @@
 
 .tab_imageList .card_cnt{
     @include profileCard;
+
+    & .card_img img{
+        @media only screen and (max-width: $breakPointSmall){
+            max-height: unset;
+            object-fit: cover;
+        }
+    }
 }
 
 
