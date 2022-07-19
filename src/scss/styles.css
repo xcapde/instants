@@ -1592,6 +1592,7 @@ input:focus::placeholder {
   font-size: small;
   font-weight: 400;
   width: 7rem;
+  height: 3rem;
 }
 
 .mainForm_btn {
