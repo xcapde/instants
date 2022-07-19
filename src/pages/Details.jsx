@@ -83,7 +83,7 @@ export function Details(props) {
                                     <img className="user_avatar" src={instantInfo && instantInfo.creator? instantInfo.creator.avatar : '' } alt="creator avatar"/>
                                     <h1 className="user_name">{instantInfo && instantInfo.creator? instantInfo.creator.name : ''} {instantInfo && instantInfo.creator? instantInfo.creator.surname : ''}</h1>
                                 </div> 
-                                <p>{instantInfo.description}</p>
+                                {instantInfo.description? <p>{instantInfo.description}</p> : ''}
                             </div>
                             <div className="comments_box">
                                 {comments.length > 0?
