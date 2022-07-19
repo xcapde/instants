@@ -81,7 +81,7 @@ export function MainForm(props) {
                             <span className="form_icon"><i className="fa-solid fa-angles-right"></i></span>
                             Title:
                         </label>
-                        <input onChange={onInputChange} value={newInstant.title||''} className={error && !newInstant.title? "title_input inputError" : "title.input"} name="title" id="title" type="text" placeholder="Write a title" maxLength="30" autoFocus/>
+                        <input onChange={onInputChange} value={newInstant.title||''} className={error && !newInstant.title? "title_input inputError" : "title.input"} name="title" id="title" type="text" placeholder="Write a title" aria-label="title" maxLength="30" autoFocus/>
                     </div>
                     <div className="mainForm_input_box">
                         <label htmlFor="location">

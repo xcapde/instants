@@ -15,7 +15,6 @@ export function Searcher(){
         
         if(value.length === 0){
             setSearchList([]);
-            console.log('resetinglist')
         }
         if(value.length > 2){
             getSearch(searchValue.toLowerCase().trim())
