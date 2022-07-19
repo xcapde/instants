@@ -78,7 +78,7 @@ export function Details(props) {
                                 <div className="like_count"><i className="fa-solid fa-heart"></i>{instantInfo.likesCount}</div>
                                 <div className="ubication"><i className="fa-solid fa-location-dot"></i>{instantInfo.location}</div>
                             </div>                          
-                            <div className="description_box">
+                            <div className={instantInfo.description? "description_box" : "description_box noDesciption"}>
                                 <div className="user_cnt">
                                     <img className="user_avatar" src={instantInfo && instantInfo.creator? instantInfo.creator.avatar : '' } alt="creator avatar"/>
                                     <h1 className="user_name">{instantInfo && instantInfo.creator? instantInfo.creator.name : ''} {instantInfo && instantInfo.creator? instantInfo.creator.surname : ''}</h1>

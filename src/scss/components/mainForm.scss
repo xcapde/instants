@@ -150,7 +150,7 @@
 
 .reduced img{
     margin: 0 !important;
-    -webkit-box-reflect: below 0% linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.0), rgba(0,0,0,0.0),rgba(0, 0, 0, 0.267));
+    // -webkit-box-reflect: below 0% linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.0), rgba(0,0,0,0.0),rgba(0, 0, 0, 0.267));
     transition: 1s all ease-out;
     &:hover{
         width: 40%;
@@ -191,6 +191,7 @@
 
 
 .mainForm_btns{
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     width: 50%;

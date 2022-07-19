@@ -123,6 +123,7 @@
         padding: 4%;
         color: $colorDark;
         font-size: smaller;
+        word-wrap: break-word;
         @media only screen and (max-width: $breakPointSmall){
             font-size: medium;
         }
@@ -154,10 +155,10 @@
 }
 
 .description_box{
-    overflow-y: auto;
+    overflow-y: auto !important;
     width: 100%;
     height: fit-content;
-    min-height: 30%;
+    min-height: 25%;
 
     & .user_avatar{
         width: 2.5rem;
@@ -165,6 +166,10 @@
         border-radius: 50%;
         margin: 0 2% 0;
     }
+}
+
+.noDesciption{
+    min-height: 13%;
 }
 
 
@@ -178,7 +183,7 @@
     border-top-style: solid;
     color: $colorGrey;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
 
     & .results_info{
         color: $colorGrey;
@@ -193,5 +198,5 @@
 }
 
 .users_comments{
-    overflow-y: auto;
+    overflow-y: auto !important;
 }
